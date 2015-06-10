@@ -29,6 +29,10 @@ body {
     font-weight: 700;
 }
 
+.search-form {
+    padding-top: 150px;
+}
+
 /* Custom Button Styles */
 
 .btn-dark {
@@ -161,6 +165,7 @@ hr.small {
     background-size: cover;
     -o-background-size: cover;
 }
+
 
 /* About */
 
