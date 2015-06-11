@@ -242,3 +242,8 @@ hr.small {
 footer {
     padding: 100px 0;
 }
+
+
+/* navbar */
+.navbar-static-top {
+    margin-bottom: 0px;
