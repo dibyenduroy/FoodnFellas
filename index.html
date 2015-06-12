@@ -25,277 +25,401 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">FoodnFellas</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#">Sign Up</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li> <button type="button" class="btn btn-info">Become a provider</button> </li>
-                </ul>
-            </div><!--/.nav-collapse -->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">FoodnFellas</a>
         </div>
-    </nav>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" data-toggle="modal" data-target=".social-signup-modal">Sign Up</a></li>
+                <li><a href="#" data-toggle="modal" data-target=".social-login-modal">Login</a></li>
+                <li> <button type="button" class="btn btn-info">Become a provider</button> </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
 
-    <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1>Looking for home cooked food?</h1>
-            <br>
-            <a href="#about" class="btn btn-dark btn-lg">How it works</a>
+<!-- Social Signup Modal -->
+<div class="modal fade social-signup-modal" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body">
+                <!--<div class="container-fluid">-->
+                <div class="omb_login">
+                    <div class="row omb_socialButtons">
+                        <div class=".col-xs-12">
+                            <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
+                                <i class="fa fa-facebook"></i>
+                                <span class="hidden-xs">Sign up with Facebook</span>
+                            </a>
+                        </div>
+                        <div class=".col-xs-12 ">
+                            <a href="#" class="btn btn-lg btn-block omb_btn-google">
+                                <i class="fa fa-google"></i>
+                                <span>Sign up with Google</span>
+                            </a>
+                        </div>
+                    </div>
 
-            <form class="navbar-form search-form" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Where?">
-                    <input type="text" class="form-control" placeholder="No of people">
-                    <input type="text" class="form-control" placeholder="When?">
-                </div>
-                <button type="submit" class="btn btn-default">Search</button>
-            </form>
-        </div>
-    </header>
+                    <div class="row omb_loginOr">
+                        <div class="col-xs-12">
+                            <hr class="omb_hrOr">
+                            <span class="omb_spanOr">or</span>
+                        </div>
+                    </div>
 
-    <!-- About -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>FoodnFellas is an online marketplace and delivery service for home cooked food.</h2>
-                    <p class="lead">Instead of having to contend with commercially prepared food and the same menus day
-                        in and day out, explore the joy of discovering authentic and healthy food from real people,
-                        straight from their home kitchens.</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Services -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="services" class="services bg-primary">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Food Consumers</h2>
-                    <hr class="small">
                     <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item">
+                        <div class="col-xs-12 email-signup">
+                            <li class="fa fa-envelope"></li>
+                            <a href="#">Sign up with email</a>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="row signup-terms">
+                        By signing up, I agree to FoodnFella's
+                        <a href="#"> Terms of Service </a>,
+                        <a href="#"> Privacy Policy </a>, and
+                        <a href="#"> Refund Policy </a>.
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                Already a FoodnFellas member? <a href="/signup"> Log in </a>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<!-- Social Login Modal -->
+<div class="modal fade social-login-modal" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body">
+                <!--<div class="container-fluid">-->
+                    <div class="omb_login">
+                        <div class="row omb_socialButtons">
+                            <div class=".col-xs-12">
+                                <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
+                                    <i class="fa fa-facebook"></i>
+                                    <span class="hidden-xs">Facebook</span>
+                                </a>
+                            </div>
+                            <div class=".col-xs-12">
+                                <a href="#" class="btn btn-lg btn-block omb_btn-google">
+                                    <i class="fa fa-google"></i>
+                                    <span>Google</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row omb_loginOr">
+                            <div class="col-xs-12">
+                                <hr class="omb_hrOr">
+                                <span class="omb_spanOr">or</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <form class="omb_loginForm" action="" autocomplete="off" method="POST">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                        <input type="text" class="form-control" name="username" placeholder="email address">
+                                    </div>
+                                    <span class="help-block"></span>
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                        <input  type="password" class="form-control" name="password" placeholder="Password">
+                                    </div>
+                                    <span class="help-block">Password error</span>
+
+                                    <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <label class="checkbox" id="remember-me">
+                                    <input type="checkbox" value="remember-me">Remember Me
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p class="omb_forgotPwd">
+                                    <a href="#">Forgot password?</a>
+                                </p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                Don't have an account? <a href="/signup"> Sign up </a>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<!-- Header -->
+<header id="top" class="header">
+    <div class="text-vertical-center">
+        <h1>Looking for home cooked food?</h1>
+        <br>
+        <a href="#about" class="btn btn-dark btn-lg">How it works</a>
+
+        <form class="navbar-form search-form" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Where?">
+                <input type="text" class="form-control" placeholder="No of people">
+                <input type="text" class="form-control" placeholder="When?">
+            </div>
+            <button type="submit" class="btn btn-default">Search</button>
+        </form>
+    </div>
+</header>
+
+<!-- About -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>FoodnFellas is an online marketplace and delivery service for home cooked food.</h2>
+                <p class="lead">Instead of having to contend with commercially prepared food and the same menus day
+                    in and day out, explore the joy of discovering authentic and healthy food from real people,
+                    straight from their home kitchens.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- Services -->
+<!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+<section id="services" class="services bg-primary">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Food Consumers</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-stack-1x text-primary">1</i>
                             </span>
-                                <h4>
-                                    <strong>DISCOVER AMAZING HOME COOKED FOOD</strong>
-                                </h4>
-                                <p>Scroll through numerous listings for delicious and healthy home cooked food of your chosen cuisine type.</p>
-                            </div>
+                            <h4>
+                                <strong>DISCOVER AMAZING HOME COOKED FOOD</strong>
+                            </h4>
+                            <p>Scroll through numerous listings for delicious and healthy home cooked food of your chosen cuisine type.</p>
                         </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-stack-1x text-primary">2</i>
                             </span>
-                                <h4>
-                                    <strong>BOOK YOUR ORDER</strong>
-                                </h4>
-                                <p>Place your order with food provider of choice. Choose your delivery option. You can
+                            <h4>
+                                <strong>BOOK YOUR ORDER</strong>
+                            </h4>
+                            <p>Place your order with food provider of choice. Choose your delivery option. You can
                                 also request customization.</p>
-                            </div>
                         </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-stack-1x text-primary">3</i>
                             </span>
-                                <h4>
-                                    <strong>ENJOY DELICIOUS HOME COOKED FOOD</strong>
-                                </h4>
-                                <p>Enjoy the goodness of home cooked meals from the comfort of your home or office.</p>
-                            </div>
+                            <h4>
+                                <strong>ENJOY DELICIOUS HOME COOKED FOOD</strong>
+                            </h4>
+                            <p>Enjoy the goodness of home cooked meals from the comfort of your home or office.</p>
                         </div>
                     </div>
-                    <!-- /.row (nested) -->
-                    <h2>Food Providers</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item">
+                </div>
+                <!-- /.row (nested) -->
+                <h2>Food Providers</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-stack-1x text-primary">1</i>
                             </span>
-                                <h4>
-                                    <strong>LIST YOUR DISHES</strong>
-                                </h4>
-                                <p>Setup your posting with the dishes you cook and the date and times when you can provide the food.</p>
-                            </div>
+                            <h4>
+                                <strong>LIST YOUR DISHES</strong>
+                            </h4>
+                            <p>Setup your posting with the dishes you cook and the date and times when you can provide the food.</p>
                         </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-stack-1x text-primary">2</i>
                             </span>
-                                <h4>
-                                    <strong>CONFIRM ORDERS</strong>
-                                </h4>
-                                <p>Confirm requested bookings from interested customers. Prepare the food to meet the order. </p>
-                            </div>
+                            <h4>
+                                <strong>CONFIRM ORDERS</strong>
+                            </h4>
+                            <p>Confirm requested bookings from interested customers. Prepare the food to meet the order. </p>
                         </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-stack-1x text-primary">3</i>
                             </span>
-                                <h4>
-                                    <strong>PROVIDE FOOD</strong>
-                                </h4>
-                                <p>Based on the delivery option chosen, provide the food to the customers or delivery folks.</p>
-                            </div>
+                            <h4>
+                                <strong>PROVIDE FOOD</strong>
+                            </h4>
+                            <p>Based on the delivery option chosen, provide the food to the customers or delivery folks.</p>
                         </div>
                     </div>
-                    <!-- /.row (nested) -->
                 </div>
-                <!-- /.col-lg-10 -->
+                <!-- /.row (nested) -->
             </div>
-            <!-- /.row -->
+            <!-- /.col-lg-10 -->
         </div>
-        <!-- /.container -->
-    </section>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
 
-    <!--&lt;!&ndash; Callout &ndash;&gt;-->
-    <!--<aside class="callout">-->
-        <!--<div class="text-vertical-center">-->
-            <!--<h1>Vertically Centered Text</h1>-->
-        <!--</div>-->
-    <!--</aside>-->
+<!--&lt;!&ndash; Callout &ndash;&gt;-->
+<!--<aside class="callout">-->
+<!--<div class="text-vertical-center">-->
+<!--<h1>Vertically Centered Text</h1>-->
+<!--</div>-->
+<!--</aside>-->
 
-    <!--&lt;!&ndash; Portfolio &ndash;&gt;-->
-    <!--<section id="portfolio" class="portfolio">-->
-        <!--<div class="container">-->
-            <!--<div class="row">-->
-                <!--<div class="col-lg-10 col-lg-offset-1 text-center">-->
-                    <!--<h2>Featured Dishes</h2>-->
-                    <!--<hr class="small">-->
-                    <!--<div class="row">-->
-                        <!--<div class="col-md-6">-->
-                            <!--<div class="portfolio-item">-->
-                                <!--<a href="#">-->
-                                    <!--<img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">-->
-                                <!--</a>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="col-md-6">-->
-                            <!--<div class="portfolio-item">-->
-                                <!--<a href="#">-->
-                                    <!--<img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">-->
-                                <!--</a>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="col-md-6">-->
-                            <!--<div class="portfolio-item">-->
-                                <!--<a href="#">-->
-                                    <!--<img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">-->
-                                <!--</a>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="col-md-6">-->
-                            <!--<div class="portfolio-item">-->
-                                <!--<a href="#">-->
-                                    <!--<img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">-->
-                                <!--</a>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--&lt;!&ndash; /.row (nested) &ndash;&gt;-->
-                    <!--<a href="#" class="btn btn-dark">View More Items</a>-->
-                <!--</div>-->
-                <!--&lt;!&ndash; /.col-lg-10 &ndash;&gt;-->
-            <!--</div>-->
-            <!--&lt;!&ndash; /.row &ndash;&gt;-->
-        <!--</div>-->
-        <!--&lt;!&ndash; /.container &ndash;&gt;-->
-    <!--</section>-->
+<!--&lt;!&ndash; Portfolio &ndash;&gt;-->
+<!--<section id="portfolio" class="portfolio">-->
+<!--<div class="container">-->
+<!--<div class="row">-->
+<!--<div class="col-lg-10 col-lg-offset-1 text-center">-->
+<!--<h2>Featured Dishes</h2>-->
+<!--<hr class="small">-->
+<!--<div class="row">-->
+<!--<div class="col-md-6">-->
+<!--<div class="portfolio-item">-->
+<!--<a href="#">-->
+<!--<img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">-->
+<!--</a>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-md-6">-->
+<!--<div class="portfolio-item">-->
+<!--<a href="#">-->
+<!--<img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">-->
+<!--</a>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-md-6">-->
+<!--<div class="portfolio-item">-->
+<!--<a href="#">-->
+<!--<img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">-->
+<!--</a>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-md-6">-->
+<!--<div class="portfolio-item">-->
+<!--<a href="#">-->
+<!--<img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">-->
+<!--</a>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash; /.row (nested) &ndash;&gt;-->
+<!--<a href="#" class="btn btn-dark">View More Items</a>-->
+<!--</div>-->
+<!--&lt;!&ndash; /.col-lg-10 &ndash;&gt;-->
+<!--</div>-->
+<!--&lt;!&ndash; /.row &ndash;&gt;-->
+<!--</div>-->
+<!--&lt;!&ndash; /.container &ndash;&gt;-->
+<!--</section>-->
 
-    <!--&lt;!&ndash; Call to Action &ndash;&gt;-->
-    <!--<aside class="call-to-action bg-primary">-->
-        <!--<div class="container">-->
-            <!--<div class="row">-->
-                <!--<div class="col-lg-12 text-center">-->
-                    <!--<h3>The buttons below are impossible to resist.</h3>-->
-                    <!--<a href="#" class="btn btn-lg btn-light">Click Me!</a>-->
-                    <!--<a href="#" class="btn btn-lg btn-dark">Look at Me!</a>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</aside>-->
+<!--&lt;!&ndash; Call to Action &ndash;&gt;-->
+<!--<aside class="call-to-action bg-primary">-->
+<!--<div class="container">-->
+<!--<div class="row">-->
+<!--<div class="col-lg-12 text-center">-->
+<!--<h3>The buttons below are impossible to resist.</h3>-->
+<!--<a href="#" class="btn btn-lg btn-light">Click Me!</a>-->
+<!--<a href="#" class="btn btn-lg btn-dark">Look at Me!</a>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</aside>-->
 
-    <!--&lt;!&ndash; Map &ndash;&gt;-->
-    <!--<section id="contact" class="map">-->
-        <!--<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>-->
-        <!--<br />-->
-        <!--<small>-->
-            <!--<a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>-->
-        <!--</small>-->
-        <!--</iframe>-->
-    <!--</section>-->
+<!--&lt;!&ndash; Map &ndash;&gt;-->
+<!--<section id="contact" class="map">-->
+<!--<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>-->
+<!--<br />-->
+<!--<small>-->
+<!--<a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>-->
+<!--</small>-->
+<!--</iframe>-->
+<!--</section>-->
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>FoodnFellows</strong>
-                    </h4>
-                    <p>Carnegie Mellon University<br>Silicon Valley, CA 94043</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
-                        </li>
-                    </ul>
-                    <br>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; Your Website 2014</p>
-                </div>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h4><strong>FoodnFellows</strong>
+                </h4>
+                <p>Carnegie Mellon University<br>Silicon Valley, CA 94043</p>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
+                    <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
+                    </li>
+                </ul>
+                <br>
+                <ul class="list-inline">
+                    <li>
+                        <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                    </li>
+                </ul>
+                <hr class="small">
+                <p class="text-muted">Copyright &copy; Your Website 2014</p>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script>
+<!-- Custom Theme JavaScript -->
+<script>
     // Closes the sidebar menu
     $("#menu-close").click(function(e) {
         e.preventDefault();
@@ -324,7 +448,7 @@
             }
         });
     });
-    </script>
+</script>
 
 </body>
 
