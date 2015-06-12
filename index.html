@@ -80,7 +80,7 @@
                     <div class="row">
                         <div class="col-xs-12 email-signup">
                             <li class="fa fa-envelope"></li>
-                            <a href="#">Sign up with email</a>
+                            <a href="#" data-toggle="modal" data-target=".signupwith-email-modal">Sign up with email</a>
                         </div>
                     </div>
                     </br>
@@ -89,6 +89,49 @@
                         <a href="#"> Terms of Service </a>,
                         <a href="#"> Privacy Policy </a>, and
                         <a href="#"> Refund Policy </a>.
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                Already a FoodnFellas member? <a href="/signup"> Log in </a>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Social Signup Modal -->
+<div class="modal fade signupwith-email-modal" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body">
+                <!--<div class="container-fluid">-->
+                <div class="omb_login">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <form class="omb_loginForm" action="" autocomplete="off" method="POST">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input type="text" class="form-control" name="name" placeholder="First Name">
+                                </div>
+                                <span class="help-block"></span>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input type="text" class="form-control" name="name" placeholder="Last Name">
+                                </div>
+                                <span class="help-block"></span>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input type="text" class="form-control" name="username" placeholder="email address">
+                                </div>
+                                <span class="help-block"></span>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                    <input  type="password" class="form-control" name="password" placeholder="Password">
+                                </div>
+                                <span class="help-block">Password error</span>
+                                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
