@@ -28,7 +28,11 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src = "https://plus.google.com/js/client:platform.js" async defer></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
+    <!-- Custom Javascript -->
+    <script src="js/social_login.js"></script>
 </head>
 
 <body>
@@ -40,8 +44,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#" data-toggle="modal" data-target=".social-signup-modal">Sign Up</a></li>
-                <li><a href="#" data-toggle="modal" data-target=".social-login-modal">Login</a></li>
+                <li><a href="/signup" data-toggle="modal" data-target=".social-signup-modal">Sign Up</a></li>
+                <li><a href="/login" data-toggle="modal" data-target=".social-login-modal">Login</a></li>
                 <li> <button type="button" class="btn btn-info">Become a provider</button> </li>
             </ul>
         </div><!--/.nav-collapse -->
@@ -55,21 +59,36 @@
             <div class="modal-body">
                 <!--<div class="container-fluid">-->
                 <div class="omb_login">
-                    <div class="row omb_socialButtons">
-                        <div class=".col-xs-12">
-                            <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
-                                <i class="fa fa-facebook"></i>
-                                <span class="hidden-xs">Sign up with Facebook</span>
-                            </a>
-                        </div>
-                        <div class=".col-xs-12 ">
-                            <a href="#" class="btn btn-lg btn-block omb_btn-google">
-                                <i class="fa fa-google"></i>
-                                <span>Sign up with Google</span>
-                            </a>
+                    <!--<div class="row omb_socialButtons">-->
+                        <!--<div class=".col-xs-12">-->
+                            <!--<a href="#" class="btn btn-lg btn-block omb_btn-facebook">-->
+                                <!--<i class="fa fa-facebook"></i>-->
+                                <!--<span class="hidden-xs">Sign up with Facebook</span>-->
+                            <!--</a>-->
+                        <!--</div>-->
+                        <!--<div class=".col-xs-12 ">-->
+                            <!--<a href="#" class="btn btn-lg btn-block omb_btn-google">-->
+                                <!--<i class="fa fa-google"></i>-->
+                                <!--<span>Sign up with Google</span>-->
+                            <!--</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="fb-login-button col-xs-12" data-max-rows="1" data-size="large" data-show-faces="false"
+                         data-auto-logout-link="false" scope="public_profile,email" onlogin="checkLoginState();">
+                    </div>
+                    <div id="gConnect" class="google-button2 col-xs-12">
+                        <button class="g-signin"
+                                data-scope="email"
+                                data-clientid="214287020717-2nu6arauqkqb8ednahji6lc5ovdnnkcr.apps.googleusercontent.com"
+                                data-callback="onSignInCallback"
+                                data-theme="dark"
+                                data-cookiepolicy="single_host_origin">
+                        </button>
+                        <!-- Textarea for outputting data -->
+                        <div id="response" class="hide">
+                            <textarea id="responseContainer" style="width:100%; height:150px"></textarea>
                         </div>
                     </div>
-
                     <div class="row omb_loginOr">
                         <div class="col-xs-12">
                             <hr class="omb_hrOr">
@@ -92,8 +111,11 @@
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">
-                Already a FoodnFellas member? <a href="/signup"> Log in </a>
+            <div class="modal-footer"
+                Already a FoodnFellas member?
+                <a href="/login" class="modal-link link-to-login-in-signup" data-modal-href="/login_modal" data-modal-type="login">
+                    Log in
+                </a>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -108,27 +130,32 @@
                 <div class="omb_login">
                     <div class="row">
                         <div class="col-xs-12">
-                            <form class="omb_loginForm" action="" autocomplete="off" method="POST">
+                            <form class="omb_loginForm" action="./registration.php" autocomplete="off" method="POST">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                    <input type="text" class="form-control" name="name" placeholder="First Name">
+                                    <input type="text" class="form-control" name="FirstName" placeholder="First Name">
                                 </div>
                                 <span class="help-block"></span>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                    <input type="text" class="form-control" name="name" placeholder="Last Name">
+                                    <input type="text" class="form-control" name="LastName" placeholder="Last Name">
                                 </div>
                                 <span class="help-block"></span>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                    <input type="text" class="form-control" name="username" placeholder="email address">
+                                    <input type="text" class="form-control" name="Email" placeholder="email address">
                                 </div>
                                 <span class="help-block"></span>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                    <input  type="password" class="form-control" name="password" placeholder="Password">
+                                    <input type="password" class="form-control" name="password" placeholder="Password">
                                 </div>
-                                <span class="help-block">Password error</span>
+                                <span class="help-block"></span>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input type="text" class="form-control" name="login_type" value="1" placeholder="login_type">
+                                </div>
+                                <span class="help-block"></span>
                                 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
                             </form>
                         </div>
@@ -136,7 +163,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                Already a FoodnFellas member? <a href="/signup"> Log in </a>
+                Already a FoodnFellas member? <a href="/login"> Log in </a>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -151,42 +178,47 @@
                 <!--<div class="container-fluid">-->
                     <div class="omb_login">
                         <div class="row omb_socialButtons">
-                            <div class=".col-xs-12">
-                                <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
-                                    <i class="fa fa-facebook"></i>
-                                    <span class="hidden-xs">Facebook</span>
-                                </a>
+                            <div class="fb-login-button col-xs-12" data-max-rows="1" data-size="large" data-show-faces="false"
+                                 data-auto-logout-link="false" scope="public_profile,email" onlogin="checkLoginState();">
                             </div>
-                            <div class=".col-xs-12">
-                                <a href="#" class="btn btn-lg btn-block omb_btn-google">
-                                    <i class="fa fa-google"></i>
-                                    <span>Google</span>
-                                </a>
+                            <div id="gConnect" class="google-button col-xs-12">
+                                <button class="g-signin"
+                                        data-scope="email"
+                                        data-clientid="214287020717-2nu6arauqkqb8ednahji6lc5ovdnnkcr.apps.googleusercontent.com"
+                                        data-callback="onSignInCallback"
+                                        data-theme="dark"
+                                        data-cookiepolicy="single_host_origin">
+                                </button>
+                                <!-- Textarea for outputting data -->
+                                <div id="response" class="hide">
+                                    <textarea id="responseContainer" style="width:100%; height:150px"></textarea>
+                                </div>
                             </div>
                         </div>
-
                         <div class="row omb_loginOr">
                             <div class="col-xs-12">
                                 <hr class="omb_hrOr">
                                 <span class="omb_spanOr">or</span>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-xs-12">
-                                <form class="omb_loginForm" action="" autocomplete="off" method="POST">
+                                <form class="omb_loginForm" action="login_v2.php" autocomplete="off" method="POST">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                        <input type="text" class="form-control" name="username" placeholder="email address">
+                                        <input type="text" class="form-control" name="email" placeholder="email address">
                                     </div>
                                     <span class="help-block"></span>
-
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                        <input  type="password" class="form-control" name="password" placeholder="Password">
+                                        <input type="password" class="form-control" name="passwd" placeholder="Password">
                                     </div>
-                                    <span class="help-block">Password error</span>
-
+                                    <span class="help-block"></span>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                        <input type="text" class="form-control" name="login_type" value="1" placeholder="login_type">
+                                    </div>
+                                    <span class="help-block"></span>
                                     <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
                                 </form>
                             </div>
@@ -345,83 +377,6 @@
     </div>
     <!-- /.container -->
 </section>
-
-<!--&lt;!&ndash; Callout &ndash;&gt;-->
-<!--<aside class="callout">-->
-<!--<div class="text-vertical-center">-->
-<!--<h1>Vertically Centered Text</h1>-->
-<!--</div>-->
-<!--</aside>-->
-
-<!--&lt;!&ndash; Portfolio &ndash;&gt;-->
-<!--<section id="portfolio" class="portfolio">-->
-<!--<div class="container">-->
-<!--<div class="row">-->
-<!--<div class="col-lg-10 col-lg-offset-1 text-center">-->
-<!--<h2>Featured Dishes</h2>-->
-<!--<hr class="small">-->
-<!--<div class="row">-->
-<!--<div class="col-md-6">-->
-<!--<div class="portfolio-item">-->
-<!--<a href="#">-->
-<!--<img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">-->
-<!--</a>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="col-md-6">-->
-<!--<div class="portfolio-item">-->
-<!--<a href="#">-->
-<!--<img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">-->
-<!--</a>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="col-md-6">-->
-<!--<div class="portfolio-item">-->
-<!--<a href="#">-->
-<!--<img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">-->
-<!--</a>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="col-md-6">-->
-<!--<div class="portfolio-item">-->
-<!--<a href="#">-->
-<!--<img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">-->
-<!--</a>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--&lt;!&ndash; /.row (nested) &ndash;&gt;-->
-<!--<a href="#" class="btn btn-dark">View More Items</a>-->
-<!--</div>-->
-<!--&lt;!&ndash; /.col-lg-10 &ndash;&gt;-->
-<!--</div>-->
-<!--&lt;!&ndash; /.row &ndash;&gt;-->
-<!--</div>-->
-<!--&lt;!&ndash; /.container &ndash;&gt;-->
-<!--</section>-->
-
-<!--&lt;!&ndash; Call to Action &ndash;&gt;-->
-<!--<aside class="call-to-action bg-primary">-->
-<!--<div class="container">-->
-<!--<div class="row">-->
-<!--<div class="col-lg-12 text-center">-->
-<!--<h3>The buttons below are impossible to resist.</h3>-->
-<!--<a href="#" class="btn btn-lg btn-light">Click Me!</a>-->
-<!--<a href="#" class="btn btn-lg btn-dark">Look at Me!</a>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</aside>-->
-
-<!--&lt;!&ndash; Map &ndash;&gt;-->
-<!--<section id="contact" class="map">-->
-<!--<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>-->
-<!--<br />-->
-<!--<small>-->
-<!--<a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>-->
-<!--</small>-->
-<!--</iframe>-->
-<!--</section>-->
 
 <!-- Footer -->
 <footer>
