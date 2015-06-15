@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>FoodnFellas - landing page</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <!-- Custom styles for this template -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src = "https://plus.google.com/js/client:platform.js" async defer></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <!-- Custom Javascript -->
+    <script src="js/social_login.js"></script>
+</head>
+
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">FoodnFellas</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<!-- Header -->
+<header id="top" class="header">
+    <div class="text-vertical-center">
+        <h1>Welcome to FoodnFellas!</h1>
+        <br>
+        <a href="#about" class="btn btn-dark btn-lg">How it works</a>
+        <h3 id="slogan"> Providing a platform for everyone to interact through home cooked food. Any one can order food and any one can provide food.
+        Please be an early Evangelist and signup. We will invite you as soon as we launch this Fall</h3>
+        <form class="navbar-form search-form" method="post" action="php/earlybirds.php">
+            <!-- we will create registration.php after registration.html -->
+            <div class="form-group">
+                <input type="text" class="form-control" name="fname" placeholder="First Name">
+                <input type="text" class="form-control" name="lname" placeholder="Last Name">
+                <input type="text" class="form-control" name="email" placeholder="Email">
+                <input type="submit" class="btn btn-primary btn-large" name="submit">
+            </div>
+        </form>
+    </div>
+</header>
+
+<!-- About -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>FoodnFellas is an online marketplace and delivery service for home cooked food.</h2>
+                <p class="lead">Instead of having to contend with commercially prepared food and the same menus day
+                    in and day out, explore the joy of discovering authentic and healthy food from real people,
+                    straight from their home kitchens.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- Services -->
+<!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+<section id="services" class="services bg-primary">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Food Consumers</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-stack-1x text-primary">1</i>
+                            </span>
+                            <h4>
+                                <strong>DISCOVER AMAZING HOME COOKED FOOD</strong>
+                            </h4>
+                            <p>Scroll through numerous listings for delicious and healthy home cooked food of your chosen cuisine type.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-stack-1x text-primary">2</i>
+                            </span>
+                            <h4>
+                                <strong>BOOK YOUR ORDER</strong>
+                            </h4>
+                            <p>Place your order with food provider of choice. Choose your delivery option. You can
+                                also request customization.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-stack-1x text-primary">3</i>
+                            </span>
+                            <h4>
+                                <strong>ENJOY DELICIOUS HOME COOKED FOOD</strong>
+                            </h4>
+                            <p>Enjoy the goodness of home cooked meals from the comfort of your home or office.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+                <h2>Food Providers</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-stack-1x text-primary">1</i>
+                            </span>
+                            <h4>
+                                <strong>LIST YOUR DISHES</strong>
+                            </h4>
+                            <p>Setup your posting with the dishes you cook and the date and times when you can provide the food.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-stack-1x text-primary">2</i>
+                            </span>
+                            <h4>
+                                <strong>CONFIRM ORDERS</strong>
+                            </h4>
+                            <p>Confirm requested bookings from interested customers. Prepare the food to meet the order. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-stack-1x text-primary">3</i>
+                            </span>
+                            <h4>
+                                <strong>PROVIDE FOOD</strong>
+                            </h4>
+                            <p>Based on the delivery option chosen, provide the food to the customers or delivery folks.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h4><strong>FoodnFellows</strong>
+                </h4>
+                <p>Carnegie Mellon University<br>Silicon Valley, CA 94043</p>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
+                    <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
+                    </li>
+                </ul>
+                <br>
+                <ul class="list-inline">
+                    <li>
+                        <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                    </li>
+                </ul>
+                <hr class="small">
+                <p class="text-muted">Copyright &copy; Your Website 2014</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+</script>
+
+</body>
+
+</html>

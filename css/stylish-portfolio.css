@@ -344,3 +344,10 @@ opacity:0.9;
     text-align: center;
     padding: 10px;
 }
+
+/* Landing page */
+
+#slogan {
+    word-wrap: break-word;
+    width: 50%;
+}
