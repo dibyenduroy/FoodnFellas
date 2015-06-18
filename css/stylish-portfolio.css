@@ -161,7 +161,7 @@ hr.small {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(https://s3-us-west-2.amazonaws.com/foodnfellas/food_photos/food1.jpg?X-Amz-Date=20150618T032913Z&X-Amz-Expires=300&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Signature=ca81e6673ceae4888c7d520b462ffe107341fdd7d92f04b7161696f0bfd4cd2c&X-Amz-Credential=ASIAJ2O64XW6S4SH6LDA/20150618/us-west-2/s3/aws4_request&X-Amz-SignedHeaders=Host&x-amz-security-token=AQoDYXdzEDwakAJwqwcyeFYtgJyi8WJOySuNeioHYS6Nb7CVm5F0MxNrAh5iR7az6D96jfOc%2BkMvwsxvKRS5Si%2BMWqMcttyKGgAX4cnEB3bEaGqzbt54FTQDkeSs30LC6RZQM6Yg92JJqgMHVOFTxrSHB0hwTpKhpN6RNABjX9f7NdbXf0fgNZ05MpjGG2AE0fUcLOdaUMw5ZPdU671RN91gzGyZoO6jZiCBXQwWYIG7KetNrUlD8GWROXXGlCaWJlk2hSSGC0vfNyK2r6VwcbNPPldpjNGhZWNVvJayyAaAvu2CXnCRIotwDmFPsfuV4nef0ck%2Bdp7U/ojCPT6%2BIHZDwyJkbOZRyZg1F4MZncRzSGcuC7Z/PMwLViDn8YisBQ%3D%3D) no-repeat center center scroll;
+    background: url(https://s3-us-west-2.amazonaws.com/foodnfellas/food_photos/food1.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
