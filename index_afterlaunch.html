@@ -48,6 +48,10 @@
     </div>
 </nav>
 
+
+<!-- Custom Javascript -->
+<script src="js/social_login.js"></script>
+
 <!-- Social Signup Modal -->
 <div class="modal fade social-signup-modal" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm">
@@ -69,9 +73,13 @@
                             <!--</a>-->
                         <!--</div>-->
                     <!--</div>-->
-                    <div class="fb-login-button col-xs-12" data-max-rows="1" data-size="large" data-show-faces="false"
-                         data-auto-logout-link="false" scope="public_profile,email" onlogin="checkLoginState();">
-                    </div>
+                    <!--<div class="fb-login-button col-xs-12" data-max-rows="1" data-size="large" data-show-faces="false"-->
+                         <!--data-auto-logout-link="false" scope="public_profile,email" onlogin="checkLoginState();">-->
+                    <!--</div>-->
+
+                    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                    </fb:login-button>
+
                     <div id="gConnect" class="google-button2 col-xs-12">
                         <button class="g-signin"
                                 data-scope="email"
@@ -445,8 +453,5 @@
 </script>
 
 </body>
-
-<!-- Custom Javascript -->
-<script src="js/social_login.js"></script>
 
 </html>
