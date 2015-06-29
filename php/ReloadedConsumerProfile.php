@@ -149,7 +149,7 @@ $conn->close();
 <br>
 <h>You Profile View Now <h>
 <br> To Update Go Back to Update Page  
-<?
+<?php
 //echo $_SESSION["user_id"];
 echo "<a href=../php/ConsumerProfile.php?userid=".$_SESSION["user_id"].">  Profile Update Page</a> <br>";    
 ?>
