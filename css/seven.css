@@ -30,7 +30,7 @@ body {
   background-color: #333;
 }
 body {
-  background: url(https://s3-us-west-2.amazonaws.com/foodnfellas/food_photos/food1.jpg) no-repeat center center fixed;
+  background: url(https://s3-us-west-2.amazonaws.com/foodnfellas/beefSandwich.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -103,6 +103,7 @@ body {
 @media (min-width: 768px) {
   .masthead-brand {
     float: left;
+    color: darkgrey;
   }
   .masthead-nav {
     float: right;
@@ -170,4 +171,19 @@ body {
 .starter-template {
   padding: 100px 15px;
   text-align: center;
+}
+
+
+/*
+ * dropdown buttons
+ */
+
+.dropdown-button {
+  padding-bottom: 10px;
+}
+
+.dropdown-label {
+  color: whitesmoke;
+  font-size: large;
+  float: left;
 }
