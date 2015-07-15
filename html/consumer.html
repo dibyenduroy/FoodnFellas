@@ -49,19 +49,16 @@
         <!-- Portfolio Item Row -->
         <div class="row">
 
+            <form role="form" action="../php/ReloadedConsumerProfile.php" method="'post" enctype="multipart/form-data">
             <div class="col-md-3">
                 <img class="img-responsive" src="http://placehold.it/250x250" alt="">
                 <div class="form-group">
-                    <form action="../php/ConsumerProfile.php" method="post" enctype="multipart/form-data">
-                        <input type="file" name="fileToUpload" id="fileToUpload">
+                        <input type="file" name="fileToUpload" id="fileToUpload"/>
                         <p class="help-block">Upload your profile picture here.</p>
-                        <input type="submit" value="Upload Image" name="submit" class="btn btn-sm btn-default">
-                    </form>
                 </div>
             </div>
 
             <div class="col-md-8">
-                <form role="form" action="../php/ReloadedConsumerProfile.php" method="'post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="aboutMe">About me</label>
                         <textarea name="AboutMe" class="form-control" rows="3" id="aboutMe"></textarea>
@@ -93,11 +90,10 @@
                         <input type="text" name="PhoneNumber" class="form-control" id="phoneNumber">
                     </div>
 
-                    <input type='submit' class="btn btn-primary" value='Update Details' onClick="window.location.reload(true)"/></div>
+                    <input type='submit' class="btn btn-primary" value='Update Details' onClick="window.location.reload(true)"/>
             <!--<button type="submit" class="btn btn-primary">Submit</button>-->
-                </form>
             </div>
-
+        </form>
         </div>
         <!-- /.row -->
     </div>
