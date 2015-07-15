@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Portfolio Item - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/consumer.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">FoodnFellas</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/signup" data-toggle="modal" data-target=".social-signup-modal">Sign Up</a></li>
+                    <li><a href="/login" data-toggle="modal" data-target=".social-login-modal">Login</a></li>
+                    <li> <button type="button" class="btn btn-info">Become a provider</button> </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Portfolio Item Row -->
+        <div class="row">
+
+            <div class="col-md-3">
+                <img class="img-responsive" src="http://placehold.it/250x250" alt="">
+                <div class="form-group">
+                    <form action="../php/ConsumerProfile.php" method="post" enctype="multipart/form-data">
+                        <input type="file" name="fileToUpload" id="fileToUpload">
+                        <p class="help-block">Upload your profile picture here.</p>
+                        <input type="submit" value="Upload Image" name="submit" class="btn btn-sm btn-default">
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <form role="form" action="../php/ReloadedConsumerProfile.php" method="'post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="aboutMe">About me</label>
+                        <textarea name="AboutMe" class="form-control" rows="3" id="aboutMe"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="favoriteDish">Favorite Dish</label>
+                        <input type="text" name="FavouriteDish" class="form-control" id="favoriteDish">
+                    </div>
+
+                    <!--<div class="form-group">-->
+                        <!--<label for="homeAddress">Address</label>-->
+                        <!--<input type="text" class="form-control" id="homeAddress" placeholder="Home Address">-->
+                        <!--<input type="text" class="form-control" id="officeAddress" placeholder="Office Address">-->
+                    <!--</div>-->
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" name="Email" class="form-control" id="email">
+                    </div>
+
+                    <!--<div class="form-group">-->
+                        <!--<label for="password">Password</label>-->
+                        <!--<input type="text" class="form-control" id="password">-->
+                    <!--</div>-->
+
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone number</label>
+                        <input type="text" name="PhoneNumber" class="form-control" id="phoneNumber">
+                    </div>
+
+                    <input type='submit' class="btn btn-primary" value='Update Details' onClick="window.location.reload(true)"/></div>
+            <!--<button type="submit" class="btn btn-primary">Submit</button>-->
+                </form>
+            </div>
+
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
