@@ -14,7 +14,7 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="../css/seven.css" rel="stylesheet">
+  <link href="../css/search.css" rel="stylesheet">
 
   <!-- jquery ui-->
   <script src="../external/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
@@ -32,19 +32,22 @@
 </head>
 
 <body>
-<div class="cover-container">
-  <div class="masthead clearfix">
-    <div class="inner">
-      <h3 class="masthead-brand"> FoodnFellas </h3>
-      <nav>
-        <ul class="nav masthead-nav">
-          <li class="active"><a href="#">MarySmith001</a></li>
-          <li> <button type="button" class="btn btn-info">Become a provider</button> </li>
-        </ul>
-      </nav>
-    </div> <!-- /.inner -->
-  </div> <!-- /.masthead clearfix -->
-</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">FoodnFellas</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/signup" data-toggle="modal" data-target=".social-signup-modal"></a></li>
+        <li><a href="/login" data-toggle="modal" data-target=".social-login-modal">MarySmith001</a></li>
+        <li> <button type="button" class="btn btn-info" disabled>Become a provider</button> </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
 
 <div class ="container">
   <div class="starter-template">
@@ -56,10 +59,6 @@
           <input type="text" class="form-control" placeholder="Date / Time">
         </div>
         </br>
-
-        <div class="row">
-          <input type="text" id="foo" class="span2" value="" data-slider-min="-20" data-slider-max="20" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after"data-slider-tooltip="hide">
-        </div>
 
         <div class="row">
           <div class="col-md-3">

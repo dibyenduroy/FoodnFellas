@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Portfolio Item - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/provider.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">FoodnFellas</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/signup" data-toggle="modal" data-target=".social-signup-modal"></a></li>
+                <li><a href="/login" data-toggle="modal" data-target=".social-login-modal">MarySmith001</a></li>
+                <li> <button type="button" class="btn btn-info">Become a provider</button> </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <!-- Portfolio Item Row -->
+    <form role="form" action="../php/ReloadedProviderProfile.php" method="'post" enctype="multipart/form-data">
+        <input type="hidden" name="userid" value="-999">
+        <div class="row">
+            <div class="col-md-3">
+                <label for="aboutMe">About me</label>
+            </div>
+            <div class="col-md-9">
+                <textarea name="AboutMe" class="form-control" rows="3" id="aboutMe"></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <label for="Cuisines">Cuisine Type</label>
+            </div>
+            <div class="col-md-9">
+                <input type="text" name="Cuisines" class="form-control" id="Cuisines">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <label for="Awards">Awards won</label>
+            </div>
+            <div class="col-md-9">
+                <input type="text" name="Awards" class="form-control" id="Awards">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <label for="kitchenphoto">Upload kitchen photo</label>
+            </div>
+            <div class="col-md-9">
+                <input type="file" name="kitchenphoto" id="kitchenphoto">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <label for="Foodphoto">Upload food photo</label>
+            </div>
+            <div class="col-md-9">
+                <input type="file" name="Foodphoto" id="Foodphoto">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <label for="AddressName">Address</label>
+            </div>
+            <div class="col-md-9">
+                <input type="text" name="AddressName" class="form-control" id="AddressName" placeholder="Address name">
+                <input type="text" name="HouseNo" class="form-control" id="HouseNo" placeholder="House No.">
+                <input type="text" name="Street1" class="form-control" id="Street1" placeholder="Street 1">
+                <input type="text" name="Street2" class="form-control" id="Street2" placeholder="Street 2">
+                <input type="text" name="City" class="form-control" id="City" placeholder="City">
+                <input type="text" name="State" class="form-control" id="State" placeholder="State">
+                <input type="text" name="Zip" class="form-control" id="Zip" placeholder="Zip code">
+
+            </div>
+        </div>
+
+        <input type='submit' class="btn btn-primary save" value='Save' onClick="window.location.reload(true)"/>
+    </form>
+</div>
+<!-- /.container -->
+
+<!-- jQuery -->
+<script src="../js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

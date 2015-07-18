@@ -50,6 +50,7 @@
         <div class="row">
 
             <form role="form" action="../php/ReloadedConsumerProfile.php" method="'post" enctype="multipart/form-data">
+            <input type="hidden" name="userid" value="-999">
             <div class="col-md-3">
                 <img class="img-responsive" src="http://placehold.it/250x250" alt="">
                 <div class="form-group">
@@ -59,6 +60,15 @@
             </div>
 
             <div class="col-md-8">
+                    <div class="form-group">
+                        <label for="FirstName">First Name</label>
+                        <input type="text" name="FirstName" class="form-control" id="FirstName">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Lastname">Last Name</label>
+                        <input type="text" name="Lastname" class="form-control" id="Lastname">
+                    </div>
                     <div class="form-group">
                         <label for="aboutMe">About me</label>
                         <textarea name="AboutMe" class="form-control" rows="3" id="aboutMe"></textarea>
