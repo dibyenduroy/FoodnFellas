@@ -186,3 +186,11 @@ body {
   font-size: large;
   float: left;
 }
+
+#price-slider-label {
+    padding-bottom: 5px;
+}
+
+.price-slider {
+    padding-bottom: 50px;
+}
