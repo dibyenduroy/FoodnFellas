@@ -85,20 +85,28 @@
                     <input type="checkbox" id="carb">
             </div>
             <div class="form-group">
-                    <label for="allergens">Alergens</label>
-                    <button class="btn btn-default dropdown-toggle" type="button" id="allergens" data-toggle="dropdown" aria-expanded="true">
-                    Meal Specification
-                    <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="allergens">
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Milk </a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Eggs </a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Peanuts</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Fish</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Shellfish</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Wheat</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Soy</a></li>
-                    </ul>
+                    <div class="row">
+                        <div class="col-md-4">
+                        <label for="allergens">Food Allergies</label>
+                        </div>
+                        <div class="col-md-4">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="allergens" data-toggle="dropdown" aria-expanded="true">
+                            Allergies
+                            <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="allergens">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Milk </a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Eggs </a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Peanuts</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Fish</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Shellfish</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Wheat</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Soy</a></li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
             </div>
             <input type='submit' class="btn btn-primary" value='Submit' onClick="window.location.reload(true)"/>
         </div>     

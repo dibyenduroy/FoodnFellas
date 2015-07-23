@@ -10,16 +10,16 @@
 
   <title>FoodnFellas</title>
 
+  <!-- jquery and jquery ui-->
+  <script src="../external/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+  <link href="../external/jquery-ui-1.11.4.custom/jquery-ui.min.css" rel="stylesheet">
+  <script src="../external/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+
   <!-- Bootstrap Core CSS -->
   <link href="../css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="../css/search.css" rel="stylesheet">
-
-  <!-- jquery and jquery ui-->
-  <script src="../external/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
-  <link href="../external/jquery-ui-1.11.4.custom/jquery-ui.min.css" rel="stylesheet">
-  <script src="../external/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
 
   <!-- Custom Javascript -->
   <script src="../js/seven.js"></script>
@@ -76,15 +76,17 @@
             <div class="dropdown-label">Meal Requirement</div>
           </div>
           <div class="col-md-4 dropdown-button">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Select one <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a href="#">Vegan</a></li>
-              <li><a href="#">Vegetarian</a></li>
-              <li><a href="#">Gluten Free</a></li>
-              <li><a href="#">Dairy Free</a></li>
-            </ul>
+            <div class="dropdown">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select one <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Vegan</a></li>
+                <li><a href="#">Vegetarian</a></li>
+                <li><a href="#">Gluten Free</a></li>
+                <li><a href="#">Dairy Free</a></li>
+              </ul>
+            </div>
           </div>
         </div>
 
