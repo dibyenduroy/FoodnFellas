@@ -4,7 +4,7 @@ $.ajax({
     dataType: 'jsonp',                //data format
     success: function(data)          //on recieve of reply
     {
-        console.log("data is ", data);
+        //console.log("data is ", data);
         /*
          var firstName = data[0];              //get id
          var lastName = data[1];           //get name

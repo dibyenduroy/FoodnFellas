@@ -1,4 +1,4 @@
-<?php
+<?php header('content-type: application/json; charset=utf-8');
 
 session_start();
 $_SESSION["user_id"] = $_GET["userid"];
