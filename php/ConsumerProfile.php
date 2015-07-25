@@ -49,8 +49,7 @@ mysql_data_seek($result2, 0);
     echo "0 results";
 }
 
-$all_user_info = array();
-echo json_encode($all_user_info);
-//echo $_GET['callback'] . '('.json_encode($all_user_info).')';
+echo json_encode($array_user_address);
+//echo $_GET['callback'] . '('.json_encode($array_user_address).')';
 }
 ?>
