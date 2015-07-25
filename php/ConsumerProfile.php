@@ -48,6 +48,6 @@ mysql_data_seek($result2, 0);
 } else {
     echo "0 results";
 }
-echo json_encode($all_user_info);
+echo $_GET['callback'] . '('.json_encode($all_user_info).')';
 }
 ?>
