@@ -7,7 +7,7 @@ $(function ()
         crossDomain: true,
         data: "",                        //you can insert url argumnets here to pass to api.php
                                          //for example "id=5&parent=6"
-        dataType: 'jsonp',                //data format
+        //dataType: 'jsonp',                //data format
         success: function(data)          //on recieve of reply
         {
             console.log("data is ", data);
