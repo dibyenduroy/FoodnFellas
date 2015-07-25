@@ -1,3 +1,4 @@
+header("Access-Control-Allow-Origin: *");
 $(function ()
 {    //-----------------------------------------------------------------------
     // 2) Send a http request with AJAX http://api.jquery.com/jQuery.ajax/
