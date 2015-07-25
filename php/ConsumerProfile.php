@@ -27,7 +27,8 @@ if ($conn->connect_error) {
  $fetch_photo = "SELECT user_id,photo,about_me,my_fav_dish,phone_number,f_name,l_name,email  FROM user where user_id = '$session_user_id' ";
  $result = $conn->query($fetch_photo);
 $array_user_address = mysql_fetch_row($result)
-mysql_data_seek($result2, 0);
+mysql_data_seek($result, 0);
+echo $_GET['callback'] . '('.json_encode($array_user_address).')';
 
  if ($result->num_rows > 0) {
     // output data of each row
@@ -50,6 +51,6 @@ mysql_data_seek($result2, 0);
 }
 
 #echo json_encode($array_user_address);
-echo $_GET['callback'] . '('.json_encode($array_user_address).')';
+
 }
 ?>
