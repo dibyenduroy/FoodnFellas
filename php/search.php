@@ -35,8 +35,7 @@ $result1 = $conn->query($sql1);
 if ($result1->num_rows > 0) {	
 	// Now, return the meal entries. 
 	while($row = $result1->fetch_assoc()) {
-			$user_id = row["pa.user_id"];
-			$provider_id = row["pa.provider_food_id"];
+			$provider_id = $row["pa.provider_food_id"];
 
 
     		$sql2 = "SELECT m.dish_name, m.meal_description, m.meal_id, p.about_me, p.awards_won, p.kitchen_photo, p.food_album, p.cuisine_i_cook
@@ -50,7 +49,7 @@ if ($result1->num_rows > 0) {
 			}
 
 			$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
-    }
+  }
 } else {
     echo "0 results";
 }
