@@ -2,7 +2,7 @@ $(function(){
     $.ajax({
         url: 'http://foodnfellas.com/php/ConsumerProfile.php',                  //the script to call to get data
         crossDomain: true,
-        //dataType: 'jsonp',                //data format
+        dataType: 'jsonp',                //data format
         type: 'get',
         success: function(data)          //on recieve of reply
         {
