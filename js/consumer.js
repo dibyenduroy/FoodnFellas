@@ -1,4 +1,4 @@
-$.ajax({url: 'ConsumerProfile.php', dataType:'jsonp'});
+$.ajax({url: 'http://foodnfellas.com/php/ConsumerProfile.php', dataType:'jsonp'});
 //$.ajax({
 //    url: 'http://foodnfellas.com/php/ConsumerProfile.php',                  //the script to call to get data
 //    crossDomain: true,
