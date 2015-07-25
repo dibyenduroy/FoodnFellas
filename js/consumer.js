@@ -4,6 +4,7 @@ $(function ()
     //-----------------------------------------------------------------------
     $.ajax({
         url: 'http://foodnfellas.com/php/ConsumerProfile.php',                  //the script to call to get data
+        crossDomain: true,
         data: "",                        //you can insert url argumnets here to pass to api.php
                                          //for example "id=5&parent=6"
         dataType: 'json',                //data format
