@@ -12,9 +12,7 @@ header('Cache-Control: no-cache');
 getConsumerphoto();
 function getConsumerphoto() {
 
-$array_user_address = array(
-    'hello' => 'world'
-);
+$array_user_address = array(1,2,3,4);
 
 echo $_GET['callback'].'('.json_encode($array_user_address).');';
 }
