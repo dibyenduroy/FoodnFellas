@@ -3,7 +3,7 @@ $(function ()
     // 2) Send a http request with AJAX http://api.jquery.com/jQuery.ajax/
     //-----------------------------------------------------------------------
     $.ajax({
-        url: '../php/ConsumerProfile.php',                  //the script to call to get data
+        url: 'http://foodnfellas.com/php/ConsumerProfile.php',                  //the script to call to get data
         data: "",                        //you can insert url argumnets here to pass to api.php
                                          //for example "id=5&parent=6"
         dataType: 'json',                //data format
