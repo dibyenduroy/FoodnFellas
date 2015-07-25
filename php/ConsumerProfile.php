@@ -49,7 +49,7 @@ mysql_data_seek($result2, 0);
     echo "0 results";
 }
 
-echo json_encode($array_user_address);
-//echo $_GET['callback'] . '('.json_encode($array_user_address).')';
+#echo json_encode($array_user_address);
+echo $_GET['callback'] . '('.json_encode($array_user_address).')';
 }
 ?>
