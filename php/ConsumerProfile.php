@@ -28,7 +28,6 @@ if ($conn->connect_error) {
  $result = $conn->query($fetch_photo);
 $array_user_address = mysql_fetch_row($result)
 mysql_data_seek($result, 0);
-echo $_GET['callback'] . '('.json_encode($array_user_address).')';
 
  if ($result->num_rows > 0) {
     // output data of each row
@@ -51,6 +50,6 @@ echo $_GET['callback'] . '('.json_encode($array_user_address).')';
 }
 
 #echo json_encode($array_user_address);
-
+echo $_REQUEST['callback'] . '('.json_encode($array_user_address).');';
 }
 ?>
