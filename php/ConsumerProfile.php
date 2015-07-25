@@ -1,6 +1,4 @@
 <?php
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Origin: http://fnfsandbo-elasticl-1bp44otusa4d-1996682149.us-west-2.elb.amazonaws.com");
 
 session_start();
 $_SESSION["user_id"] = $_GET["userid"];
