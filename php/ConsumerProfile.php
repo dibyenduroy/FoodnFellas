@@ -1,4 +1,6 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+
 session_start();
 $_SESSION["user_id"] = $_GET["userid"];
 #$session_user_id=$_SESSION["user_id"];
