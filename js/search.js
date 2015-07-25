@@ -1,3 +1,5 @@
+$( "#datepicker" ).datepicker();
+
 $(function() {
     $( "#slider-range" ).slider({
         range: true,

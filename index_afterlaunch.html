@@ -42,7 +42,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/signup" data-toggle="modal" data-target=".social-signup-modal">Sign Up</a></li>
                 <li><a href="/login" data-toggle="modal" data-target=".social-login-modal">Login</a></li>
-                <li> <button type="button" class="btn btn-info" onclick="location.href='/html/provider.html'">Become a provider</button> </li>
+                <li> <button type="button" class="btn btn-info" onclick="providerBtnCallBack()">Become a provider</button> </li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -119,27 +119,27 @@
                             <form class="omb_loginForm" action="php/registration.php" autocomplete="off" method="POST">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                    <input type="text" class="form-control" name="FirstName" placeholder="First Name">
+                                    <input type="text" class="form-control" id = "firstName" name="FirstName" placeholder="First Name">
                                 </div>
                                 <span class="help-block"></span>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                    <input type="text" class="form-control" name="LastName" placeholder="Last Name">
+                                    <input type="text" class="form-control" id = "lastName" name="LastName" placeholder="Last Name">
                                 </div>
                                 <span class="help-block"></span>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                    <input type="text" class="form-control" name="Email" placeholder="email address">
+                                    <input type="text" class="form-control" id = "email" name="Email" placeholder="email address">
                                 </div>
                                 <span class="help-block"></span>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                    <input type="password" class="form-control" name="password" placeholder="Password">
+                                    <input type="password" class="form-control" id = "password" name="password" placeholder="Password">
                                 </div>
                                 <span class="help-block"></span>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                    <input type="text" class="form-control" name="login_type" value="1" placeholder="login_type">
+                                    <input type="text" class="form-control" id = "login_type" name="login_type" value="1" placeholder="login_type">
                                 </div>
                                 <span class="help-block"></span>
                                 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
