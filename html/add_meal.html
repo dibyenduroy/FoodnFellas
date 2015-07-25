@@ -61,7 +61,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle" type="button" id="cuisineType" data-toggle="dropdown" aria-expanded="true">
+                                <button class="btn btn-default dropdown-toggle" type="button" name="cuisineType" id="cuisineType" data-toggle="dropdown" aria-expanded="true">
                                     Cuisine Type
                                     <span class="caret"></span>
                                 </button>
@@ -76,13 +76,13 @@
                 </div>
                 </br>
                 <div class="form-group">
-                    <label for="dishname">Dish-Name</label>
-                    <input type="text" class="form-control" placeholder="Dish1" id ="dishname">
+                    <label for="dishName">Dish-Name</label>
+                    <input type="text" class="form-control" placeholder="Dish1" name="dishName" id="dishName">
                 </div>
 
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <input type="text" class="form-control" placeholder="Description1" id="description">
+                    <input type="text" class="form-control" placeholder="Description1" name="description" id="description">
                 </div>
                 <br>
             </div>
@@ -95,7 +95,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle" type="button" id="mealSpecification" data-toggle="dropdown" aria-expanded="true">
+                                <button class="btn btn-default dropdown-toggle" type="button" name="mealSpecification" id="mealSpecification" data-toggle="dropdown" aria-expanded="true">
                                     Meal Specification
                                     <span class="caret"></span>
                                 </button>
@@ -114,11 +114,12 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-md-3">
-                            <label for="deliverymethod">Delivery Method</label>
+                            <label for="deliveryMethod">Delivery Method</label>
                         </div>
                         <div class="col-md-3">
                             <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle" type="button" id="deliverymethod" data-toggle="dropdown" aria-expanded="true">
+                                <button class="btn btn-default dropdown-toggle" type="button" name="deliveryMethod" id="deliveryMethod"
+                                        data-toggle="dropdown" aria-expanded="true">
                                     Delivery Method
                                     <span class="caret"></span>
                                 </button>
@@ -134,7 +135,7 @@
                 <br>
                 <div class="form-group">
                     <label for="price">Price</label>
-                    <input type="text" class="form-control" placeholder="Per Person in $" id="price">
+                    <input type="text" class="form-control" placeholder="Per Person in $" name="price" id="price">
                 </div>
                 </br>
                 <input type='submit' class="btn btn-primary" value='Submit' onClick="window.location.reload(true)"/>
