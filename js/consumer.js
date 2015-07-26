@@ -16,7 +16,7 @@ jQuery(
                     'data-target=".social-signup-modal">Sign Up</a></li>');
             } else {
                 // Show user ID in the navbar
-                $("#userNameOrLogin").prepend('<li id="userId">'+ data["user_id"] +'</li>');
+                $("#userNameOrLogin").prepend('<li id="userId"> Signed in as '+ data["user_id"] +'</li>');
 
                 $('#firstName').val("dummy first name");
                 $('#lastName').val("dummy last name");
