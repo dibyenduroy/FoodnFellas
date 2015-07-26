@@ -23,7 +23,7 @@ include 'foodnfellasDBConnection.php';
 // Get the entries from Provider_address matching the city.
 $sql1 = "SELECT `pa.user_id`, `pa.provider_food_id` FROM `Provider_address`  as pa JOIN `Provider_food` as pf 
                                                 ON `pa.provider_food_id` = `pf.provider_food_id` 
-                                                WHERE `city` = '".$city."';";
+                                                WHERE `city` = '".$city."';"; 
 //                                                AND pf.min_people <= ".$num_people." 
 //                                                AND pf.max_people >= ".$num_people."
 //                                                AND pf.price_per_person BETWEEN ".$price_low." AND ".$price_high." 
@@ -32,6 +32,7 @@ $sql1 = "SELECT `pa.user_id`, `pa.provider_food_id` FROM `Provider_address`  as 
 //                                                AND pf.delivery_method = ".$delivery_method." 
 
 $result1 = $conn->query($sql1);
+echo $result1;
 if ($result1->num_rows > 0) {	
 	// Now, return the meal entries. 
 	while($row = $result1->fetch_assoc()) {
