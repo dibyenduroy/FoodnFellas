@@ -35,7 +35,7 @@ if ($conn->connect_error) {
 }
 
 // Get the entries from Provider_address matching the city.
-$sql1 = "SELECT pa.user_id, pa.provider_food_id FROM Provider_address  as pa JOIN Provider_food as pf 
+$sql1 = "SELECT pa.user_id as pui, pa.provider_food_id as pfi FROM Provider_address  as pa JOIN Provider_food as pf 
                                                 ON pa.provider_food_id = pf.provider_food_id
                                                 WHERE pa.city = '".$city."';"; 
 //                                                AND pf.min_people <= ".$num_people." 
@@ -53,7 +53,9 @@ $result1 = $conn->query($sql1);
 if ($result1->num_rows > 0) {	
 	// Now, return the meal entries. 
 	while($row = $result1->fetch_assoc()) {
-			$provider_id = $row["pa.provider_food_id"];
+			$provider_id = $row["pfi"];
+      echo "Printin provider id      :     ";
+      echo "$provider_id";
     	$sql2 = "SELECT m.dish_name, m.meal_description, m.meal_id, p.about_me, p.awards_won, p.kitchen_photo, p.food_album, p.cuisine_i_cook
     								FROM  Meal as m JOIN Provider as p 
     								ON m.user_id = p.user_id
