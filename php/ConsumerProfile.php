@@ -26,7 +26,7 @@ function getConsumerphoto() {
         echo "Error Connecting to Database";
     }
 
-    $queryUserInfo = "SELECT `user_id`,`photo`,`about_me`,`my_fav_dish`,`phone_number`,`f_name`,`l_name`,`email` FROM `user`";
+    $queryUserInfo = "SELECT `user_id`,`photo`,`about_me`,`my_fav_dish`,`phone_number`,`f_name`,`l_name`,`email` FROM `user`;";
 
     $array_user_info = Array();
     $index = 0;
