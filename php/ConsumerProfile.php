@@ -19,15 +19,17 @@ function getConsumerphoto() {
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
+
     // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
         echo "Error Connecting to Database";
     }
-     $fetch_photo = "SELECT user_id,photo,about_me,my_fav_dish,phone_number,f_name,l_name,email  FROM user where user_id = '$session_user_id' ";
-     $result = $conn->query($fetch_photo);
+
+    $fetch_photo = "SELECT user_id,photo,about_me,my_fav_dish,phone_number,f_name,l_name,email  FROM user where user_id = '$session_user_id' ";
+    $result = $conn->query($fetch_photo);
     $array_user_address = mysql_fetch_row($result)
-    mysql_data_seek($result2, 0);
+    mysql_data_seek($result, 0);
 
      if ($result->num_rows > 0) {
         // output data of each row
