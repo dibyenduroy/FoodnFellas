@@ -2,56 +2,37 @@
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
 
-
 $return = $_POST;
-$id=5;
-$provider_food_id=4; // Meal Table
 
-//@ The provider_food_id needs to be integrated into Provider_food and Meal tables at the same time
-$photo="s3 url";
-$dishName = $return["dishName"];   // Meal table
-$description = $return["description"]; // Meal table
-////////////////////////////////////////////////////////////////
-$price = $return["price"]; // Provider_Food table
-$cuisineType = "Bengali" ;//$return["cuisineType"]; // Provider_Food
-$mealSpec ="Veg" ; //$return["mealSpecification"]; // Provider_Food (meal_type)
-$deliveryMethod ="Pick up" ; //$return["deliveryMethod"]; // Provider_food
-
-
-
-/*echo $dishName;
-echo $description;
-echo $price;
-echo $cuisineType;
-echo $mealSpec;
-echo $deliveryMethod ;*/
-
-
-
+$provider_food_id = $return["food_provider_id"]; 
 
 include 'foodnfellasDBConnection.php';
 
-$sql1 = "insert into foodnfellas.Meal (user_id,provider_food_id,dish_name,meal_description,photo) values (".$id.",".$provider_food_id.",'".$dishName."',"."'".$description."', '".$photo."')";
+$sql1 = "SELECT u.f_name, u.l_name, u.photo, p.about_me, p.kitchen_photo, p.food_album, p.awards_won, p.cuisines_i_cook, m.dish_name, 
+                m.meal_description, pf.price_per_person, pf.delivery_method, pf.meal_type, pf.cuisine_type
+                pf.available_start, pf.available_end, pa.street_1, pa.city, pa.state, pa.zip_code, pa.country   
+                                 FROM Meal as m 
+                                 JOIN Provider_address as pa                            
+                                 ON m.provider_food_id = pa.provider_food_id
+                                 JOIN Provider_food as pf 
+                                 ON pa.provider_food_id = pf.provider_food_id
+                                 JOIN Provider as p
+                                 ON pf.user_id = p.user_id
+                                 JOIN User as u 
+                                 ON p.user_id = u.user_id
+                                 WHERE pf.provider_food_id = ".$provider_food_id.";";
 
-$sql2 = "insert into foodnfellas.Provider_food (user_id,price_per_person,meal_type,delivery_method) values(".$id.",".$price.","."'".$mealSpec."', ' ".$deliveryMethod."')";
-
-//echo $sql1;
-
-//echo $sql2;
-
-
-//echo $sql1;
-if (($conn->query($sql1) === TRUE)  and ($conn->query($sql2) === TRUE) ) {
-  $return["Status"] = "Success";
-  echo "Meals Added Sucessfully";
-}else {
-  
-  echo "There is some issue while adding meals.";
+$result1 = $conn->query($sql1);
+if ($result1->num_rows > 0) {
+	$array_selected_search = mysql_fetch_row($result1); 
+} else {
+	echo "0 results";
 }
 
+// At this point, we have all the information for the search query.
+echo json_encode($array_selected_search);
+
 $conn->close(); 
-
-
 
 }
 
