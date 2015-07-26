@@ -47,9 +47,8 @@ $sql1 = "SELECT pa.user_id, pa.provider_food_id FROM Provider_address  as pa JOI
 //if (($conn->query($sql1) === TRUE)) {
 $result1 = $conn->query($sql1);
   echo "$sql1";
-  echo " ------ Hi   1";
-  echo "$conn";
-  echo " ----- Hi   2";
+  echo " ------ Hi  akdjsaklj 1";
+  echo " ----- Hi   2 going into if ";
 
 if ($result1->num_rows > 0) {	
   echo "I am inside result if ";
