@@ -24,7 +24,7 @@ if ($conn->connect_error) {
     echo "Error Connecting to Database";
 }
 
-$fetch_provider_info = "select u.user_id as user_id,u.photo as photo,p.about_me as about_me,p.kitchen_photo as kitchen_photo,p.food_album as food_album,p.awards_won as awards_won,p.cuisine_i_cook as cuisine_i_cook FROM Provider p , user u where p.user_id=u.user_id and u.user_id = '4';";
+$fetch_provider_info = "select u.user_id as user_id,u.photo as photo,p.about_me as about_me,p.kitchen_photo as kitchen_photo,p.food_album as food_album,p.awards_won as awards_won,p.cuisine_i_cook as cuisine_i_cook FROM Provider p , user u where p.user_id=u.user_id and u.user_id = '5';";
 $result = $conn->query($fetch_provider_info);
 //$array_user_info = $result->fetch_assoc();
 //mysql_data_seek($result, 0);
@@ -57,7 +57,7 @@ $index = 0;
     echo "0 results";
 }
 print_r($array_info_address);
-$fetch_provider_address = "SELECT address_id, country, state, zip_code, city, street_1, street_2, house_no, address_name  FROM Provider_address where user_id = '4';";
+$fetch_provider_address = "SELECT address_id, country, state, zip_code, city, street_1, street_2, house_no, address_name  FROM Provider_address where user_id = '5';";
 $result2 = $conn->query($fetch_provider_address);
 //$array_user_address = mysql_fetch_row($result2)
 //mysql_data_seek($result2, 0);
