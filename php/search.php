@@ -6,8 +6,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 $return = $_POST;
 
 $user_id = $return["user_id"];
+$user_id = 2;
 // This will be used in Provider_address table.
 $city = $return["city"];
+$city = "Sunnyvale";
 
 // These fields will be used in Provider_food table.
 $num_people = $return["num_people"];
@@ -35,7 +37,7 @@ if ($conn->connect_error) {
 // Get the entries from Provider_address matching the city.
 $sql1 = "SELECT `pa.user_id`, `pa.provider_food_id` FROM `Provider_address`  as pa JOIN `Provider_food` as pf 
                                                 ON `pa.provider_food_id` = `pf.provider_food_id` 
-                                                WHERE `pa.city` = '".$city."' ;";
+                                                WHERE `pa.city` = '".$city."';"; 
 //                                                AND pf.min_people <= ".$num_people." 
 //                                                AND pf.max_people >= ".$num_people."
 //                                                AND pf.price_per_person BETWEEN ".$price_low." AND ".$price_high." 
@@ -48,7 +50,6 @@ $result1 = $conn->query($sql1);
   echo " ------ Hi   1";
   echo "$conn";
   echo " ----- Hi   2";
-  $result1->num_rows 
 
 if ($result1->num_rows > 0) {	
   echo "I am inside result if ";
