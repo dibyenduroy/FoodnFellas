@@ -44,8 +44,9 @@ $sql1 = "SELECT `pa.user_id`, `pa.provider_food_id` FROM `Provider_address`  as 
 //                                                AND pf.delivery_method = ".$delivery_method." 
 //if (($conn->query($sql1) === TRUE)) {
 $result1 = $conn->query($sql1);
-  echo "$sql1";
-  echo "HI";
+  echo ".$sql1 "."<br>";
+  echo "conn is $conn "."<br>";
+  echo "HI and result = $result1 "."<br>";
 
 if ($result1->num_rows > 0) {	
   echo "I am inside result if ";
