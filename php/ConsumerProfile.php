@@ -41,7 +41,7 @@ function getConsumerphoto() {
         //$array_user_info = array_merge($array_user_info, $row);
         }
         #print_r($array_user_info);
-        echo json_encode($array_user_info);
+        echo $_GET['callback'].'('.json_encode($array_user_info).');';
     }
 
     //$array_user_address = mysql_fetch_row($result)
