@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 	include 'foodnfellasDBConnection.php';
 
 	$sql1 = "SELECT u.f_name, u.l_name, u.photo, u.about_me, p.kitchen_photo, p.awards_won, p.cuisine_i_cook 
-	                FROM User as u 
+	                FROM user as u 
 	                JOIN Provider as p 
 	                ON u.user_id = p.user_id
 	                WHERE u.user_id = '".$user_id."';";
