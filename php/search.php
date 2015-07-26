@@ -60,12 +60,15 @@ if ($result1->num_rows > 0) {
     								FROM  Meal as m JOIN Provider as p 
     								ON m.user_id = p.user_id
 									WHERE  m.provider_food_id = '".$provider_id."';";
+
 			$result2 = $conn->query($sql2);
       //echo "$sql2";
-			if ($result2->num_rows > 0) {
-				$array_meal_search_row = mysql_fetch_row($result2);
-        echo "I am here.. or am ?";
-        print_r("$array_meal_search_row");
+      if ($result2->num_rows > 0) {
+				while($array_meal_search_row = $result2->fetch_assoc()) {
+          echo "I am here.. or am ?";
+          print_r($array_meal_search_row);
+        }
+
 			}
 
 			//$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
