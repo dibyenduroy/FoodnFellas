@@ -16,9 +16,9 @@ jQuery(
                     'data-target=".social-signup-modal">Sign Up</a></li>');
             } else {
                 // Show user ID in the navbar
-                $("#userNameOrLogin").prepend('<button type="button" class="btn btn-default">'+
-                    '<span class="glyphicon glyphicon-user" aria-hidden="true"></span> Star'+
-                    '</button>');
+                $("#userNameOrLogin").prepend('<li id="logout-btn"><button type="button" class="btn btn-default">'+
+                    '<span class="glyphicon glyphicon-user" aria-hidden="true"></span> Logout'+
+                    '</button></li>');
                 $("#userNameOrLogin").prepend('<li id="userId"> Signed in as '+ data["user_id"] +'</li>');
 
                 //add logout btn
