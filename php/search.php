@@ -69,7 +69,7 @@ if ($result1->num_rows > 0) {
 
 			}
 
-			//$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
+			$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
   }
 } else {
     echo "0 results";
@@ -78,7 +78,7 @@ if ($result1->num_rows > 0) {
  
 
 // At this point, we have all the information for the search query.
-//echo json_encode($array_meal_search_all);
+echo json_encode($array_meal_search_all);
 
 
 $conn->close();
