@@ -11,7 +11,9 @@ jQuery(
 
             //if (!$('#user_id')) {
             if (true) {
-                $("#userNameOrLogin ul").append('<li><a href="/signup" data-toggle="modal" '+
+                $("#userNameOrLogin").prepend('<li><a href="/login" data-toggle="modal" '+
+                    'data-target=".social-login-modal">Login</a></li>');
+                $("#userNameOrLogin").prepend('<li><a href="/signup" data-toggle="modal" '+
                     'data-target=".social-signup-modal">Sign Up</a></li>');
             }
             $('#firstName').val("dummy first name");
