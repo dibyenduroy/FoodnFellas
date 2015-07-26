@@ -38,8 +38,7 @@ if ($result1->num_rows > 0) {
 	while($row = $result1->fetch_assoc()) {
 			$provider_id = $row["pa.provider_food_id"];
 
-
-    		$sql2 = "SELECT m.dish_name, m.meal_description, m.meal_id, p.about_me, p.awards_won, p.kitchen_photo, p.food_album, p.cuisine_i_cook
+    	$sql2 = "SELECT m.dish_name, m.meal_description, m.meal_id, p.about_me, p.awards_won, p.kitchen_photo, p.food_album, p.cuisine_i_cook
     								FROM  Meal as m JOIN Provider as p 
     								ON m.user_id = p.user_id
 									WHERE  m.provider_food_id = ".$provider_id.";";
