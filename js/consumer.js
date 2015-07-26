@@ -5,12 +5,12 @@ jQuery(
         crossDomain: true,
         dataType: 'jsonp',                //data format
         type: 'GET',
-        success: function(data)          //on recieve of reply
+        success: function(data)
         {
             console.log(JSON.stringify(data));
             console.log('success');
             //$('.results').html(JSON.stringify(data));
-            $('#firstName').val(JSON.stringify(data));
+            //$('#firstName').val(JSON.stringify(data));
         },
         error: function(xhr, status, error) {
             var err = eval("(" + xhr.responseText + ")");
