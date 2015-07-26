@@ -32,6 +32,7 @@ $sql1 = "SELECT `pa.user_id`, `pa.provider_food_id` FROM `Provider_address`  as 
 //                                                AND pf.delivery_method = ".$delivery_method." 
 
 $result1 = $conn->query($sql1);
+echo "HI";
 echo $result1;
 if ($result1->num_rows > 0) {	
 	// Now, return the meal entries. 
