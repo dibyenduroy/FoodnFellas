@@ -21,10 +21,9 @@ $delivery_method = $return["delivery_method"];
 include 'foodnfellasDBConnection.php';
 
 // Get the entries from Provider_address matching the city.
-$sql1 = "SELECT pa.user_id, pa.provider_food_id FROM Provider_address  as pa JOIN Provider_food as pf 
-                                                ON pa.provider_food_id = pf.provider_food_id 
-                                                WHERE city = ".$city."
-       											                    AND pf.provider_food_id = ".$loop_provider_food_id.";";
+$sql1 = "SELECT `pa.user_id`, `pa.provider_food_id` FROM `Provider_address`  as pa JOIN `Provider_food` as pf 
+                                                ON `pa.provider_food_id` = `pf.provider_food_id` 
+                                                WHERE `city` = '".$city."';";
 //                                                AND pf.min_people <= ".$num_people." 
 //                                                AND pf.max_people >= ".$num_people."
 //                                                AND pf.price_per_person BETWEEN ".$price_low." AND ".$price_high." 
@@ -55,7 +54,7 @@ if ($result1->num_rows > 0) {
 }
 
 // At this point, we have all the information for the search query.
-echo json_encode($array_meal_search_all);
+//echo json_encode($array_meal_search_all);
 
 
 $conn->close();
