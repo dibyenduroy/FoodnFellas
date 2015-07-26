@@ -42,7 +42,7 @@ $index = 0;
         $s3_food_photo=$row["food_album"];
         $s3_provider_photo=$row["photo"];
 
-    echo " The User ID is  : ".$row["user_id"] ."<br>";
+ /*   echo " The User ID is  : ".$row["user_id"] ."<br>";
     echo " About Me : ".$row["about_me"] ."<br>";
     echo " Cuisines I cook : ".$row["cuisine_i_cook"] ."<br>";
     echo " Awards won : ".$row["awards_won"] ."<br><br>";
@@ -52,6 +52,7 @@ $index = 0;
     echo " Provider Image : <img  float:left' SRC='$s3_provider_photo'> <br>" ;
     echo " Provider KItchen : <img  float:left' SRC='$s3_kitchen_photo'> <br>" ;
     echo " Food Served Today :<img  SRC='$s3_food_photo'> <br>" ;
+    */
     }
 } else {    
     echo "0 results";
@@ -72,7 +73,7 @@ if ($result2->num_rows > 0) {
 
     $array_info_address[$index] = $row2;
     $index++;
-    echo "I am insdie while 2           -";
+   /* echo "I am insdie while 2           -";
     echo " The Provider Address Details are  :" ."<br>";
     echo " Address_ID  : ".$row2["address_id"] ."<br>";
     echo " Country : ".$row2["country"] ."<br>";
@@ -82,6 +83,7 @@ if ($result2->num_rows > 0) {
     echo " Street2 : ".$row2["street_2"] ."<br>";
     echo " house_no : ".$row2["house_no"] ."<br>";
     echo " address_name : ".$row2["address_name"] ."<br>";
+    */
     }
 } else {
     echo "0 results";
