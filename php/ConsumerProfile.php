@@ -26,7 +26,7 @@ function getConsumerphoto() {
         echo "Error Connecting to Database";
     }
 
-    $queryUserInfo = "SELECT user_id, photo,about_me, my_fav_dish, phone_number, f_name, l_name,email FROM user WHERE user_id = '".$session_user_id."';"; 
+    $queryUserInfo = "SELECT user_id, photo,about_me, my_fav_dish, phone_number, f_name, l_name,email FROM user WHERE user_id = '4';"; 
     echo "$queryUserInfo";
     $result1 = $conn->query($queryUserInfo);
 
@@ -42,6 +42,7 @@ function getConsumerphoto() {
             $index++;
         //$array_user_info = array_merge($array_user_info, $row);
         }
+        print_r($array_user_info);
     }
 
     //$array_user_address = mysql_fetch_row($result)
