@@ -7,7 +7,7 @@
 
 <body>
 
-<h4> Order Transaction Page <h>   
+<h4> Search Page <h>   
 <form action="search.php" method='post' enctype="multipart/form-data">
 
 
