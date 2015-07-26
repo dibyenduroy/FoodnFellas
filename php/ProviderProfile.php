@@ -32,12 +32,12 @@ $array_info_address = Array();
 $index = 0;
 
  if ($result->num_rows > 0) {
-    echo "i am inside if               -";
+    //echo "i am inside if               -";
     // output data of each row
     while($row = $result->fetch_assoc()) {
         $array_info_address[$index] = $row;
         $index++;
-        echo "I am inside while             -;";
+        //echo "I am inside while             -;";
         $s3_kitchen_photo=$row["kitchen_photo"];
         $s3_food_photo=$row["food_album"];
         $s3_provider_photo=$row["photo"];
@@ -67,7 +67,7 @@ $result2 = $conn->query($fetch_provider_address);
 
 
 if ($result2->num_rows > 0) {
-    echo "I am inside if 2            -";
+//echo "I am inside if 2            -";
   // output data of each row
   while($row2 = $result2->fetch_assoc()) {
 
@@ -88,7 +88,7 @@ if ($result2->num_rows > 0) {
 } else {
     echo "0 results";
 }
-print_r($array_info_address);
+//print_r($array_info_address);
 //$all_user_info = array_merge($array_user_info, $array_user_address);
 echo $_GET['callback'].'('.json_encode($array_info_address).');';
 }
