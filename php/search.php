@@ -61,13 +61,15 @@ if ($result1->num_rows > 0) {
 									  WHERE  m.provider_food_id = '".$provider_id."';";
       echo "$sql2";
       $array_meal_search_all = Array();
-      $index = ;
+      $index = 0;
 			$result2 = $conn->query($sql2);
       if ($result2->num_rows > 0) {
 				while($array_meal_search_row = $result2->fetch_assoc()) {
           echo "printin array_meal_search_row";
-          print_r($array_meal_search_row);
-          $array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
+          //print_r($array_meal_search_row);
+          $array_meal_search_all[$index] = $array_meal_search_row;
+          $index++;
+          //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
         }
 			}
       echo "printing array meal search all";
