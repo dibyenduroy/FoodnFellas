@@ -54,15 +54,13 @@ if ($result1->num_rows > 0) {
 	// Now, return the meal entries. 
 	while($row = $result1->fetch_assoc()) {
 			$provider_id = $row["pfi"];
-      //echo "Printin provider id      :     ";
-      //echo "$provider_id";
     	$sql2 = "SELECT m.dish_name, m.meal_description, m.meal_id, p.about_me, p.awards_won, p.kitchen_photo, p.food_album, p.cuisine_i_cook
-    								FROM  Meal as m JOIN Provider as p 
+    								FROM  Meal as m 
+                    JOIN Provider as p 
     								ON m.user_id = p.user_id
-									WHERE  m.provider_food_id = '".$provider_id."';";
+									  WHERE  m.provider_food_id = '".$provider_id."';";
 
 			$result2 = $conn->query($sql2);
-      //echo "$sql2";
       if ($result2->num_rows > 0) {
 				while($array_meal_search_row = $result2->fetch_assoc()) {
           echo "I am here.. or am ?";

@@ -20,11 +20,11 @@ $sql1 = "SELECT u.f_name, u.l_name, u.photo, p.about_me, p.kitchen_photo, p.food
                                  ON pf.user_id = p.user_id
                                  JOIN User as u 
                                  ON p.user_id = u.user_id
-                                 WHERE pf.provider_food_id = ".$provider_food_id.";";
+                                 WHERE pf.provider_food_id = '".$provider_food_id."';";
 
 $result1 = $conn->query($sql1);
 if ($result1->num_rows > 0) {
-	$array_selected_search = mysql_fetch_row($result1); 
+	$array_selected_search = $result1->fetch_assoc(); 
 } else {
 	echo "0 results";
 }

@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 	                FROM User as u 
 	                JOIN Provider as p 
 	                ON u.user_id = p.user_id
-	                WHERE u.user_id = ".$user_id.";";
+	                WHERE u.user_id = '".$user_id."';";
 
 	$result1 = $conn->query($sql1);
 	if ($result1->num_rows > 0) {
@@ -26,12 +26,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
                                  ON m.user_id = pf.user_id
                                  JOIN Provider as p
                                  ON pf.user_id = p.user_id
-                                 WHERE m.user_id = ".$user_id.";";
+                                 WHERE m.user_id = '".$user_id."';";
 
 	$result2 = $conn->query($sql2);
 	if ($result2->num_rows > 0) {
 		while ($row = $result2->fetch_assoc()) {
-			$array_row = mysql_fetch_row($result2);
+			$array_row = $result2->fetch_assoc();
 		} 
 		$array_repeated_results = array_merge($array_repeated_results, $array_row);
 	} else {
