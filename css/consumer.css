@@ -14,6 +14,10 @@ body {
     color: white;
 }
 
+#userId {
+    color: black;
+    font-size: large;
+}
 
 .portfolio-item {
     margin-bottom: 25px;
