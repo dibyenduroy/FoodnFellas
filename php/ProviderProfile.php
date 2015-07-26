@@ -35,7 +35,7 @@ $index = 0;
     echo "i am inside if               -";
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        $array_info_address[$index] = $row2;
+        $array_info_address[$index] = $row;
         $index++;
         echo "I am inside while             -;";
         $s3_kitchen_photo=$row["kitchen_photo"];
