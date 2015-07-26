@@ -1,8 +1,8 @@
 <?php
-//
-
 if (is_ajax()) {
+  echo "INSIDE IS AJAX";
   if (isset($_POST["action"]) && !empty($_POST["action"])) { //Checks if action value exists
+    echo "INSIDE POST ACTION";
     $action = $_POST["action"];
     switch($action) { //Switch case for value of action
       case "test": test_function(); break;
