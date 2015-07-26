@@ -1,8 +1,11 @@
 <?php
+$_SERVER['REQUEST_METHOD'] = "POST";
+
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
 	$return = $_POST;
 	$user_id = $return["user_id"];
+	$user_id = 5;
 
 	include 'foodnfellasDBConnection.php';
 
