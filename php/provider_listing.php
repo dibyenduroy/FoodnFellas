@@ -46,7 +46,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 	}
 
 	$provider_listings = array_merge($array_unique_result, $array_repeated_results);
-	echo "  printing provider listings   ";
+	echo "  printing provider listings    ";
 	print_r(provider_listings);
 
 	// At this point, we have all the information for the search query.
