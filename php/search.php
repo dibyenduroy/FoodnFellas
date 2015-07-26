@@ -60,16 +60,18 @@ if ($result1->num_rows > 0) {
     								ON m.user_id = p.user_id
 									  WHERE  m.provider_food_id = '".$provider_id."';";
       echo "$sql2";
+      $array_meal_search_all = Array();
+      $index = ;
 			$result2 = $conn->query($sql2);
       if ($result2->num_rows > 0) {
 				while($array_meal_search_row = $result2->fetch_assoc()) {
-          echo "I am here.. or am ?";
+          echo "printin array_meal_search_row";
           print_r($array_meal_search_row);
+          $array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
         }
-
 			}
-
-			$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
+      echo "printing array meal search all";
+      print_r($array_meal_search_all);
   }
 } else {
     echo "0 results";
@@ -78,7 +80,7 @@ if ($result1->num_rows > 0) {
  
 
 // At this point, we have all the information for the search query.
-echo "I am printing json array : -------------- ---------------"
+echo "I am printing json array : -------------- ---------------";
 echo json_encode($array_meal_search_all);
 
 
