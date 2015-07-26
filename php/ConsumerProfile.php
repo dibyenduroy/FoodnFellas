@@ -30,7 +30,7 @@ function getConsumerphoto() {
 
     $array_user_info = Array();
     if ($result = $conn->query($queryUserInfo)){
-        $array_user_info = $result->fetch_assoc();
+        $array_user_info = $result->fetch_array();
         //$array_user_info = array_merge($array_user_info, $row);
     }
 
