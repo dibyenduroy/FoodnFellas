@@ -7,18 +7,20 @@ jQuery(
         type: 'GET',
         success: function(data)
         {
+            var data = data[0];
             $('#firstName').val("dummy first name");
             $('#lastName').val("dummy last name");
-            $('#aboutMe').val(data[0]['about_me']);
-            $('#favoriteDish').val(data[0]['my_fav_dish']);
+            $('#aboutMe').val(data['about_me']);
+            $('#favoriteDish').val(data['my_fav_dish']);
             $('#email').val("dummy email");
-            $('#phoneNumber').val(data[0]['phone_number']);
+            $('#phoneNumber').val(data['phone_number']);
 
-            if (data[0]['photo']) {
+            if (data['photo']) {
                 //replace the photo
-                $('#profile_image').src = data[0]['photo'];
-                $('#profile_image').style.height = '200px';
-                $('#profile_image').style.width = '200px';
+                var image = $('#profile_image')[0];
+                image.src = data[0]['photo'];
+                image.style.height = '200px';
+                image.style.width = '200px';
             }
         },
         error: function(xhr, status, error) {
