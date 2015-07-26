@@ -30,7 +30,6 @@ function getConsumerphoto() {
     echo "$queryUserInfo";
     $result1 = $conn->query($queryUserInfo);
 
-
     $array_user_info = Array();
     $index = 0;
 
@@ -38,16 +37,11 @@ function getConsumerphoto() {
         while ($row = $result1->fetch_assoc()){
             $array_user_info[$index] = $row;
             $index++;
-        //$array_user_info = array_merge($array_user_info, $row);
         }
-        print_r($array_user_info);
+        // wrap the data as with the callback
+        echo $_GET['callback'].'('.json_encode($array_user_info).');';
     }
 
-    //$array_user_address = mysql_fetch_row($result)
-    //mysql_data_seek($result, 0);
-
-    // wrap the data as with the callback
-    //echo $_GET['callback'].'('.json_encode($array_user_info).');';
     $conn->close();
 }
 ?>
