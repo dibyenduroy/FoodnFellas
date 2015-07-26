@@ -18,7 +18,7 @@ jQuery(
             if (data['photo']) {
                 //replace the photo
                 var image = $('#profile_image')[0];
-                image.src = data[0]['photo'];
+                image.src = data['photo'];
                 image.style.height = '200px';
                 image.style.width = '200px';
             }
