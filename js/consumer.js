@@ -5,8 +5,9 @@ jQuery(
         crossDomain: true,
         dataType: 'jsonp',                //data format
         type: 'GET',
-        success: function()          //on recieve of reply
+        success: function(data)          //on recieve of reply
         {
+            console.log(JSON.stringify(data))
             console.log('success');
         },
         error: function(xhr, status, error) {

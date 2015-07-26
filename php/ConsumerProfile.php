@@ -1,5 +1,8 @@
 <?php
-header('content-type: application/javascript; charset=utf-8');
+header('content-type: text/javascript;');
 $array_user_address = array(1,2,3,4);
-echo $_GET['callback'].'('.json_encode($array_user_address).');';
+
+// wrap the data as with the callback
+$callback = isset($_GET["callback"]) ? $_GET["callback"] : "alert";
+echo $callback."(".$array_user_address.");";
 ?>
