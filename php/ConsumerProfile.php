@@ -35,9 +35,7 @@ function getConsumerphoto() {
     $index = 0;
 
     if ($result1->num_rows > 0) {  
-        echo "inside if      "; 
         while ($row = $result1->fetch_assoc()){
-            echo "inside while         ----";
             $array_user_info[$index] = $row;
             $index++;
         //$array_user_info = array_merge($array_user_info, $row);
@@ -49,7 +47,7 @@ function getConsumerphoto() {
     //mysql_data_seek($result, 0);
 
     // wrap the data as with the callback
-    echo $_GET['callback'].'('.json_encode($array_user_info).');';
+    //echo $_GET['callback'].'('.json_encode($array_user_info).');';
     $conn->close();
 }
 ?>
