@@ -47,20 +47,19 @@ $sql1 = "SELECT pa.user_id, pa.provider_food_id FROM Provider_address  as pa JOI
 //if (($conn->query($sql1) === TRUE)) {
 $result1 = $conn->query($sql1);
   echo "$sql1";
-  echo " ------ Hi  akdjsaklj 1";
-  echo " ----- Hi   2 going into if ";
+  echo "------------------- ------------ ----------- -------- ";
+
 
 if ($result1->num_rows > 0) {	
-  echo "I am inside result if ";
 	// Now, return the meal entries. 
 	while($row = $result1->fetch_assoc()) {
-      echo "I am inside result while ";
 			$provider_id = $row["pa.provider_food_id"];
     	$sql2 = "SELECT m.dish_name, m.meal_description, m.meal_id, p.about_me, p.awards_won, p.kitchen_photo, p.food_album, p.cuisine_i_cook
     								FROM  Meal as m JOIN Provider as p 
     								ON m.user_id = p.user_id
-									WHERE  m.provider_food_id = ".$provider_id.";";
+									WHERE  m.provider_food_id = '".$provider_id."';";
 			$result2 = $conn->query($sql2);
+      echo "$sql2";
 			if ($result2->num_rows > 0) {
 				$array_meal_search_row = mysql_fetch_row($result2);
 			}
