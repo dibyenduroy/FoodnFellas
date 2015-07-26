@@ -1,6 +1,19 @@
 <?php
-header('content-type: text/javascript;');
-$array_user_address = array(1,2,3,4);
 
-// wrap the data as with the callback
-echo $_GET['callback'].'('.json_encode($array_user_address).');';
+session_start();
+$_SESSION["user_id"] = $_GET["userid"];
+#$session_user_id=$_SESSION["user_id"];
+$session_user_id=4;
+
+include('image_check.php');
+header('Cache-Control: no-cache');
+header('content-type: text/javascript;');
+
+getConsumerphoto();
+function getConsumerphoto() {
+    $array_user_address = array(1,2,3,4);
+
+    // wrap the data as with the callback
+    echo $_GET['callback'].'('.json_encode($array_user_address).');';
+}
+?>
