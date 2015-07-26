@@ -22,6 +22,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 	if ($result1->num_rows > 0) {
 		echo "  if1 success   ";
 		$array_unique_result = $result1->fetch_assoc();
+		echo "  sql1 result  ";
+		print_r();
 	} else {
 		echo "0 results1";
 	}
