@@ -3,7 +3,7 @@
 session_start();
 $_SESSION["user_id"] = $_GET["userid"];
 #$session_user_id=$_SESSION["user_id"];
-$session_user_id=4;
+$session_user_id = 4;
 
 include('image_check.php');
 header('Cache-Control: no-cache');
@@ -26,7 +26,7 @@ function getConsumerphoto() {
         echo "Error Connecting to Database";
     }
 
-    $queryUserInfo = "SELECT user_id, photo,about_me, my_fav_dish, phone_number, f_name, l_name,email FROM user WHERE user_id = '4';"; 
+    $queryUserInfo = "SELECT user_id, photo,about_me, my_fav_dish, phone_number, f_name, l_name,email FROM user WHERE user_id = '".$session_user_id."';"; 
     echo "$queryUserInfo";
     $result1 = $conn->query($queryUserInfo);
 
