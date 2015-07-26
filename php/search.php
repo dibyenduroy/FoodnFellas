@@ -35,7 +35,7 @@ if ($conn->connect_error) {
 // Get the entries from Provider_address matching the city.
 $sql1 = "SELECT `pa.user_id`, `pa.provider_food_id` FROM `Provider_address`  as pa JOIN `Provider_food` as pf 
                                                 ON `pa.provider_food_id` = `pf.provider_food_id` 
-                                                WHERE `pa.city` = '".$city."';"; 
+                                                WHERE `pa.city` = '".$city."'";
 //                                                AND pf.min_people <= ".$num_people." 
 //                                                AND pf.max_people >= ".$num_people."
 //                                                AND pf.price_per_person BETWEEN ".$price_low." AND ".$price_high." 
@@ -44,9 +44,11 @@ $sql1 = "SELECT `pa.user_id`, `pa.provider_food_id` FROM `Provider_address`  as 
 //                                                AND pf.delivery_method = ".$delivery_method." 
 //if (($conn->query($sql1) === TRUE)) {
 $result1 = $conn->query($sql1);
-  echo ".$sql1 "."<br>";
-  echo "conn is $conn "."<br>";
-  echo "HI and result = $result1 "."<br>";
+  echo "$sql1";
+  echo " ------ Hi   1";
+  echo "$conn";
+  echo " ----- Hi   2";
+  $result1->num_rows 
 
 if ($result1->num_rows > 0) {	
   echo "I am inside result if ";
