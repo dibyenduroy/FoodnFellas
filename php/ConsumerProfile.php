@@ -11,7 +11,7 @@ header('content-type: text/javascript;');
 
 getConsumerphoto();
 function getConsumerphoto() {
-    $array_user_address = array(1,2,3,4);
+    //$array_user_address = array(1,2,3,4);
     $servername = "fm1s2t7e010rjki.cnn0dbzvr04c.us-west-2.rds.amazonaws.com";
     $username = "fnfsandbox";
     $password = "greatfood123";
@@ -25,6 +25,18 @@ function getConsumerphoto() {
         die("Connection failed: " . $conn->connect_error);
         echo "Error Connecting to Database";
     }
+
+    $queryUserInfo = "SELECT user_id,photo,about_me,my_fav_dish,phone_number,f_name,l_name,email  FROM user where user_id = '$session_user_id' ";
+
+    $array_user_info = Array();
+    if ($result = $conn->query($queryUserInfo)){
+        while( $row = $result->fetch_array()){
+            $array_user_info[] = $row;
+        }
+    }
+
+    //$array_user_address = mysql_fetch_row($result)
+    //mysql_data_seek($result, 0);
 
     // wrap the data as with the callback
     echo $_GET['callback'].'('.json_encode($array_user_address).');';
