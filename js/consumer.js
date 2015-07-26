@@ -8,6 +8,12 @@ jQuery(
         success: function(data)
         {
             var data = data[0];
+
+            //if (!$('#user_id')) {
+            if (true) {
+                $("#userNameOrLogin ul").append('<li><a href="/signup" data-toggle="modal" '+
+                    'data-target=".social-signup-modal">Sign Up</a></li>');
+            }
             $('#firstName').val("dummy first name");
             $('#lastName').val("dummy last name");
             $('#aboutMe').val(data['about_me']);
