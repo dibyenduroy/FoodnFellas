@@ -26,12 +26,12 @@ function getConsumerphoto() {
         echo "Error Connecting to Database";
     }
 
-    $queryUserInfo = "SELECT `user_id`,`photo`,`about_me`,`my_fav_dish`,`phone_number`,`f_name`,`l_name`,`email` FROM `user` where `user_id` = 4 ";
+    $queryUserInfo = "SELECT `user_id`,`photo`,`about_me`,`my_fav_dish`,`phone_number`,`f_name`,`l_name`,`email` FROM `user`";
 
     $array_user_info = Array();
     $index = 0;
     while ($row = mysql_fetch_assoc($queryUserInfo)){
-        $array_user_info[index] = $row;
+        $array_user_info[$index] = $row;
         $index++;
         //$array_user_info = array_merge($array_user_info, $row);
     }
@@ -41,5 +41,6 @@ function getConsumerphoto() {
 
     // wrap the data as with the callback
     echo $_GET['callback'].'('.json_encode($array_user_info).');';
+    $conn->close();
 }
 ?>
