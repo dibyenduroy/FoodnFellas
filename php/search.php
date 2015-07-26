@@ -78,6 +78,7 @@ if ($result1->num_rows > 0) {
  
 
 // At this point, we have all the information for the search query.
+echo "I am printing json array : -------------- ---------------"
 echo json_encode($array_meal_search_all);
 
 
