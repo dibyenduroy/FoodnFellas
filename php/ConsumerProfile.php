@@ -29,8 +29,10 @@ function getConsumerphoto() {
     $queryUserInfo = "SELECT `user_id`,`photo`,`about_me`,`my_fav_dish`,`phone_number`,`f_name`,`l_name`,`email` FROM `user` where `user_id` = ".$session_user_id." ";
 
     $array_user_info = Array();
-    if ($result = $conn->query($queryUserInfo)){
-        $array_user_info = $result->fetch_array();
+    index = 0;
+    while ($row = mysql_fetch_assoc(queryUserInfo)){
+        $array_user_info[index] = $row;
+        index++;
         //$array_user_info = array_merge($array_user_info, $row);
     }
 
