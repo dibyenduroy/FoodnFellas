@@ -7,8 +7,10 @@ jQuery(
         type: 'GET',
         success: function(data)          //on recieve of reply
         {
-            console.log(JSON.stringify(data))
+            console.log(JSON.stringify(data));
             console.log('success');
+            $('.results').html(JSON.stringify(data));
+
         },
         error: function(xhr, status, error) {
             var err = eval("(" + xhr.responseText + ")");
