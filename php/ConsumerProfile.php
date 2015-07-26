@@ -26,7 +26,7 @@ function getConsumerphoto() {
         echo "Error Connecting to Database";
     }
 
-    $queryUserInfo = "SELECT user_id,photo,about_me,my_fav_dish,phone_number,f_name,l_name,email  FROM user where user_id = '$session_user_id' ";
+    $queryUserInfo = "SELECT user_id,photo,about_me,my_fav_dish,phone_number,f_name,l_name,email FROM user where user_id = ".$session_user_id." ";
 
     $array_user_info = Array();
     if ($result = $conn->query($queryUserInfo)){
