@@ -65,7 +65,7 @@ if ($result1->num_rows > 0) {
 			if ($result2->num_rows > 0) {
 				$array_meal_search_row = mysql_fetch_row($result2);
         echo "I am here.. or am ?";
-        echo "$array_meal_search_row";
+        print_r("$array_meal_search_row");
 			}
 
 			//$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
