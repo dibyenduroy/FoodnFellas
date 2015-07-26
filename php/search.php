@@ -6,10 +6,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 $return = $_POST;
 
 $user_id = $return["user_id"];
-$user_id = 2;
+//$user_id = 2;
 // This will be used in Provider_address table.
 $city = $return["city"];
-$city = "Sunnyvale";
+//$city = "Sunnyvale";
 
 // These fields will be used in Provider_food table.
 $num_people = $return["num_people"];
