@@ -73,10 +73,6 @@ if ($result2->num_rows > 0) {
     $array_info_address[$index] = $row2;
     $index++;
     echo "I am insdie while 2           -";
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";echo "<br>";
     echo " The Provider Address Details are  :" ."<br>";
     echo " Address_ID  : ".$row2["address_id"] ."<br>";
     echo " Country : ".$row2["country"] ."<br>";
@@ -90,7 +86,7 @@ if ($result2->num_rows > 0) {
 } else {
     echo "0 results";
 }
-$all_user_info = array_merge($array_user_info, $array_user_address);
-echo $_GET['callback'].'('.json_encode($array_user_address).');';
+//$all_user_info = array_merge($array_user_info, $array_user_address);
+echo $_GET['callback'].'('.json_encode($array_info_address).');';
 }
 ?>
