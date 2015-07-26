@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 		echo "  if1 success   ";
 		$array_unique_result = $result1->fetch_assoc();
 		echo "  sql1 result  ";
-		print_r();
+		print_r($array_unique_result);
 	} else {
 		echo "0 results1";
 	}
