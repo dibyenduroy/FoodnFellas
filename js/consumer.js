@@ -10,8 +10,7 @@ jQuery(
             console.log(JSON.stringify(data));
             console.log('success');
             //$('.results').html(JSON.stringify(data));
-
-            $('firstName').value = JSON.stringify(data);
+            $('#firstName').val(JSON.stringify(data));
         },
         error: function(xhr, status, error) {
             var err = eval("(" + xhr.responseText + ")");
