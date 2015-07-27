@@ -27,7 +27,7 @@ function getConsumerphoto() {
     }
 
     $queryUserInfo = "SELECT user_id, photo,about_me, my_fav_dish, phone_number, f_name, l_name,email FROM user WHERE user_id = '4';"; 
-    echo "$queryUserInfo";
+    //echo "$queryUserInfo";
     $result1 = $conn->query($queryUserInfo);
 
     $array_user_info = Array();
@@ -40,7 +40,7 @@ function getConsumerphoto() {
         }
         // wrap the data as with the callback
         echo $_GET['callback'].'('.json_encode($array_user_info).');';
-    }
+        }
 
     $conn->close();
 }
