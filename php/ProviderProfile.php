@@ -57,14 +57,11 @@ $index = 0;
 } else {    
     echo "0 results";
 }
-print_r($array_info_address);
+//print_r($array_info_address);
 $fetch_provider_address = "SELECT address_id, country, state, zip_code, city, street_1, street_2, house_no, address_name  FROM Provider_address where user_id = '5';";
 $result2 = $conn->query($fetch_provider_address);
 //$array_user_address = mysql_fetch_row($result2)
 //mysql_data_seek($result2, 0);
-
-
-
 
 if ($result2->num_rows > 0) {
 //echo "I am inside if 2            -";
