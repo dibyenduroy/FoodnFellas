@@ -1,4 +1,8 @@
 <?php
+
+header('Cache-Control: no-cache');
+header('content-type: text/javascript;');
+
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
 
@@ -76,9 +80,9 @@ if ($result1->num_rows > 0) {
     echo "The is some issue in conn->query";
 } 
  
-
 // At this point, we have all the information for the search query.
-echo json_encode($array_meal_search_all);
+// wrap the data as with the callback
+echo $_GET['callback'].'('.json_encode($array_meal_search_all).');';
 
 
 $conn->close();

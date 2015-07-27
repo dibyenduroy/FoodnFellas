@@ -1,10 +1,17 @@
 <?php
+
+// Delete this during final integration.
 $_SERVER['REQUEST_METHOD'] = "POST";
+
+header('Cache-Control: no-cache');
+header('content-type: text/javascript;');
 
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
 	$return = $_POST;
 	$user_id = $return["user_id"];
+
+	// Delete this during final integration.
 	$user_id = 5;
 
 	include 'foodnfellasDBConnection.php';
@@ -15,11 +22,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 	                ON u.user_id = p.user_id
 	                WHERE u.user_id = '".$user_id."';";
 
+    // Delete these echos during final integration.
 	echo " SQL1    ";
 	echo $sql1;
 
 	$result1 = $conn->query($sql1);
 	if ($result1->num_rows > 0) {
+		// Delete these echos and print_r during final integration.
 		echo "  if1 success   ";
 		$array_unique_result = $result1->fetch_assoc();
 		echo "  sql1 result  ";
@@ -36,11 +45,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
                                  JOIN Provider as p
                                  ON pf.user_id = p.user_id
                                  WHERE m.user_id = '".$user_id."';";
+    // Delete these echos during final integration.
     echo "  SQL2   ";
     echo sql2;
 
 	$result2 = $conn->query($sql2);
 	if ($result2->num_rows > 0) {
+		// Delete these echos and print_r during final integration.
 		echo " if2 success ";
 		while ($row = $result2->fetch_assoc()) {
 			$array_row = $result2->fetch_assoc();
@@ -52,11 +63,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 	}
 
 	$provider_listings = array_merge($array_unique_result, $array_repeated_results);
+	// Delete these echos and print_r during final integration.
 	echo "  printing provider listings    ";
-	print_r(provider_listings);
+	// print_r($provider_listings);
 
 	// At this point, we have all the information for the search query.
-	echo json_encode($provider_listings);
+	// wrap the data as with the callback
+    echo $_GET['callback'].'('.json_encode($provider_listings).');';
 
 	$conn->close();
 }
