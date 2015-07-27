@@ -50,6 +50,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
     echo "<br>"."  SQL2   ";
     echo $sql2;
 
+    $array_repeated_results = Array();
+    $index = 0;
+
 	$result2 = $conn->query($sql2);
 	if ($result2->num_rows > 0) {
 		// Delete these echos and print_r during final integration.
@@ -58,7 +61,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 			$array_row = $result2->fetch_assoc();
 			echo "<br>"."printing each repeated result";
 			print_r($array_row);
-			$array_repeated_results = array_merge($array_repeated_results, $array_row);	
+			$array_repeated_results[$index] = $array_row;
+			$index++;	
 		} 
 		
 	} else {
