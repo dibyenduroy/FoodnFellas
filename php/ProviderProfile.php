@@ -6,6 +6,8 @@ $session_user_id=4;
 
 include('image_check.php');
 header('Cache-Control: no-cache');
+header('content-type: text/javascript;');
+
 //
 
 getProviderInfo();
