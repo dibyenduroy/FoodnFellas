@@ -3,12 +3,17 @@
 header('Cache-Control: no-cache');
 header('content-type: text/javascript;');
 
+// Delete this during integration cleanup.
+$_SERVER['REQUEST_METHOD'] = "POST";
+
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
 
 $return = $_POST;
 
 $provider_food_id = $return["food_provider_id"];
+
+// Delete this hardcoding during final cleanup.
 $provider_food_id = 1; 
 
 include 'foodnfellasDBConnection.php';
