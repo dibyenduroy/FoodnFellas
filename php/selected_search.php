@@ -14,12 +14,12 @@ $return = $_POST;
 $provider_food_id = $return["food_provider_id"];
 
 // Delete this hardcoding during final cleanup.
-$provider_food_id = 1; 
+$provider_food_id = 5; 
 
 include 'foodnfellasDBConnection.php';
 
-$sql1 = "SELECT u.f_name, u.l_name, u.photo, u.about_me, p.kitchen_photo, p.food_album, p.awards_won, p.cuisines_i_cook, m.dish_name, 
-                m.meal_description, pf.price_per_person, pf.delivery_method, pf.meal_type, pf.cuisine_type
+$sql1 = "SELECT u.f_name, u.l_name, u.photo, u.about_me, p.kitchen_photo, p.food_album, p.awards_won, p.cuisine_i_cook, m.dish_name, 
+                m.meal_description, pf.price_per_person, pf.delivery_method, pf.meal_type, pf.cuisine_type,
                 pf.available_start, pf.available_end, pa.street_1, pa.city, pa.state, pa.zip_code, pa.country   
                                  FROM Meal as m 
                                  JOIN Provider_address as pa                            
