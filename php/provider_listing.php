@@ -80,7 +80,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 
 	// At this point, we have all the information for the search query.
 	// wrap the data as with the callback
-    echo $_GET['callback'].'('.json_encode($provider_listings).');';
+    echo $_GET['callback'].'('.json_encode($array_unique_result).');';
 
 	$conn->close();
 }
