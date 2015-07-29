@@ -62,14 +62,11 @@ function SignIn($email_p,$password_p,$login_type_p)
   }
 }
 
-if(isset($_POST['submit']))
-{
-  //echo "inside post submit";
-  $email_p=$_POST["email"];
-  $password_p=md5($_POST["passwd"]);
-  $login_type_p=$_POST['login_type'];
+//echo "inside post submit";
+$email_p=$_POST["email"];
+$password_p=md5($_POST["passwd"]);
+$login_type_p=$_POST['login_type'];
 
-  SignIn($email_p,$password_p,$login_type_p);
-}
+SignIn($email_p,$password_p,$login_type_p);
 
 ?>

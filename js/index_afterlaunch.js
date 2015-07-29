@@ -39,7 +39,7 @@ function signupCallBack() {
     );
 }
 
-function loginOnSubmit() {
+function loginCallBack() {
     jQuery(
         $(function () {
             $.ajax({
@@ -62,12 +62,3 @@ function loginOnSubmit() {
         })
     );
 }
-
-jQuery(
-    $('#login_btn').submit(function() {
-        loginOnSubmit();
-    })
-);
-
-
-
