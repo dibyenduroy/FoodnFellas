@@ -23,17 +23,17 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 	                WHERE u.user_id = '".$user_id."';";
 
     // Delete these echos during final integration.
-	echo " SQL1    ";
-	echo $sql1;
+	//echo " SQL1    ";
+	//echo $sql1;
 
 	$result1 = $conn->query($sql1);
 	if ($result1->num_rows > 0) {
 		// Delete these echos and print_r during final integration.
-		echo "  if1 success   ";
+	//	echo "  if1 success   ";
 		$array_unique_result = $result1->fetch_assoc();
-		echo "  sql1 result  ";
-		echo "  Printing array_unique_result  "."<br>";
-		print_r($array_unique_result);
+	//	echo "  sql1 result  ";
+	//	echo "  Printing array_unique_result  "."<br>";
+	//	print_r($array_unique_result);
 	} else {
 		echo "0 results1";
 	}
@@ -47,8 +47,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
                                  ON pf.user_id = p.user_id
                                  WHERE m.user_id = '".$user_id."';";
     // Delete these echos during final integration.
-    echo "<br>"."  SQL2   ";
-    echo $sql2;
+    //echo "<br>"."  SQL2   ";
+    //echo $sql2;
 
     $array_repeated_results = Array();
     $index = 0;
@@ -56,11 +56,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 	$result2 = $conn->query($sql2);
 	if ($result2->num_rows > 0) {
 		// Delete these echos and print_r during final integration.
-		echo "<br>"." if2 success ";
+	//	echo "<br>"." if2 success ";
 		while ($row = $result2->fetch_assoc()) {
 			$array_row = $result2->fetch_assoc();
-			echo "<br>"."printing each repeated result";
-			print_r($array_row);
+	//		echo "<br>"."printing each repeated result";
+	//		print_r($array_row);
 			$array_repeated_results[$index] = $array_row;
 			$index++;	
 		} 
@@ -69,13 +69,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 		echo "0 results2";
 	}
 
-	echo "<br>"."  Printing array_repeated_results  ";
-	print_r($array_repeated_results);
+//	echo "<br>"."  Printing array_repeated_results  ";
+//	print_r($array_repeated_results);
 
 	$provider_listings = array_merge($array_unique_result, $array_repeated_results);
 	// Delete these echos and print_r during final integration.
-	echo "<br>"."  printing provider listings    ";
-	print_r($provider_listings);
+//	echo "<br>"."  printing provider listings    ";
+//	print_r($provider_listings);
 
 	// At this point, we have all the information for the search query.
 	// wrap the data as with the callback
