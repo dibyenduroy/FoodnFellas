@@ -9,9 +9,9 @@ jQuery(
             location.href='./html/search.html?date=10_05_2015';
         });
 
-        $('#login-btn').submit(function() {
-            loginOnSubmit();
-        });
+        //$('#login-btn').submit(function() {
+        //    loginOnSubmit();
+        //});
     })
 );
 
@@ -45,7 +45,7 @@ function signupCallBack() {
     );
 }
 
-function loginOnSubmit() {
+function loginCallBack() {
     jQuery(
         $(function () {
             $.ajax({
