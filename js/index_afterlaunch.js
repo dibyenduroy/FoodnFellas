@@ -4,15 +4,15 @@ function providerBtnCallBack() {
     location.href='/html/provider.html';
 }
 
-//function redirectToHomePage() {
-//    // get the user id back from the registration.php
-//    // get the user data back from the consumer.php (see how consumer.js) does this
-//    // if the user data exists, in database
-//    // then reload index_afterlaunch.html with the
-//    //login info
-//
-//    //location.href='index_afterlaunch.html';
-//}
+jQuery(
+    $('#search-btn').submit(function(ev) {
+        ev.preventDefault(); // to stop the form from submitting
+        /* Validations go here */
+        this.submit(); // If all the validations succeeded
+        //redirect to search
+        location.href='./html/search.html?date=10_05_2015';
+    })
+);
 
 function signupCallBack() {
     jQuery(
