@@ -43,7 +43,7 @@ function loginCallBack() {
     jQuery(
         $(function () {
             $.ajax({
-                url: '../php/registration.php',   //the script to call to get data
+                url: '../php/login_v2.php',   //the script to call to get data
                 crossDomain: true,
                 dataType: 'jsonp',                //data format
                 type: 'GET',

@@ -1,8 +1,14 @@
 <?php
+echo "INSIDE LOGIN_V2 PHP";
+
 session_start();
+
+echo "AFTER SESSION START";
 
 function SignIn($email_p,$password_p,$login_type_p)
 {
+
+    echo "INSIDE SIGN IN";
   //starting the session for user profile page
   if(!empty($email_p) ) {
     include 'foodnfellasDBConnection.php';
