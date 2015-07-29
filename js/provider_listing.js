@@ -23,18 +23,36 @@ jQuery(
                 //add logout btn
 
                 // fill in the form with existing user data.
-                $('#firstName').val("dummy first name");
-                $('#lastName').val("dummy last name");
-                $('#aboutMe').val(data['about_me']);
-                $('#favoriteDish').val(data['my_fav_dish']);
-                $('#email').val("dummy email");
-                $('#phoneNumber').val(data['phone_number']);
+                $('#Name').val(data['f_name']).val(data['l_name']);
+                $('#AboutMe').val(data['about_me']);
+                $('#AwardsWon').val(data['awards_won']);
+                $('#Cuisine_I_Cook').val(data['cuisine_i_cook']);
+                $('#price_per_person').val(data['price_per_person']);
+                $('#delivery_method').val(data['delivery_method']);
+                $('#').val(data['available_start']).val(data['available_end']);
+                $('#dish_name').val(data['dish_name']);
+                $('#meal_description').val(data['meal_description']);
 
-                // display user profile photo
+
+                // display  profile photos and other photos.
                 if (data['photo']) {
                     //replace the photo
                     var image = $('#profile_image')[0];
                     image.src = data['photo'];
+                    image.style.height = '200px';
+                    image.style.width = '200px';
+                }
+                if (data['kitchen_photo']) {
+                    //replace the photo
+                    var image = $('#kitchen_photo')[0];
+                    image.src = data['kitchen_photo'];
+                    image.style.height = '200px';
+                    image.style.width = '200px';
+                }
+                if (data['food_album']) {
+                    //replace the photo
+                    var image = $('#food_album')[0];
+                    image.src = data['food_album'];
                     image.style.height = '200px';
                     image.style.width = '200px';
                 }

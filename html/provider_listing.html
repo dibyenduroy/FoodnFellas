@@ -35,7 +35,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right" id="userNameOrLogin">
-                    <li> <button type="button" class="btn btn-info">Become a provider</button> </li>
+                    <li> <button type="button" class="btn btn-info">Add Food Listing</button> </li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -49,32 +49,32 @@
         <!// This is provider information. No looping required. -->
             <div class="col-md-3">
                 <label for="Name">Name: </label>
-                <output name="Name" for="Name">
+                <output name="Name" id ="Name">
             </div>
             <div class="col-md-3">
                 <label for="AboutMe">About Me:  </label>
-                <label for="Name">Software Engineer at Intuit</label>
+                <output name="AboutMe" id ="AboutMe">
             </div>
             <div class="col-md-3">
                 <label for="AwardsWon">Awards Won: </label>
-                <label for="Name">garlic festival</label>
+                <output name="AwardsWon" id ="AwardsWon">
             </div>
             <div class="col-md-3">
-                <label for="Name">Cuisines I Cook: </label>
-                <label for="Name">Bengali</label>
+                <label for="Cuisine_I_Cook">Cuisines I Cook: </label>
+                <output name="Cuisine_I_Cook" id ="Cuisine_I_Cook">
             </div>
             <br>
             <div class="col-md-6">
-                <label for="Name">Photo </label>
-                <label for="Name">http://foodnfellas.s3.amazonaws.com/1436742211.jpg</label>
+                <label for="profile_image">Profile Photo </label>
+                <img class="img-responsive" id="profile_image" src="http://placehold.it/250x250" alt="">
             </div>
             <div class="col-md-6">
-                <label for="Name">Kitchen Photo </label>
-                <label for="Name">http://foodnfellas.s3.amazonaws.com/1436742216.jpg</label>
+                <label for="profile_image">Kitchen Photo </label>
+                <img class="img-responsive" id="kitchen_photo" src="http://placehold.it/250x250" alt="">
             </div>
             <div class="col-md-12">
-                <label for="Name">Food Album </label>
-                <label for="Name">http://foodnfellas.s3.amazonaws.com/1436742216.jpg</label>
+                <label for="profile_image">Food Album </label>
+                <img class="img-responsive" id="food_album" src="http://placehold.it/250x250" alt="">
             </div>
             <br></br>
             <div class="container-fluid">
@@ -83,32 +83,28 @@
     <!// This is provider's Meal information.  looping required. -->
  
             <div class="col-xs-12 col-sm-3 ">
-                <label for="Name">Price per person: </label>
-                <label for="Name">$12</label>
+                <label for="price_per_person">Price per person: </label>
+                <output name="price_per_person" id ="price_per_person">
             </div>
             <div class="col-xs-12 col-sm-3 ">
-                <label for="Name">Delivery Method </label>
-                <label for="Name">DINEIN</label>
+                <label for="delivery_method">Delivery Method </label>
+                <output name="delivery_method" id ="delivery_method">
             </div>
             <div class="col-xs-12 col-sm-3 ">
-                <label for="Name">Delivery Method </label>
-                <label for="Name">DINEIN</label>
-            </div>
-            <div class="col-xs-12 col-sm-3 ">
-                <label for="Name">Cuisine Type </label>
-                <label for="Name">Bengali</label>
+                <label for="meal_type">Cuisine Type </label>
+                <output name="meal_type" id ="meal_type">
             </div>
             <div class="col-md-6 ">
-                <label for="Name">Available On</label>
-                <label for="Name">Between [available_start]  and  [available_end] </label>
+                <label for="available_on">Available On</label>
+                <output name="available_on" id ="available_on">
             </div>
             <div class="col-md-12 ">
-            <dl>
-            <dt>Daler Boda</dt>
-            <dd>Description: Fried masoor lentil pakoda </dd>
-            <dt>Chuteny</dt>
-            <dd>Chilanthro, green chilli paste to go with pakoda</dd>
-            </dl>
+                <dl>
+                    <label for="dish_name">Dish Name</label>
+                    <dt><output name="dish_name" id ="dish_name"></dt>
+                    <label for="meal_description">Dish Description</label>
+                    <dt><output name="meal_description" id ="meal_description"></dt>
+                </dl>
             <div>
 
         <!input type='submit' class="btn btn-primary save" value='Save' onClick="window.location.reload(true)"/>
