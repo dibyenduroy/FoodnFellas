@@ -1,18 +1,25 @@
-$( "#datepicker" ).datepicker();
+jQuery(
+    $(function() {
+        $( "#datepicker" ).datepicker();
+
+        $('#search-btn').submit(function(ev) {
+            ev.preventDefault(); // to stop the form from submitting
+            /* Validations go here */
+            this.submit(); // If all the validations succeeded
+            //redirect to search
+            location.href='./html/search.html?date=10_05_2015';
+        });
+
+        $('#login-btn').submit(function() {
+            loginOnSubmit();
+        });
+    })
+);
 
 function providerBtnCallBack() {
     location.href='/html/provider.html';
 }
 
-jQuery(
-    $('#search-btn').submit(function(ev) {
-        ev.preventDefault(); // to stop the form from submitting
-        /* Validations go here */
-        this.submit(); // If all the validations succeeded
-        //redirect to search
-        location.href='./html/search.html?date=10_05_2015';
-    })
-);
 
 function signupCallBack() {
     jQuery(
@@ -39,7 +46,7 @@ function signupCallBack() {
     );
 }
 
-function loginCallBack() {
+function loginOnSubmit() {
     jQuery(
         $(function () {
             $.ajax({
@@ -50,12 +57,10 @@ function loginCallBack() {
                 success: function (data) {
                     console.log('inside success');
                     console.log(data);
-                    location.href='index_afterlaunch.html';
                     alert("Successful Login");
                 },
                 error: function (xhr, status, error) {
                     var err = eval("(" + xhr.responseText + ")");
-                    location.href='index_afterlaunch.html';
                     alert("Unsuccessful login. Please try again");
                 }
             });

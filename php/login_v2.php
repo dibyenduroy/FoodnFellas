@@ -37,9 +37,8 @@ function SignIn($email_p,$password_p,$login_type_p)
             $array_user_results[$index] = $row;
             $index++; 
       }
-      echo $_GET['callback'].'('.json_encode($array_user_results).');';
-    } else {
     }
+    echo $_GET['callback'].'('.json_encode($array_user_results).');';
     $conn->close();
   }
 }
