@@ -24,7 +24,7 @@ function signupCallBack() {
     jQuery(
         $(function () {
             $.ajax({
-                url: '../php/registration.php',   //the script to call to get data
+                url: './php/registration.php',   //the script to call to get data
                 crossDomain: true,
                 dataType: 'jsonp',                //data format
                 type: 'GET',
@@ -46,24 +46,19 @@ function signupCallBack() {
 }
 
 function loginCallBack() {
-
-    $.getJSON('../php/login_v2.php', function(json) {
-        alert(json[0]); // <h1>Program Overview</h1><h1>January 29, 2009</h1>
+    $.ajax({
+        url: './php/login_v2.php',   //the script to call to get data
+        crossDomain: true,
+        dataType: 'jsonp',                //data format
+        type: 'GET',
+        success: function (data) {
+            console.log('inside success');
+            console.log(data);
+            alert("Successful Login");
+        },
+        error: function (xhr, status, error) {
+            var err = eval("(" + xhr.responseText + ")");
+            alert("Unsuccessful login. Please try again");
+        }
     });
-
-    //$.ajax({
-    //    url: '../php/login_v2.php',   //the script to call to get data
-    //    crossDomain: true,
-    //    dataType: 'jsonp',                //data format
-    //    type: 'GET',
-    //    success: function (data) {
-    //        console.log('inside success');
-    //        console.log(data);
-    //        alert("Successful Login");
-    //    },
-    //    error: function (xhr, status, error) {
-    //        var err = eval("(" + xhr.responseText + ")");
-    //        alert("Unsuccessful login. Please try again");
-    //    }
-    //});
 }
