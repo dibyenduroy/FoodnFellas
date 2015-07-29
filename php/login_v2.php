@@ -50,7 +50,7 @@ function SignIn($email_p,$password_p,$login_type_p)
     } else {
       // echo "Your Username or Password is Incorrect";
       //failure
-      echo $_GET['callback'].'('.json_encode('{status: 'failure'}').');';
+      //echo $_GET['callback'].'('.json_encode('{status: 'failure'}').');';
     }
     $conn->close();
   }
