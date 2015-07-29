@@ -43,7 +43,6 @@ function test_function() {
       if ($conn->query($sql) === TRUE) {
         $return["Status"] = "Success";
       }else {
-        $return["Status"] = "hello4";
         $return["Status"] = "Error";
         $return["Error"] = $conn->error;
       }
