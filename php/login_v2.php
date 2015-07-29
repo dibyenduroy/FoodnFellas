@@ -3,22 +3,23 @@ echo "INSIDE LOGIN_V2 PHP";
 
 session_start();
 
-echo "AFTER SESSION START";
+//echo "AFTER SESSION START";
 
 function SignIn($email_p,$password_p,$login_type_p)
 {
 
-    echo "INSIDE SIGN IN";
+    //echo "INSIDE SIGN IN";
   //starting the session for user profile page
   if(!empty($email_p) ) {
     include 'foodnfellasDBConnection.php';
     // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
-        echo "Error Connecting to Database";
+        //echo "Error Connecting to Database";
     }
     if($login_type_p==="1") {
       $sql = "SELECT *  FROM user where email='".$email_p."'"."AND password='".$password_p."'";
+      print($sql);
     }
 
     if($login_type_p==="2") {
@@ -58,7 +59,7 @@ function SignIn($email_p,$password_p,$login_type_p)
 
 if(isset($_POST['submit']))
 {
-  echo "inside post submit";
+  //echo "inside post submit";
   $email_p=$_POST["email"];
   $password_p=md5($_POST["passwd"]);
   $login_type_p=$_POST['login_type'];
