@@ -1,7 +1,7 @@
 jQuery(
     $(function(){
     $.ajax({
-        url: '../php/provider_listing.php',                  //the script to call to get data
+        url: '../php/ConsumerProfile.php',                  //the script to call to get data
         crossDomain: true,
         dataType: 'jsonp',                //data format
         type: 'GET',
