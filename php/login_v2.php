@@ -40,13 +40,13 @@ function SignIn($email_p,$password_p,$login_type_p)
     //echo "Number of Rows ".$num;
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
-            $array_user_info[$index] = $row;
+            $array_user_results[$index] = $row;
             $index++; 
           }
 
       // echo "You are Sucessfully Logged in";
       //success
-      echo $_GET['callback'].'('.json_encode($array_user_info).');';
+      echo $_GET['callback'].'('.json_encode($array_user_results).');';
     } else {
       // echo "Your Username or Password is Incorrect";
       //failure
