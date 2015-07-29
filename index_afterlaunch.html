@@ -40,7 +40,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/signup" data-toggle="modal" data-target=".social-signup-modal">Sign Up</a></li>
+                <li><a href="/signup" data-toggle="modal" data-target=".signupwith-email-modal">Sign Up</a></li>
                 <li><a href="/login" data-toggle="modal" data-target=".social-login-modal">Login</a></li>
                 <li> <button type="button" class="btn btn-info" onclick="providerBtnCallBack()">Become a provider</button> </li>
             </ul>
@@ -151,7 +151,7 @@
                                     <input type="text" class="form-control" id = "login_type" name="login_type" value="1" placeholder="login_type">
                                 </div>
                                 <span class="help-block"></span>
-                                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+                                <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="redirectToHomePage()">Sign up</button>
                             </form>
                         </div>
                     </div>
@@ -172,30 +172,30 @@
             <div class="modal-body">
                 <!--<div class="container-fluid">-->
                     <div class="omb_login">
-                        <div class="row omb_socialButtons">
-                            <div class="fb-login-button col-xs-12" data-max-rows="1" data-size="large" data-show-faces="false"
-                                 data-auto-logout-link="false" scope="public_profile,email" onlogin="checkLoginState();">
-                            </div>
-                            <div id="gConnect" class="google-button col-xs-12">
-                                <button class="g-signin"
-                                        data-scope="email"
-                                        data-clientid="214287020717-2nu6arauqkqb8ednahji6lc5ovdnnkcr.apps.googleusercontent.com"
-                                        data-callback="onSignInCallback"
-                                        data-theme="dark"
-                                        data-cookiepolicy="single_host_origin">
-                                </button>
-                                <!-- Textarea for outputting data -->
-                                <div id="response" class="hide">
-                                    <textarea id="responseContainer" style="width:100%; height:150px"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row omb_loginOr">
-                            <div class="col-xs-12">
-                                <hr class="omb_hrOr">
-                                <span class="omb_spanOr">or</span>
-                            </div>
-                        </div>
+                        <!--<div class="row omb_socialButtons">-->
+                            <!--<div class="fb-login-button col-xs-12" data-max-rows="1" data-size="large" data-show-faces="false"-->
+                                 <!--data-auto-logout-link="false" scope="public_profile,email" onlogin="checkLoginState();">-->
+                            <!--</div>-->
+                            <!--<div id="gConnect" class="google-button col-xs-12">-->
+                                <!--<button class="g-signin"-->
+                                        <!--data-scope="email"-->
+                                        <!--data-clientid="214287020717-2nu6arauqkqb8ednahji6lc5ovdnnkcr.apps.googleusercontent.com"-->
+                                        <!--data-callback="onSignInCallback"-->
+                                        <!--data-theme="dark"-->
+                                        <!--data-cookiepolicy="single_host_origin">-->
+                                <!--</button>-->
+                                <!--&lt;!&ndash; Textarea for outputting data &ndash;&gt;-->
+                                <!--<div id="response" class="hide">-->
+                                    <!--<textarea id="responseContainer" style="width:100%; height:150px"></textarea>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="row omb_loginOr">-->
+                            <!--<div class="col-xs-12">-->
+                                <!--<hr class="omb_hrOr">-->
+                                <!--<span class="omb_spanOr">or</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
                         <div class="row">
                             <div class="col-xs-12">
                                 <form class="omb_loginForm" action="php/login_v2.php" autocomplete="off" method="POST">
@@ -255,7 +255,7 @@
                 <input type="text" class="form-control" placeholder="No of people">
                 <input type="text" id="datepicker" class="form-control" placeholder="When?">
             </div>
-            <button type="submit" class="btn btn-default" id="search-btn">Search</button>
+            <button type="submit" class="btn btn-default" id="search-btn" onclick="searchBtnClick()">Search</button>
         </form>
     </div>
 </header>

@@ -1,18 +1,6 @@
 <?php
 
-//if (is_ajax()) {
-if (TRUE) {
-  echo "INSIDE IS AJAX";
-  if (TRUE) {
-  //if (isset($_POST["action"]) && !empty($_POST["action"])) { //Checks if action value exists
-    echo "INSIDE POST ACTION";
-    $action = $_POST["action"];
-    //switch($action) { //Switch case for value of action
-    //  case "test": test_function(); break;
-    //}
-    test_function();
-  }
-}
+test_function();
 
 //Function to check if the request is an AJAX request
 function is_ajax() {
@@ -20,7 +8,6 @@ function is_ajax() {
 }
 
 function test_function() {
-    echo "INSIDE TEST FUNCTION";
     $return = $_POST;
     // login_type : if login_type =1 (It means it comes from Form login) , if login_type =2 (It means it comes from FB)
     //if login_type =3 (It means it comes from Form Google)
