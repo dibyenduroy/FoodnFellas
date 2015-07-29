@@ -50,7 +50,8 @@ function test_function() {
       $conn->close();
     }
     $return["json"] = json_encode($return);
-    echo json_encode($return);
+    //echo json_encode($return);
+    echo $_GET['callback'].'('.json_encode($return).');';
 }
 
 ?>
