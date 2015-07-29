@@ -14,7 +14,7 @@ function providerBtnCallBack() {
 //    //location.href='index_afterlaunch.html';
 //}
 
-function redirectToHomePage() {
+function signupCallBack() {
     jQuery(
         $(function () {
             $.ajax({
@@ -26,6 +26,28 @@ function redirectToHomePage() {
                     console.log('inside success');
                     console.log(data);
                     //TODO: need to check if sign up was successful (data should have status -- fix PHP)
+                    location.href='index_afterlaunch.html';
+                },
+                error: function (xhr, status, error) {
+                    var err = eval("(" + xhr.responseText + ")");
+                    alert(err.Message);
+                }
+            });
+        })
+    );
+}
+
+function loginCallBack() {
+    jQuery(
+        $(function () {
+            $.ajax({
+                url: '../php/login_v2.php',   //the script to call to get data
+                crossDomain: true,
+                dataType: 'jsonp',                //data format
+                type: 'GET',
+                success: function (data) {
+                    console.log('inside success');
+                    console.log(data);
                     location.href='index_afterlaunch.html';
                 },
                 error: function (xhr, status, error) {
