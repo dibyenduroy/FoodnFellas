@@ -57,8 +57,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 	if ($result2->num_rows > 0) {
 		// Delete these echos and print_r during final integration.
 	//	echo "<br>"." if2 success ";
-		if ($row = $result2->fetch_assoc()) {
-//		while ($row = $result2->fetch_assoc()) {
+	//	if ($row = $result2->fetch_assoc()) {
+		while ($row = $result2->fetch_assoc()) {
 			$array_row = $result2->fetch_assoc();
 	//		echo "<br>"."printing each repeated result";
 	//		print_r($array_row);
@@ -80,7 +80,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 
 	// At this point, we have all the information for the search query.
 	// wrap the data as with the callback
-    echo $_GET['callback'].'('.json_encode($array_unique_result).');';
+    echo $_GET['callback'].'('.json_encode($provider_listings).');';
 
 	$conn->close();
 }
