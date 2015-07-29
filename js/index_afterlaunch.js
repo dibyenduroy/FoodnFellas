@@ -1,7 +1,6 @@
 jQuery(
     $(function() {
         $( "#datepicker" ).datepicker();
-
         $('#search-btn').submit(function(ev) {
             ev.preventDefault(); // to stop the form from submitting
             /* Validations go here */
