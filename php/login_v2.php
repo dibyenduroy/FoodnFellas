@@ -1,7 +1,8 @@
 <?php
 session_start();
 
-function login($email_p,$password_p,$login_type_p) {
+function SignIn($email_p,$password_p,$login_type_p)
+{
   //starting the session for user profile page
   if(!empty($email_p) ) {
     include 'foodnfellasDBConnection.php';
@@ -47,7 +48,7 @@ if(isset($_POST['submit']))
   $password_p=md5($_POST["passwd"]);
   $login_type_p=$_POST['login_type'];
 
-  login($email_p,$password_p,$login_type_p);
+  SignIn($email_p,$password_p,$login_type_p);
 }
 
 ?>
