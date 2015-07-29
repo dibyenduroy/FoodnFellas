@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Portfolio Item - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- custom javascript -->
+    <script src="../js/provider_listing.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">FoodnFellas</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right" id="userNameOrLogin">
+                    <li> <button type="button" class="btn btn-info">Add Food Listing</button> </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+<!-- Page Content -->
+<div class="container">
+    <!-- Portfolio Item Row -->
+        <!--// This is provider information. No looping required. -->
+            <div class="col-md-3">
+                <label for="Name">Name: </label>
+                <output name="Name" id ="Name">
+            </div>
+            <div class="col-md-3">
+                <label for="AboutMe">About Me:  </label>
+                <output name="AboutMe" id ="AboutMe">
+            </div>
+            <div class="col-md-3">
+                <label for="AwardsWon">Awards Won: </label>
+                <output name="AwardsWon" id ="AwardsWon">
+            </div>
+            <div class="col-md-3">
+                <label for="Cuisine_I_Cook">Cuisines I Cook: </label>
+                <output name="Cuisine_I_Cook" id ="Cuisine_I_Cook">
+            </div>
+            <br>
+            <div class="col-md-6">
+                <label for="profile_image">Profile Photo </label>
+                <img class="img-responsive" id="profile_image" src="http://placehold.it/250x250" alt="">
+            </div>
+            <div class="col-md-6">
+                <label for="profile_image">Kitchen Photo </label>
+                <img class="img-responsive" id="kitchen_photo" src="http://placehold.it/250x250" alt="">
+            </div>
+            <div class="col-md-12">
+                <label for="profile_image">Food Album </label>
+                <img class="img-responsive" id="food_album" src="http://placehold.it/250x250" alt="">
+            </div>
+            <br></br>
+            <div class="container-fluid">
+                <h2> All Meal listings</h3>
+            </div>   
+    <!--// This is provider's Meal information.  looping required. -->
+ 
+            <div class="col-xs-12 col-sm-3 ">
+                <label for="price_per_person">Price per person: </label>
+                <output name="price_per_person" id ="price_per_person">
+            </div>
+            <div class="col-xs-12 col-sm-3 ">
+                <label for="delivery_method">Delivery Method </label>
+                <output name="delivery_method" id ="delivery_method">
+            </div>
+            <div class="col-xs-12 col-sm-3 ">
+                <label for="meal_type">Cuisine Type </label>
+                <output name="meal_type" id ="meal_type">
+            </div>
+            <div class="col-md-6 ">
+                <label for="available_on">Available On</label>
+                <output name="available_on" id ="available_on">
+            </div>
+            <div class="col-md-12 ">
+                <dl>
+                    <label for="dish_name">Dish Name</label>
+                    <dt><output name="dish_name" id ="dish_name"></dt>
+                    <label for="meal_description">Dish Description</label>
+                    <dt><output name="meal_description" id ="meal_description"></dt>
+                </dl>
+            <div>
+
+        <!--input type='submit' class="btn btn-primary save" value='Save' onClick="window.location.reload(true)"/>
+
+</div>
+<!-- /.container -->
+
+<!-- jQuery -->
+<script src="../js/jquery.js"></script>
+
+<!-- custom javascript -->
+<script src="../js/provider_listing.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
