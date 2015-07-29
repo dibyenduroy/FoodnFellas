@@ -1,9 +1,9 @@
 <?php
-//echo "INSIDE LOGIN_V2 PHP";
+echo "INSIDE LOGIN_V2 PHP";
 
 session_start();
 
-//echo "AFTER SESSION START";
+echo "AFTER SESSION START";
 
 function SignIn($email_p,$password_p,$login_type_p)
 {
