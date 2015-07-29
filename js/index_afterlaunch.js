@@ -46,19 +46,23 @@ function signupCallBack() {
 }
 
 function loginCallBack() {
-    $.ajax({
-        url: './php/login_v2.php',   //the script to call to get data
-        crossDomain: true,
-        dataType: 'jsonp',                //data format
-        type: 'GET',
-        success: function (data) {
-            console.log('inside success');
-            console.log(data);
-            alert("Successful Login");
-        },
-        error: function (xhr, status, error) {
-            var err = eval("(" + xhr.responseText + ")");
-            alert("Unsuccessful login. Please try again");
-        }
-    });
+    jQuery(
+        $(function () {
+            $.ajax({
+                url: './php/login_v2.php',   //the script to call to get data
+                crossDomain: true,
+                dataType: 'jsonp',                //data format
+                type: 'GET',
+                success: function (data) {
+                    console.log('inside success');
+                    console.log(data);
+                    alert("Successful Login");
+                },
+                error: function (xhr, status, error) {
+                    var err = eval("(" + xhr.responseText + ")");
+                    alert("Unsuccessful login. Please try again");
+                }
+            });
+        })
+    );
 }
