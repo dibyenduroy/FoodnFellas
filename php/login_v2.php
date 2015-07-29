@@ -2,7 +2,6 @@
 session_start();
 
 function login($email_p,$password_p,$login_type_p) {
-  echo "INSIDE LOGIN";
   //starting the session for user profile page
   if(!empty($email_p) ) {
     include 'foodnfellasDBConnection.php';
@@ -35,19 +34,16 @@ function login($email_p,$password_p,$login_type_p) {
     } else {
       // echo "Your Username or Password is Incorrect";
       //failure
-      echo $_GET['callback'].'('.json_encode('{}').');';
+      echo $_GET['callback'].'('.json_encode('{status: 'failure'}').');';
     }
     $conn->close();
   }
 }
 
-if(isset($_POST['submit']))
-{
-  $email_p=$_POST["email"];
-  $password_p=md5($_POST["passwd"]);
-  $login_type_p=$_POST['login_type'];
+$email_p=$_POST["email"];
+$password_p=md5($_POST["passwd"]);
+$login_type_p=$_POST['login_type'];
 
-  login($email_p,$password_p,$login_type_p);
-}
+login($email_p,$password_p,$login_type_p);
 
 ?>
