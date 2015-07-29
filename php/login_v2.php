@@ -1,5 +1,7 @@
 <?php
 session_start();
+header('Cache-Control: no-cache');
+header('content-type: text/javascript;');
 
 function SignIn($email_p,$password_p,$login_type_p)
 {
