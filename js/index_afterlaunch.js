@@ -27,11 +27,12 @@ function signupCallBack() {
                     console.log(data);
                     //TODO: need to check if sign up was successful (data should have status -- fix PHP)
                     location.href='index_afterlaunch.html';
-                    alert("Succesful Login")
+                    alert("Sign up was succesful")
                 },
                 error: function (xhr, status, error) {
                     var err = eval("(" + xhr.responseText + ")");
-                    alert("Sign up was unsucessful. Please try again");
+                    location.href='index_afterlaunch.html';
+                    alert("Sign up was failed. Please try again");
                 }
             });
         })
@@ -54,6 +55,7 @@ function loginCallBack() {
                 },
                 error: function (xhr, status, error) {
                     var err = eval("(" + xhr.responseText + ")");
+                    location.href='index_afterlaunch.html';
                     alert("Unsuccessful login. Please try again");
                 }
             });
