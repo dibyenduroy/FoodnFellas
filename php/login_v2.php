@@ -1,5 +1,5 @@
 <?php
-echo "INSIDE LOGIN_V2 PHP";
+//echo "INSIDE LOGIN_V2 PHP";
 
 session_start();
 
@@ -19,7 +19,7 @@ function SignIn($email_p,$password_p,$login_type_p)
     }
     if($login_type_p==="1") {
       $sql = "SELECT *  FROM user where email='".$email_p."'"."AND password='".$password_p."'";
-      print($sql);
+      echo $sql;
     }
 
     if($login_type_p==="2") {
