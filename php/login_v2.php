@@ -26,11 +26,20 @@ function login($email_p,$password_p,$login_type_p) {
     $result = $conn->query($sql);
     $num=$result->num_rows;
 
+    $array_user_results = Array();
+    $index = 0;
+
+
     //echo "Number of Rows ".$num;
     if ($result->num_rows > 0) {
+      while ($row = $result->fetch_assoc()) {
+            $array_user_info[$index] = $row;
+            $index++; 
+          }
+
       // echo "You are Sucessfully Logged in";
       //success
-      echo $_GET['callback'].'('.json_encode($result).');';
+      echo $_GET['callback'].'('.json_encode($array_user_info).');';
     } else {
       // echo "Your Username or Password is Incorrect";
       //failure
