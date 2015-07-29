@@ -40,10 +40,14 @@ function login($email_p,$password_p,$login_type_p) {
   }
 }
 
-$email_p=$_POST["email"];
-$password_p=md5($_POST["passwd"]);
-$login_type_p=$_POST['login_type'];
+if(isset($_POST['submit']))
+{
+  echo "inside post submit";
+  $email_p=$_POST["email"];
+  $password_p=md5($_POST["passwd"]);
+  $login_type_p=$_POST['login_type'];
 
-login($email_p,$password_p,$login_type_p);
+  login($email_p,$password_p,$login_type_p);
+}
 
 ?>
