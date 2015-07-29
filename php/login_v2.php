@@ -2,7 +2,7 @@
 session_start();
 
 function login($email_p,$password_p,$login_type_p) {
-
+  echo "INSIDE LOGIN";
   //starting the session for user profile page
   if(!empty($email_p) ) {
     include 'foodnfellasDBConnection.php';
