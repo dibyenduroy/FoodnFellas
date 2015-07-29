@@ -4,15 +4,15 @@ function providerBtnCallBack() {
     location.href='/html/provider.html';
 }
 
-
-$('#search-btn').submit(function(ev) {
-    ev.preventDefault(); // to stop the form from submitting
-    /* Validations go here */
-    this.submit(); // If all the validations succeeded
-    //redirect to search
-    location.href='./html/search.html?date=10_05_2015';
-
-});
+jQuery(
+    $('#search-btn').submit(function(ev) {
+        ev.preventDefault(); // to stop the form from submitting
+        /* Validations go here */
+        this.submit(); // If all the validations succeeded
+        //redirect to search
+        location.href='./html/search.html?date=10_05_2015';
+    })
+);
 
 function signupCallBack() {
     jQuery(
