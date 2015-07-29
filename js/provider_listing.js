@@ -1,7 +1,7 @@
 jQuery(
     $(function(){
     $.ajax({
-        url: '../php/ConsumerProfile.php',                  //the script to call to get data
+        url: '../php/provider_listing.php',                  //the script to call to get data
         crossDomain: true,
         dataType: 'jsonp',                //data format
         type: 'GET',
@@ -29,7 +29,7 @@ jQuery(
                 $('#Cuisine_I_Cook').val(data['cuisine_i_cook']);
                 $('#price_per_person').val(data['price_per_person']);
                 $('#delivery_method').val(data['delivery_method']);
-                $('#').val(data['available_start']).val(data['available_end']);
+                $('#available_on').val(data['available_start']).val(data['available_end']);
                 $('#dish_name').val(data['dish_name']);
                 $('#meal_description').val(data['meal_description']);
 
