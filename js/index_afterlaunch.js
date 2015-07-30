@@ -1,13 +1,7 @@
 jQuery(
     $(function() {
-        $( "#datepicker" ).datepicker();
-        $('#search-btn').submit(function(ev) {
-            ev.preventDefault(); // to stop the form from submitting
-            /* Validations go here */
-            this.submit(); // If all the validations succeeded
-            //redirect to search
-            location.href='./html/search.html?date=10_05_2015';
-        });
+        $( "#when" ).datepicker();
+
 
         //$('#login-btn').submit(function() {
         //    loginOnSubmit();
@@ -15,8 +9,24 @@ jQuery(
     })
 );
 
+function searchBtnCallBack() {
+    //TODO: do validation
+
+    // get the values in the form
+    var where = $("#where").val();
+    var when = $("#when").val();
+    var numPeople = $("#numPeople").val();
+    // encode the special chars for the url query string
+    where = encodeURI(where);
+    when = encodeURI(when);
+    numPeople = encodeURI(numPeople);
+    location.href='./html/search.html?'
+        + 'where=' + where + '&when='
+        + when + '&numPeople=' + numPeople;
+}
+
 function providerBtnCallBack() {
-    location.href='/html/provider.html';
+    location.href='./html/provider.html';
 }
 
 
