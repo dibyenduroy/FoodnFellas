@@ -47,7 +47,7 @@ if ($result1->num_rows > 0) {
 
 // Delte these debug echos during integration.
 //echo "  Selected search output  ";
-print_r($array_selected_search);
+//print_r($array_selected_search);
 
 // At this point, we have all the information for the search query.
 // wrap the data as with the callback
