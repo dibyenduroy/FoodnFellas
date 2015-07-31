@@ -33,20 +33,20 @@ $sql1 = "SELECT u.f_name, u.l_name, u.photo, u.about_me, p.kitchen_photo, p.food
                                  WHERE pf.provider_food_id = '".$provider_food_id."';";
 
 // Delte these debug echos during integration.
-echo "  sql1  ";
-echo $sql1;
+//echo "  sql1  ";
+//echo $sql1;
 
 $result1 = $conn->query($sql1);
 if ($result1->num_rows > 0) {
         // Delte these debug echos during integration.
-        echo "  if successful  ";
+        //echo "  if successful  ";
 	$array_selected_search = $result1->fetch_assoc(); 
 } else {
 	echo "0 results";
 }
 
 // Delte these debug echos during integration.
-echo "  Selected search output  ";
+//echo "  Selected search output  ";
 print_r($array_selected_search);
 
 // At this point, we have all the information for the search query.
