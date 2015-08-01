@@ -1,15 +1,5 @@
 <?php
 
-    function func1($param1, $param2)
-    {
-        echo $param1 . 'Test' . $param2;
-    }
-
-  ?>
-
-
-  <?php
-
 $servername = "fm1s2t7e010rjki.cnn0dbzvr04c.us-west-2.rds.amazonaws.com";
 $username = "fnfsandbox";
 $password = "greatfood123";
