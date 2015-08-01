@@ -37,6 +37,7 @@ function SignIn($email_p,$password_p,$login_type_p)
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
             $array_user_results[$index] = $row;
+            setcookie("FoodnFellas", $row);
             $index++; 
       }
     }
