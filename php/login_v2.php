@@ -33,7 +33,6 @@ if ($conn->connect_error) {
     if($login_type_p==="1") {
       $sql = "SELECT *  FROM user where email='".$email_p."'"."AND password='".$password_p."'";
       
-
     }
 
     if($login_type_p==="2") {
