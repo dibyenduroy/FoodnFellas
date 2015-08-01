@@ -54,6 +54,14 @@ function signupCallBack() {
     );
 }
 
+function login_as_user() {
+    jQuery(
+        $(function() {
+            console.log(document.cookie);
+        })
+    );
+}
+
 //function loginCallBack() {
 //    jQuery(
 //        $(function () {
