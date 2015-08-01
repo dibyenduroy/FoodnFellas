@@ -50,8 +50,8 @@ function test_function() {
         if ($user_info->num_rows > 0) {
           while ($row = $user_info->fetch_assoc()) {
             $array_user_info[$index] = $row;
-            $cookie_variable=$row["f_name"]." ".$row["l_name"]." ".$row["user_id"]." ".$row["is_provider"];
-            setcookie("FoodnFellas", $cookie_variable);
+            //$cookie_variable=$row["f_name"]." ".$row["l_name"]." ".$row["user_id"]." ".$row["is_provider"];
+            //setcookie("FoodnFellas", $cookie_variable);
             $index++; 
           }
         }
