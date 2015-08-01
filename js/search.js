@@ -48,20 +48,9 @@ $(function() {
         $("#allergies2-btn").text($(this).text());
         $("#allergies2-btn").val($(this).text());
     });
-
-    $.ajax({
-        url: '../php/search.php',                  //the script to call to get data
-        crossDomain: true,
-        dataType: 'jsonp',                //data format
-        type: 'GET',
-        success: function(data)
-        {
-            console.log(data);
-        },
-        error: function(xhr, status, error) {
-            var err = eval("(" + xhr.responseText + ")");
-            alert(err.Message);
-        }
-    });
 });
 
+
+function gotoSearchResult(){
+    location.href='../html/search_results.html';
+}
