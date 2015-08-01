@@ -77,9 +77,11 @@ if ($result1->num_rows > 0) {
     echo "The is some issue in conn->query";
 } 
  
-//$array_count_elem = Array();
+$array_count_elem = array(
+    count  => $count
+    )
 //$count;
-//$array_output = array_merge($array_count_elem, $array_meal_search_row);
+$array_output = array_merge($array_count_elem, $array_meal_search_all);
 
 // Test code.
 //echo " Search Results ";
@@ -87,7 +89,7 @@ print_r($array_output);
 
 // At this point, we have all the information for the search query.
 // wrap the data as with the callback
-echo $_GET['callback'].'('.json_encode($array_meal_search_all).');';
+echo $_GET['callback'].'('.json_encode($array_output).');';
 
 
 $conn->close();
