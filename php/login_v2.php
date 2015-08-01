@@ -14,15 +14,15 @@ function SignIn($email_p,$password_p,$login_type_p)
         echo "Error Connecting to Database";
     }
     if($login_type_p==="1") {
-      $sql = "SELECT *  FROM user where email='".$email_p."'"."AND password='".$password_p."'";
+      $sql = "SELECT user_id, is_provider  FROM user where email='".$email_p."'"."AND password='".$password_p."'";
     }
 
     if($login_type_p==="2") {
-      $sql = "SELECT *  FROM user where email='".$email_p."'";
+      $sql = "SELECT user_id, is_provider  FROM user where email='".$email_p."'";
     }
 
     if($login_type_p==="3") {
-      $sql = "SELECT *  FROM user where email='".$email_p."'";
+      $sql = "SELECT user_id, is_provider   FROM user where email='".$email_p."'";
     }
 
     //echo $sql;
