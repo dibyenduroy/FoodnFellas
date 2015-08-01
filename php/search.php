@@ -78,8 +78,8 @@ if ($result1->num_rows > 0) {
 } 
  
 $array_count_elem = array(
-    count  => $count
-    )
+    "count"  => $count
+    );
 //$count;
 $array_output = array_merge($array_count_elem, $array_meal_search_all);
 
