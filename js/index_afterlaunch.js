@@ -70,7 +70,7 @@ function loginCallBack() {
                 },
                 error: function (xhr, status, error) {
                     var err = eval("(" + xhr.responseText + ")");
-                    console.log('ERROR! ', err);
+                    console.log(err);
                     //location.href='index_afterlaunch.html';
                     alert("Unsuccessful login. Please try again");
                 }
