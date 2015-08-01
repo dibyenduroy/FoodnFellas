@@ -50,8 +50,8 @@ $(function() {
     });
 });
 
-jQuery(
-    $(function(){
+
+function gotoSearchResult(){
     $.ajax({
         url: '../php/search.php',                  //the script to call to get data
         crossDomain: true,
@@ -89,9 +89,4 @@ jQuery(
             alert(err.Message);
         }
     });
-    })
-);
-
-function gotoSearchResult(){
-    location.href='../html/search_results.html';
 }
