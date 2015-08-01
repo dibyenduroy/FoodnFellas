@@ -7,7 +7,7 @@ jQuery(
         type: 'GET',
         success: function(data)
         {
-            var data = data[0];
+            var data = data[1];
             if (!data['user_id']) { //if no user id, show blank page with sign up and login btns
                 $("#userNameOrLogin").prepend('<li><a href="/login" data-toggle="modal" '+
                     'data-target=".social-login-modal">Login</a></li>');
