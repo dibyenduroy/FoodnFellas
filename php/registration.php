@@ -65,9 +65,9 @@ function test_function() {
     }
     $return["json"] = json_encode($return);
 
-    //$merged_array = array_merge($result, $array_user_info);
+    $merged_array = array_merge($result, $array_user_info);
     //echo json_encode($return);
-    echo $_GET['callback'].'('.json_encode($array_user_info).');';
+    echo $_GET['callback'].'('.json_encode($merged_array).');';
 }
 
 ?>
