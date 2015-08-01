@@ -1,15 +1,18 @@
 <?php
 
+session_start();
 // Delete this during final integration.
 $_SERVER['REQUEST_METHOD'] = "POST";
 
-header('Cache-Control: no-cache');
-header('content-type: text/javascript;');
+// header('Cache-Control: no-cache');
+// header('content-type: text/javascript;');
 
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
 	$return = $_POST;
 	$user_id = $_SESSION["user_id"];
+	echo " User-id ";
+	echo $user_id;
 
 	// Delete this during final integration.
 	//$user_id = 5;

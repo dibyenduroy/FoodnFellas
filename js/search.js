@@ -48,9 +48,9 @@ $(function() {
         $("#allergies2-btn").text($(this).text());
         $("#allergies2-btn").val($(this).text());
     });
-
 });
 
+<<<<<<< HEAD
 jQuery(
     $(function(){
     $.ajax({
@@ -129,3 +129,7 @@ jQuery(
 );
 
 
+
+function gotoSearchResult(){
+    location.href='../html/search_results.html';
+}
