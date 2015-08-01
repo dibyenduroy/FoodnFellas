@@ -51,7 +51,7 @@ $sql1 = "SELECT pa.user_id as pui, pa.provider_food_id as pfi FROM Provider_addr
 //                                                AND pf.delivery_method = ".$delivery_method." 
 //if (($conn->query($sql1) === TRUE)) {
 $result1 = $conn->query($sql1);
-echo "$sql1";
+//echo "$sql1";
 
 $count = 0;
 if ($result1->num_rows > 0) {	
