@@ -54,35 +54,41 @@ function signupCallBack() {
     );
 }
 
-function login_as_user() {
-    jQuery(
-        $(function() {
-            console.log(document.cookie);
-        })
-    );
-}
-
-//function loginCallBack() {
+//function login_as_user() {
 //    jQuery(
-//        $(function () {
-//            $.ajax({
-//                url: 'php/login_v2.php',   //the script to call to get data
-//                crossDomain: true,
-//                dataType: 'json',                //data format
-//                type: 'GET',
-//                success: function (data) {
-//                    console.log('inside success');
-//                    console.log(data);
-//                    //location.href='index_afterlaunch.html';
-//                    alert("Successful Login");
-//                },
-//                error: function (xhr, status, error) {
-//                    var err = eval("(" + xhr.responseText + ")");
-//                    console.log(err);
-//                    //location.href='index_afterlaunch.html';
-//                    alert("Unsuccessful login. Please try again");
-//                }
-//            });
+//        $(function() {
+//            console.log(document.cookie);
+//            var ca = document.cookie.split('+');
+//            for(var i=0; i<ca.length; i++) {
+//                var c = ca[i];
+//                while (c.charAt(0)==' ') c = c.substring(1);
+//                if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+//            }
 //        })
 //    );
 //}
+
+function loginCallBack() {
+    jQuery(
+        $(function () {
+            $.ajax({
+                url: 'php/login_v2.php',   //the script to call to get data
+                crossDomain: true,
+                dataType: 'json',                //data format
+                type: 'GET',
+                success: function (data) {
+                    console.log('inside success');
+                    console.log(data);
+                    //location.href='index_afterlaunch.html';
+                    alert("Successful Login");
+                },
+                error: function (xhr, status, error) {
+                    var err = eval("(" + xhr.responseText + ")");
+                    console.log(err);
+                    //location.href='index_afterlaunch.html';
+                    alert("Unsuccessful login. Please try again");
+                }
+            });
+        })
+    );
+}
