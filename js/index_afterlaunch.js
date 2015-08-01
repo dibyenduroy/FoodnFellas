@@ -2,6 +2,24 @@ jQuery(
     $(function() {
         $( "#when" ).datepicker();
 
+        $.ajax({
+            url: './php/registration.php',   //the script to call to get data
+            crossDomain: true,
+            dataType: 'jsonp',                //data format
+            type: 'GET',
+            success: function (data) {
+                //console.log('inside success');
+                //console.log(data);
+                //TODO: need to check if sign up was successful (data should have status -- fix PHP)
+                //location.href='index_afterlaunch.html';
+                alert("Sign up was succesful")
+            },
+            error: function (xhr, status, error) {
+                var err = eval("(" + xhr.responseText + ")");
+                location.href='index_afterlaunch.html';
+                alert("Sign up was failed. Please try again");
+            }
+        });
 
         //$('#login-btn').submit(function() {
         //    loginOnSubmit();
@@ -29,30 +47,30 @@ function providerBtnCallBack() {
 }
 
 
-function signupCallBack() {
-    //jQuery(
-        //$(function () {
-    $.ajax({
-        url: './php/registration.php',   //the script to call to get data
-        crossDomain: true,
-        dataType: 'jsonp',                //data format
-        type: 'GET',
-        success: function (data) {
-            //console.log('inside success');
-            //console.log(data);
-            //TODO: need to check if sign up was successful (data should have status -- fix PHP)
-            //location.href='index_afterlaunch.html';
-            alert("Sign up was succesful")
-        },
-        error: function (xhr, status, error) {
-            var err = eval("(" + xhr.responseText + ")");
-            location.href='index_afterlaunch.html';
-            alert("Sign up was failed. Please try again");
-        }
-    });
-        //})
-    //);
-}
+//function signupCallBack() {
+//    //jQuery(
+//        //$(function () {
+//    $.ajax({
+//        url: './php/registration.php',   //the script to call to get data
+//        crossDomain: true,
+//        dataType: 'jsonp',                //data format
+//        type: 'GET',
+//        success: function (data) {
+//            //console.log('inside success');
+//            //console.log(data);
+//            //TODO: need to check if sign up was successful (data should have status -- fix PHP)
+//            //location.href='index_afterlaunch.html';
+//            alert("Sign up was succesful")
+//        },
+//        error: function (xhr, status, error) {
+//            var err = eval("(" + xhr.responseText + ")");
+//            location.href='index_afterlaunch.html';
+//            alert("Sign up was failed. Please try again");
+//        }
+//    });
+//        //})
+//    //);
+//}
 
 //function login_as_user() {
 //    jQuery(
