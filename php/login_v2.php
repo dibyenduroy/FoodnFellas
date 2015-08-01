@@ -1,28 +1,47 @@
 <?php
-session_start();
-header('Cache-Control: no-cache');
-header('content-type: text/javascript;');
+//session_start();
+//header('Cache-Control: no-cache');
+//header('content-type: text/javascript;');
 
 function SignIn($email_p,$password_p,$login_type_p)
 {
   //starting the session for user profile page
   if(!empty($email_p) ) {
-    include 'foodnfellasDBConnection.php';
+    //////////////////////
+$servername = "fm1s2t7e010rjki.cnn0dbzvr04c.us-west-2.rds.amazonaws.com";
+$username = "fnfsandbox";
+$password = "greatfood123";
+$dbname = "foodnfellas";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    echo "Error Connecting to Database";
+}
+
+    /////////////////////////
     // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
         echo "Error Connecting to Database";
     }
     if($login_type_p==="1") {
-      $sql = "SELECT user_id, is_provider  FROM user where email='".$email_p."'"."AND password='".$password_p."'";
+      $sql = "SELECT *  FROM user where email='".$email_p."'"."AND password='".$password_p."'";
+      
+
     }
 
     if($login_type_p==="2") {
-      $sql = "SELECT user_id, is_provider  FROM user where email='".$email_p."'";
+      $sql = "SELECT *  FROM user where email='".$email_p."'";
     }
 
     if($login_type_p==="3") {
-      $sql = "SELECT user_id, is_provider   FROM user where email='".$email_p."'";
+      $sql = "SELECT *  FROM user where email='".$email_p."'";
     }
 
     //echo $sql;
@@ -37,19 +56,13 @@ function SignIn($email_p,$password_p,$login_type_p)
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
             $array_user_results[$index] = $row;
-            setcookie("FoodnFellas", $row);
+            $cookie_variable=$row["f_name"]." ".$row["l_name"]." ".$row["user_id"]." ".$row["is_provider"];
+            setcookie("FoodnFellas", $cookie_variable);
             $index++; 
       }
     }
-    $array_test = array(
-    "foo" => "bar",
-    "bar" => "foo",
-);
-
-    echo json_encode($array_user_results);
-    //echo $_GET['callback'].'('.json_encode($array_test).');';
-
-    //$conn->close();
+    echo $_GET['callback'].'('.json_encode($array_user_results).');';
+    $conn->close();
   }
 }
 
