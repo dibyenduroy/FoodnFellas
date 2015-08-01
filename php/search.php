@@ -38,6 +38,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
     echo "Error Connecting to Database";
 }
+$array_meal_search_all = Array();
+
 
 // Get the entries from Provider_address matching the city.
 $sql1 = "SELECT pa.user_id as pui, pa.provider_food_id as pfi FROM Provider_address  as pa JOIN Provider_food as pf 
@@ -60,7 +62,6 @@ if ($result1->num_rows > 0) {
 			$provider_id = $row["pfi"];
     	$sql2 = "SELECT m.dish_name, m.meal_description, m.meal_id, p.about_me, p.awards_won, p.kitchen_photo, p.food_album, p.cuisine_i_cook FROM  Meal as m JOIN Provider as p ON m.user_id = p.user_id WHERE  m.provider_food_id = '".$provider_id."';";
       //echo "$sql2";
-      $array_meal_search_all = Array();
       $index = 0;
 			$result2 = $conn->query($sql2);
       if ($result2->num_rows > 0) {
