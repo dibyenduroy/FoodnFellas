@@ -12,12 +12,13 @@ $return = $_POST;
 $user_id = $_SESSION["user_id"];
 //$user_id = 2;
 // This will be used in Provider_address table.
-$city = $return["city"];
+$city = $return["where"];
+echo $city;
 //$city = "Sunnyvale";
 
 // These fields will be used in Provider_food table.
 $num_people = $return["num_people"];
-$date = $return["date"];
+$date = $return["when"];
 $price_low = $return["price_low"];
 $price_high = $return["price_high"];
 $meal_type = $return["meal_type"];
