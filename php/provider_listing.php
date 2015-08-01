@@ -83,7 +83,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 //	echo "<br>"."  printing provider listings    ";
 	// Test echos.
 //	echo "  Provider Listing results ";
-	print_r($provider_listings);
+	//print_r($provider_listings);
 
 	// At this point, we have all the information for the search query.
 	// wrap the data as with the callback
