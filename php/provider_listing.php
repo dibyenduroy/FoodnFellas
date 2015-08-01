@@ -1,7 +1,7 @@
 <?php
 
 // Delete this during final integration.
-$_SERVER['REQUEST_METHOD'] = "POST";
+//$_SERVER['REQUEST_METHOD'] = "POST";
 
 header('Cache-Control: no-cache');
 header('content-type: text/javascript;');
@@ -12,7 +12,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 	$user_id = $return["user_id"];
 
 	// Delete this during final integration.
-	$user_id = 5;
+	//$user_id = 5;
 
 	include 'foodnfellasDBConnection.php';
 
@@ -82,8 +82,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 	// Delete these echos and print_r during final integration.
 //	echo "<br>"."  printing provider listings    ";
 	// Test echos.
-	echo "  Provider Listing results ";
-	print_r($provider_listings);
+//	echo "  Provider Listing results ";
+	//print_r($provider_listings);
 
 	// At this point, we have all the information for the search query.
 	// wrap the data as with the callback
