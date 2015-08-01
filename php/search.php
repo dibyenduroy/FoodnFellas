@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 
 $return = $_POST;
 
-$user_id = $return["user_id"];
+$user_id = $_SESSION["user_id"];
 //$user_id = 2;
 // This will be used in Provider_address table.
 $city = $return["city"];
