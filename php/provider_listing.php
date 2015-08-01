@@ -1,10 +1,11 @@
 <?php
 
+session_start();
 // Delete this during final integration.
 $_SERVER['REQUEST_METHOD'] = "POST";
 
-header('Cache-Control: no-cache');
-header('content-type: text/javascript;');
+// header('Cache-Control: no-cache');
+// header('content-type: text/javascript;');
 
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
