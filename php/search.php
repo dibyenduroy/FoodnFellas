@@ -42,7 +42,7 @@ if ($conn->connect_error) {
 // Get the entries from Provider_address matching the city.
 $sql1 = "SELECT pa.user_id as pui, pa.provider_food_id as pfi FROM Provider_address  as pa JOIN Provider_food as pf 
                                                 ON pa.provider_food_id = pf.provider_food_id
-                                                WHERE pa.city = '".$city."';"; 
+                                                WHERE pa.city = 'Sunnyvale';"; 
 //                                                AND pf.min_people <= ".$num_people." 
 //                                                AND pf.max_people >= ".$num_people."
 //                                                AND pf.price_per_person BETWEEN ".$price_low." AND ".$price_high." 
@@ -51,7 +51,7 @@ $sql1 = "SELECT pa.user_id as pui, pa.provider_food_id as pfi FROM Provider_addr
 //                                                AND pf.delivery_method = ".$delivery_method." 
 //if (($conn->query($sql1) === TRUE)) {
 $result1 = $conn->query($sql1);
-//echo "$sql1";
+echo "$sql1";
 
 $count = 0;
 if ($result1->num_rows > 0) {	
