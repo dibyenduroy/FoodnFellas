@@ -11,7 +11,6 @@ jQuery(
 
 function searchBtnCallBack() {
     //TODO: do validation
-
     // get the values in the form
     var where = $("#where").val();
     var when = $("#when").val();
@@ -64,8 +63,8 @@ function loginCallBack() {
                 dataType: 'jsonp',                //data format
                 type: 'GET',
                 success: function (data) {
-                    console.log('inside success');
-                    console.log(data);
+                    //console.log('inside success');
+                    //console.log(data);
                     alert("Successful Login");
                 },
                 error: function (xhr, status, error) {
