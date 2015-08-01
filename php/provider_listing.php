@@ -72,7 +72,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 
 	// Get the count. 
 	$count_array_elem = array(
-    	"count"  => $index;
+    	"count"  => $index
     );
 	
 //	echo "<br>"."  Printing array_repeated_results  ";
