@@ -46,8 +46,8 @@ function SignIn($email_p,$password_p,$login_type_p)
     "bar" => "foo",
 );
 
-    //echo $_GET['callback'].'('.json_encode($array_user_results).');';
-    echo $_GET['callback'].'('.json_encode($array_test).');';
+    echo json_encode($array_user_results);
+    //echo $_GET['callback'].'('.json_encode($array_test).');';
 
     //$conn->close();
   }
