@@ -70,13 +70,17 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 		echo "0 results2";
 	}
 
+	// Get the count.
+	$count_array_elem = $index;
 //	echo "<br>"."  Printing array_repeated_results  ";
 //	print_r($array_repeated_results);
 
-	$provider_listings = array_merge($array_unique_result, $array_repeated_results);
+	$provider_listings = array_merge($count_array_elem, $array_unique_result, $array_repeated_results);
 	// Delete these echos and print_r during final integration.
 //	echo "<br>"."  printing provider listings    ";
-//	print_r($provider_listings);
+	// Test echos.
+	echo "  Provider Listing results ";
+	print_r($provider_listings);
 
 	// At this point, we have all the information for the search query.
 	// wrap the data as with the callback

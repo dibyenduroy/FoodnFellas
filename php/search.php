@@ -52,7 +52,7 @@ $sql1 = "SELECT pa.user_id as pui, pa.provider_food_id as pfi FROM Provider_addr
 $result1 = $conn->query($sql1);
 echo "$sql1";
 
-
+$count = 0;
 if ($result1->num_rows > 0) {	
 	// Now, return the meal entries. 
 	while($row = $result1->fetch_assoc()) {
@@ -71,6 +71,7 @@ if ($result1->num_rows > 0) {
           //print_r($array_meal_search_row);
           $array_meal_search_all[$index] = $array_meal_search_row;
           $index++;
+          $count++;
           //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
         }
 			}
@@ -80,9 +81,16 @@ if ($result1->num_rows > 0) {
     echo "The is some issue in conn->query";
 } 
  
+$array_count_elem = $count;
+$array_output = array_merge($array_count_elem, $array_meal_search_row);
+
+// Test code.
+echo " Search Results ";
+print_r($array_output); 
+
 // At this point, we have all the information for the search query.
 // wrap the data as with the callback
-echo $_GET['callback'].'('.json_encode($array_meal_search_all).');';
+echo $_GET['callback'].'('.json_encode($array_output).');';
 
 
 $conn->close();
