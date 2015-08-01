@@ -85,6 +85,7 @@ $array_count_elem = $count;
 $array_output = array_merge($array_count_elem, $array_meal_search_row);
 
 // Test code.
+echo " Search Results ";
 print_r($array_output); 
 
 // At this point, we have all the information for the search query.

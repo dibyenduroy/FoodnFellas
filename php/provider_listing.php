@@ -79,6 +79,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 	// Delete these echos and print_r during final integration.
 //	echo "<br>"."  printing provider listings    ";
 	// Test echos.
+	echo "  Provider Listing results ";
 	print_r($provider_listings);
 
 	// At this point, we have all the information for the search query.
