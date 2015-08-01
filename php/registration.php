@@ -63,7 +63,7 @@ function test_function() {
     //echo $_GET['callback'].'('.json_encode($array_user_info).');';
     $conn->close();
     }
-    $return["json"] = json_encode($return);
+   // $return["json"] = json_encode($return);
 
     //$merged_array = array_merge($result, $array_user_info);
     //echo json_encode($return);
