@@ -63,14 +63,15 @@ function loginCallBack() {
                 dataType: 'json',                //data format
                 type: 'GET',
                 success: function (data) {
-                    //console.log('inside success');
-                    //console.log(data);
-                    location.href='index_afterlaunch.html';
+                    console.log('inside success');
+                    console.log(data);
+                    //location.href='index_afterlaunch.html';
                     alert("Successful Login");
                 },
                 error: function (xhr, status, error) {
                     var err = eval("(" + xhr.responseText + ")");
-                    location.href='index_afterlaunch.html';
+                    console.log('ERROR! ', err);
+                    //location.href='index_afterlaunch.html';
                     alert("Unsuccessful login. Please try again");
                 }
             });
