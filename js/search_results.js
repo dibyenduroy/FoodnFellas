@@ -22,7 +22,6 @@ jQuery(
                 $("#userNameOrLogin").prepend('<li id="userId"> Signed in as '+ data["user_id"] +'</li>');
 
                 //add logout btn
-
                 // fill in the form with existing user data.
                 $('#Name').val(data['f_name']).val(data['l_name']);
                 $('#AboutMe').val(data['about_me']);
