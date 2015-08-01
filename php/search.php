@@ -57,12 +57,8 @@ if ($result1->num_rows > 0) {
 	// Now, return the meal entries. 
 	while($row = $result1->fetch_assoc()) {
 			$provider_id = $row["pfi"];
-    	$sql2 = "SELECT m.dish_name, m.meal_description, m.meal_id, p.about_me, p.awards_won, p.kitchen_photo, p.food_album, p.cuisine_i_cook
-    								FROM  Meal as m 
-                    JOIN Provider as p 
-    								ON m.user_id = p.user_id
-									  WHERE  m.provider_food_id = '".$provider_id."';";
-     // echo "$sql2";
+    	$sql2 = "SELECT m.dish_name, m.meal_description, m.meal_id, p.about_me, p.awards_won, p.kitchen_photo, p.food_album, p.cuisine_i_cook FROM  Meal as m JOIN Provider as p ON m.user_id = p.user_id WHERE  m.provider_food_id = '".$provider_id."';";
+      echo "$sql2";
       $array_meal_search_all = Array();
       $index = 0;
 			$result2 = $conn->query($sql2);
@@ -85,7 +81,7 @@ $array_count_elem = $count;
 $array_output = array_merge($array_count_elem, $array_meal_search_row);
 
 // Test code.
-echo " Search Results ";
+//echo " Search Results ";
 print_r($array_output); 
 
 // At this point, we have all the information for the search query.
