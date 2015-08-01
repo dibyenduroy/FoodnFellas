@@ -43,25 +43,23 @@ function test_function() {
       }
       if ($conn->query($sql) === TRUE) {
         $return["Status"] = "Success";
-      }else {
-        $return["Status"] = "Error";
-        $return["Error"] = $conn->error;
-      }
-      $sql2 = "SELECT user_id, is_provider, f_name, l_name FROM user where email = '".$email."' AND password = '".$user_password."'";
-      $user_info = $conn->query($sql2);
-      $num=$user_info->num_rows; 
-
-
-
-    //echo "Number of Rows ".$num;
-    if ($user_info->num_rows > 0) {
-      while ($row = $user_info->fetch_assoc()) {
+        $sql2 = "SELECT user_id, is_provider, f_name, l_name FROM user where email = '".$email."' AND password = '".$user_password."'";
+        $user_info = $conn->query($sql2);
+        $num=$user_info->num_rows; 
+        //echo "Number of Rows ".$num;
+        if ($user_info->num_rows > 0) {
+          while ($row = $user_info->fetch_assoc()) {
             $array_user_info[$index] = $row;
             $cookie_variable=$row["f_name"]." ".$row["l_name"]." ".$row["user_id"]." ".$row["is_provider"];
             setcookie("FoodnFellas", $cookie_variable);
             $index++; 
+          }
+        }
+      }else {
+        $return["Status"] = "Error";
+        $return["Error"] = $conn->error;
       }
-    }
+
     //echo $_GET['callback'].'('.json_encode($array_user_info).');';
     $conn->close();
     }
