@@ -18,7 +18,8 @@ function test_function() {
     $user_password = md5($return["password"]);
     $login_type = $return["login_type"];
 
-
+    $array_user_info = Array();
+    $index = 0;
     $return["Status"] = (strcmp($fname, "") != 0)  ;
 
     if (strcmp($fname, "") != 0 ){
@@ -46,11 +47,29 @@ function test_function() {
         $return["Status"] = "Error";
         $return["Error"] = $conn->error;
       }
-      $conn->close();
+      $sql2 = "SELECT user_id, is_provider, f_name, l_name FROM user where email = '".$email."' AND password = '".$user_password."'";
+      $user_info = $conn->query($sql2);
+      $num=$user_info->num_rows; 
+
+
+
+    //echo "Number of Rows ".$num;
+    if ($user_info->num_rows > 0) {
+      while ($row = $user_info->fetch_assoc()) {
+            $array_user_info[$index] = $row;
+            $cookie_variable=$row["f_name"]." ".$row["l_name"]." ".$row["user_id"]." ".$row["is_provider"];
+            setcookie("FoodnFellas", $cookie_variable);
+            $index++; 
+      }
+    }
+    //echo $_GET['callback'].'('.json_encode($array_user_info).');';
+    $conn->close();
     }
     $return["json"] = json_encode($return);
+
+    $merged_array = array_merge($result, $array_user_info);
     //echo json_encode($return);
-    echo $_GET['callback'].'('.json_encode($return).');';
+    echo $_GET['callback'].'('.json_encode($merged_array).');';
 }
 
 ?>
