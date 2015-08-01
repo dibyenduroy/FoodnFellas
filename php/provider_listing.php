@@ -12,7 +12,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 	$user_id = $_SESSION["user_id"];
 
 	// Delete this during final integration.
-	$user_id = 5;
+	//$user_id = 5;
 
 	include 'foodnfellasDBConnection.php';
 
