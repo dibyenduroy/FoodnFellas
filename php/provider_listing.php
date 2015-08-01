@@ -70,8 +70,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 		echo "0 results2";
 	}
 
-	// Get the count.
-	$count_array_elem = $index;
+	// Get the count. 
+	$count_array_elem = Array();
+	$count_array_elem[0] = $index;
 //	echo "<br>"."  Printing array_repeated_results  ";
 //	print_r($array_repeated_results);
 
