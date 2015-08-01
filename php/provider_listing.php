@@ -10,6 +10,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 {
 	$return = $_POST;
 	$user_id = $_SESSION["user_id"];
+	echo " User-id ";
+	echo $user_id;
 
 	// Delete this during final integration.
 	//$user_id = 5;
