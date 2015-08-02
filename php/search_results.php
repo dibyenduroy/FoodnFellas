@@ -139,15 +139,15 @@ $conn->close();
             </div>
             <div class="col-md-6">
                 <label for="profile_image">Kitchen Photo:  </label>
-                <img class="img-responsive" id="kitchen_photo" src="<?php echo $array_selected_search['kitchen_photo'];?>" alt="">
+                <img class="img-responsive" id="kitchen_photo" src="<?php echo $array_selected_search['kitchen_photo'];?>"/250x250 alt="">
             </div>
             <div class="col-md-12">
             <label for="profile_image">Food Album  </label>
             <?php 
                 $lst_photo = explode(",", $array_selected_search['food_album']);
                 /*print the array*/
-                foreach($lst as $item) { ?>
-                <img class="img-responsive" id="food_album" src="<?php echo $lst;?>" alt="">
+                foreach($lst_photo as $item) { ?>
+                <img class="img-responsive" id="food_album" src="<?php echo $lst;?>"/250x250 alt="">
                 <?php 
                 echo "$lst";
                 }
