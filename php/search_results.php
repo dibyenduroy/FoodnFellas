@@ -65,6 +65,9 @@ header('Content-Type: text/html; charset=utf-8');
 // Delete this during integration cleanup.
 $_SERVER['REQUEST_METHOD'] = "POST";
 
+   $array_meal_search_all = array();
+   $index=0;
+
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
 
@@ -94,8 +97,7 @@ $meal_details = "SELECT dish_name, dish_description FROM Meal where provider_foo
 // Delte these debug echos during integration.
 //echo "  sql1  ";
 //echo $sql1;
-   $array_meal_search_all = array();
-   $index=0;
+
 $result1 = $conn->query($sql1);
 if ($result1->num_rows > 0) {
         // Delte these debug echos during integration.
@@ -107,7 +109,7 @@ if ($result1->num_rows > 0) {
             $array_meal_search_all[$index] = $array_meal_search_row;
             $index++; 
         }
-    print_r($array_meal_search_all);
+ 
     }
 
 } else {
@@ -140,6 +142,7 @@ $conn->close();
                     <br></br>
             <div class="container-fluid">
                 <?php 
+                   print_r($array_meal_search_all);
                 $lst_photo = explode(",", $array_selected_search['food_album']);
                 foreach($lst_photo as $item) { ?>
                 <div class="col-md-3">
