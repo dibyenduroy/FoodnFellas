@@ -100,7 +100,7 @@
         // Now, return the meal entries.
         while($row = $result1->fetch_assoc()) {
                 $provider_id = $row["pfi"];
-            $sql2 = "SELECT m.dish_name, m.meal_description, m.meal_id, p.about_me, p.awards_won, p.kitchen_photo, p.food_album, p.cuisine_i_cook FROM  Meal as m JOIN Provider as p ON m.user_id = p.user_id WHERE  m.provider_food_id = '".$provider_id."';";
+            $sql2 = "SELECT u.f_name, u.l_name, p.price_per_person, p.cuisine_i_cook , p.food_album, p.cuisine_i_cook FROM  Meal as m JOIN Provider as p ON m.user_id = p.user_id JOIN user u ON u.user_id = p.user_id WHERE  m.provider_food_id = '".$provider_id."';";
          // echo "$sql2";
           $index = 0;
                 $result2 = $conn->query($sql2);
@@ -140,24 +140,20 @@
 
       <div class="container-fluid">
           <h3> All Meal listings</h3>
-            <div class="col-md-3">
+          <?php for ($i = 1; $i <= $count; $i++) {
+          echo $i;
+          <div class="col-md-3">
                 <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
             </div>
             <div class="col-md-3">
                 <label for="Name">By: </label>
                 <output name="AboutMe" id ="AboutMe">
-                <label for="price_per_person">Price per person: <?php print_r($array_count_elem);?></label>
-                <output name="price_per_person" id ="price_per_person" value=<?php print_r($array_count_elem);?> >
-            </div>
-            <div class="col-md-3">
-                <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
-            </div>
-            <div class="col-md-3">
-                <label for="Name">By: </label>
-                <output name="Name" id ="Name">
-                <label for="price_per_person">Price per person: $</label>
+                <label for="price_per_person">Price per person: <?php $array_meal_search_all[$i];?></label>
                 <output name="price_per_person" id ="price_per_person">
             </div>
+          }?>
+            
+            
       </div> 
 
       <div class="row">
