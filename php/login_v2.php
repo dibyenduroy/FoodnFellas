@@ -210,7 +210,7 @@ function SignIn($email_p,$password_p,$login_type_p)
                 <div class="omb_login">
                     <div class="row">
                         <div class="col-xs-12">
-                            <form class="omb_loginForm" action="php/registration.php" autocomplete="off" method="post">
+                            <form class="omb_loginForm" action="registration.php" autocomplete="off" method="post">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
                                     <input type="text" class="form-control" id = "firstName" name="FirstName" placeholder="First Name">
@@ -283,7 +283,7 @@ function SignIn($email_p,$password_p,$login_type_p)
                         <!--</div>-->
                         <div class="row">
                             <div class="col-xs-12">
-                                <form class="omb_loginForm" action="php/login_v2.php" autocomplete="off" method="POST">
+                                <form class="omb_loginForm" action="login_v2.php" autocomplete="off" method="POST">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
                                         <input type="text" class="form-control" name="email" placeholder="email address">
