@@ -138,6 +138,30 @@ $conn->close();
                 <output name="Cuisine_I_Cook" id ="Cuisine_I_Cook">
             </div>
             <br>
+            <div class="col-xs-12 col-sm-3 ">
+                <label for="price_per_person">Price per person: <?php echo $array_selected_search['price_per_person'];?></label>
+                <output name="price_per_person" id ="price_per_person">
+            </div>
+            <div class="col-xs-12 col-sm-3 ">
+                <label for="delivery_method">Delivery Method  <?php echo $array_selected_search['delivery_method'];?></label>
+                <output name="delivery_method" id ="delivery_method">
+            </div>
+            <div class="col-xs-12 col-sm-3 ">
+                <label for="meal_type">Cuisine Type : <?php echo $array_selected_search['cuisine_type'];?> </label>
+                <output name="meal_type" id ="meal_type">
+            </div>
+            <div class="col-md-6 ">
+                <label for="available_on">Available On</label>
+                <output name="available_on" id ="available_on">
+            </div>
+            <div class="col-md-12 ">
+                <dl>
+                    <label for="dish_name">Dish Name: <?php echo $array_selected_search['dish_name'];?></label>
+                    <dt><output name="dish_name" id ="dish_name" value="<?php echo $array_selected_search['dish_name'];?>"></dt>
+                    <label for="meal_description">Dish Description : <?php echo $array_selected_search['meal_description'];?></label>
+                    <dt><output name="meal_description" id ="meal_description"></dt>
+                </dl>
+            <div>
             <div class="col-md-3">
                 <label for="profile_image">Kitchen Photo:  </label>
                 <img class="img-responsive" id="kitchen_photo" src="<?php echo $array_selected_search['kitchen_photo'];?>" alt="" width="200" height="200">
@@ -163,30 +187,7 @@ $conn->close();
  
     <!--// This is provider's Meal information.  looping required. -->
  
-            <div class="col-xs-12 col-sm-3 ">
-                <label for="price_per_person">Price per person: <?php echo $array_selected_search['price_per_person'];?></label>
-                <output name="price_per_person" id ="price_per_person">
-            </div>
-            <div class="col-xs-12 col-sm-3 ">
-                <label for="delivery_method">Delivery Method  <?php echo $array_selected_search['delivery_method'];?></label>
-                <output name="delivery_method" id ="delivery_method">
-            </div>
-            <div class="col-xs-12 col-sm-3 ">
-                <label for="meal_type">Cuisine Type : <?php echo $array_selected_search['cuisine_type'];?> </label>
-                <output name="meal_type" id ="meal_type">
-            </div>
-            <div class="col-md-6 ">
-                <label for="available_on">Available On</label>
-                <output name="available_on" id ="available_on">
-            </div>
-            <div class="col-md-12 ">
-                <dl>
-                    <label for="dish_name">Dish Name: <?php echo $array_selected_search['dish_name'];?></label>
-                    <dt><output name="dish_name" id ="dish_name" value="<?php echo $array_selected_search['dish_name'];?>"></dt>
-                    <label for="meal_description">Dish Description : <?php echo $array_selected_search['meal_description'];?></label>
-                    <dt><output name="meal_description" id ="meal_description"></dt>
-                </dl>
-            <div>
+
             <div class="col-md-12">
                 <button type="button" class="btn btn-info btn-large" action="OrderTransactionSubmit.php">Order</button>
             <div>
