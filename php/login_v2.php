@@ -128,12 +128,13 @@ function SignIn($email_p,$password_p,$login_type_p)
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              if (isset($_SESSION["user_id"])) {
+              <?php 
+              if (isset($_SESSION["user_id"])) { ?>
                 Hello World
-              } else {
+              <?php } else { ?>
                 <li><a href="#" data-toggle="modal" data-target=".signupwith-email-modal">Sign Up</a></li>
                 <li><a href="#" data-toggle="modal" data-target=".social-login-modal">Login</a></li>
-              }
+              <?php } ?>
               <li> <button type="button" class="btn btn-info" onclick="providerBtnCallBack()">Become a provider</button> </li>
             </ul>
         </div><!--/.nav-collapse -->
