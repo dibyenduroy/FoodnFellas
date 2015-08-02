@@ -119,10 +119,17 @@
                   echo ("<div class='col-md-6'><img class='img-responsive' id='photo' src=".$array_meal_search_row['photo']." alt=''></div><div class='col-md-3'>");
                   echo ("<label for='Name'>By: ".$array_meal_search_row['f_name']." ".$array_meal_search_row['l_name']."  "."</label>");
                   echo ("<label for='price_per_person'>Price per person: ".$array_meal_search_row['price_per_person']."</label></div>");*/
-
+                  ?>
+              <div class="col-md-3">
+                <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
+            </div>
+            <div class="col-md-3">
+                <label for="Name">By:<?php echo $array_meal_search_row['f_name']." ".$array_meal_search_row['l_name']."  "; ?> </label>
+                <label for="price_per_person">Price per person: <?php echo $array_meal_search_row['price_per_person'] ?> </label>
+            </div>
                 
 
-
+<?php
             
               //print_r($array_meal_search_row);
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
@@ -143,7 +150,10 @@
     $conn->close();
     }
 
+
 ?>
+
+            
             <div class="col-md-3">
                 <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
             </div>
