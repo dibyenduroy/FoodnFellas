@@ -32,6 +32,15 @@
 </head>
 
 <body>
+
+<?php session_start();
+// Getting session variables.
+$user_id = $_SESSION["user_id"];
+$f_name = $_SESSION["f_name"];
+$l_name = $_SESSION["l_name"];
+$is_provider = $_SESSION["is_provider"];
+
+?>
 <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
@@ -192,14 +201,7 @@ $conn->close();
 
 <h4> Order Transaction Page <h>   
 <form action="OrderTransactionSubmit.php" method='post' enctype="multipart/form-data">
-<?php session_start();
-// Getting session variables.
-$user_id = $_SESSION["user_id"];
-$f_name = $_SESSION["f_name"];
-$l_name = $_SESSION["l_name"];
-$is_provider = $_SESSION["is_provider"];
-$cost=$array_selected_search['price_per_person'] *10;
-?>
+
 
 <br>
 <br><br>
@@ -207,19 +209,22 @@ $cost=$array_selected_search['price_per_person'] *10;
 <br>
 
      <b> Order Input Details </b>   
-   <br> <input type="hidden" name="provider_id" value=" <?php echo $array_selected_search['user_id'];?>" placeholder="provider_id" />  <br>
-   <br> <input type="text" name="consumer_id" value="<?php echo $user_id;?>" placeholder="consumer_id" />  <br>
-   <br> <input type="text" name="meal_id" value="123" placeholder="meal_id" />  <br>
-   <br> <input type="text" name="cost" value="<?php echo "100"?> " placeholder="cost" /> <br>
-   <br> <input type="text" name="DeliveryMethod" value="" placeholder="DeliveryMethod" />  <br>
+
+  <form action="OrderTransactionSubmit.php" method='post' enctype="multipart/form-data">   
+   <br> <input type="hidden" name="provider_id" value="7" placeholder="provider_id" />  <br>
+   <br> <input type="hidden" name="consumer_id" value="<?php echo $user_id;?>" placeholder="consumer_id" />  <br>
+   <br> <input type="hidden" name="meal_id" value="123" placeholder="meal_id" />  <br>
+   <br> <input type="hidden" name="cost" value="100" placeholder="cost" /> <br>
+   <br> <input type="hidden" name="DeliveryMethod" value="PICKUP" placeholder="DeliveryMethod" />  <br>
    <br> <input type="text" name="NumberofAdult" value="" placeholder="NumberofAdult" />  <br>
    <br> <input type="text" name="NumberofKids" value="" placeholder="NumberofKids" />  <br>
-   <br> <input type="text" name="SpecialNote" value="" placeholder="SpecialNote" style="width: 300px;" />  <br>
-   <br> <input type="text" name="ReviewID" value="123" placeholder="ReviewID" />  <br>
+   <br> <input type="text" name="SpecialNote" value="" placeholder="SpecialNote" style="width: 500px;" />  <br>
+   <br> <input type="hidden" name="ReviewID" value="123" placeholder="ReviewID" />  <br>
    
 <br>
 <div class="col-md-12">
-                <button type="button" class="btn btn-info btn-large" action="OrderTransactionSubmit.php">Order</button>
+                
+<input type='submit' class="btn btn-info btn-large" value='Order' onClick="window.location.reload(true)"/></div>
 <div>
 
 </form>   
