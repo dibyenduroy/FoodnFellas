@@ -129,13 +129,12 @@ WHERE m.provider_food_id = '".$provider_id."';";
             }
 
 
-            while (list($var, $val) = each($array_meal_search_all[0])) {
+            while (list($var, $val) = each($array_meal_search_all)) {
               print "$var is $val\n"; 
-              echo '<h5>Nidhi $var is $val</h5>';
-              echo '<div class="col-md-3">',
+              echo '<div class="col-md-6">',
                     '<img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">',
                     '</div>',
-                    '<div class="col-md-3">',
+                    '<div class="col-md-6">',
                     '<label for="Name">By: </label>',
                     '<output name="AboutMe" id ="AboutMe">',
                     '<label for="price_per_person">Price per person: $var is $val </label>',
