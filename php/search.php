@@ -127,11 +127,10 @@ WHERE m.provider_food_id = '".$provider_id."';";
               //print_r($array_meal_search_row);
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
             }
-            for ($i = 0; $i < count($array_meal_search_all); $i++) {
-                echo "I am here";
-                echo count($array_meal_search_all);
-                print_r($array_meal_search_all[$i]);
-                echo "after this";
+
+
+            while (list($var, $val) = each($array_meal_search_all)) {
+              print "$var is $val\n";
             }
             //echo "\n";
             //print_r($array_meal_search_all);
