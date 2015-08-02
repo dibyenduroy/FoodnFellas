@@ -130,9 +130,9 @@ WHERE m.provider_food_id = '".$provider_id."';";
 
 
             while (list($var, $val) = each($array_meal_search_all[0])) {
-              print "$var is $val\n"; ?>
-              <h1>Nidhi</h1>
-              <? php
+              print "$var is $val\n"; 
+              echo '<h1>Nidhi $var is $val</h1>';
+           
 
             }
             //echo "\n";
