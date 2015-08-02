@@ -73,11 +73,10 @@ function loginCallBack() {
         url: 'php/login_v2.php',
         dataType: 'jsonp',
         jsonp: 'callback',
-        success: function(){
+        success: function(data){
             alert("success");
         }, error: function(xhr, status, error) {
-            var err = eval("(" + xhr.responseText + ")");
-            alert(err.Message);
+            alert(error);
         }
     });
     //jQuery(
