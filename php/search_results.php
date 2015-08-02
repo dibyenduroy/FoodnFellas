@@ -161,7 +161,7 @@ $conn->close();
                     <dt><output name="meal_description" id ="meal_description"></dt>
                 </dl>
             <div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <label for="profile_image">Kitchen Photo:  </label>
                 <img class="img-responsive" id="kitchen_photo" src="<?php echo $array_selected_search['kitchen_photo'];?>" alt="" width="200" height="200">
             </div>
