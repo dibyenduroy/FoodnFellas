@@ -125,7 +125,7 @@ WHERE m.provider_food_id = '".$provider_id."';";
                 //print_r($array_meal_search_row);
                 $counter++;
                for ($i = 0; $i < count($array_meal_search_row); $i++) {
-                echo $array_meal_search_row[$i];
+                print_r($array_meal_search_row[$i]);
                 }
 
 
