@@ -180,8 +180,32 @@ $conn->close();
                 <img class="img-responsive" id="kitchen_photo" src="<?php echo $array_selected_search['kitchen_photo'];?>" alt="" width="200" height="200">
             </div>
 
+<h4> Order Transaction Page <h>   
+<form action="OrderTransactionSubmit.php" method='post' enctype="multipart/form-data">
+<?php session_start();
+// Getting session variables.
+$user_id = $_SESSION["user_id"];
+$f_name = $_SESSION["f_name"];
+$l_name = $_SESSION["l_name"];
+$is_provider = $_SESSION["is_provider"];
+?>
 
+<br>
+     <b> Order Input Details </b>   
+   <br> <input type="hidden" name="provider_id" value=" <?php echo $array_selected_search['user_id'];?>" placeholder="provider_id" />  <br>
+   <br> <input type="text" name="consumer_id" value="<?php echo $user_id;?>" placeholder="consumer_id" />  <br>
+   <br> <input type="text" name="meal_id" value="123" placeholder="meal_id" />  <br>
+   <br> <input type="text" name="cost" value="<?php echo $array_selected_search['price_per_person'] * 10 ?> " placeholder="cost" /> <br>
+   <br> <input type="text" name="DeliveryMethod" value="" placeholder="DeliveryMethod" />  <br>
+   <br> <input type="text" name="NumberofAdult" value="" placeholder="NumberofAdult" />  <br>
+   <br> <input type="text" name="NumberofKids" value="" placeholder="NumberofKids" />  <br>
+   <br> <input type="text" name="SpecialNote" value="" placeholder="SpecialNote" style="width: 300px;" />  <br>
+   <br> <input type="text" name="ReviewID" value="123" placeholder="ReviewID" />  <br>
+   
+<br>
 
+<input type='submit' value='Update Details' onClick="window.location.reload(true)"/></div>
+</form>   
 
 
  
