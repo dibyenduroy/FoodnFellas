@@ -78,7 +78,6 @@
     //if (($conn->query($sql1) === TRUE)) {
     $result1 = $conn->query($sql1);
     //echo "$sql1";
-
     $count = 0;
     if ($result1->num_rows > 0) {
         // Now, return the meal entries.
@@ -102,22 +101,11 @@
         echo "0 results";
         echo "The is some issue in conn->query";
     }
-
     $array_count_elem = array(
         "count"  => $count
         );
     //$count;
-    $array_output = array_merge($array_count_elem, $array_meal_search_all);
-
-    // Test code.
-    //echo " Search Results ";
-    //print_r($array_output);
-
-    // At this point, we have all the information for the search query.
-    // wrap the data as with the callback
     //echo $_GET['callback'].'('.json_encode($array_output).');';
-
-
     $conn->close();
     }
 
@@ -153,7 +141,7 @@
             <div class="col-md-3">
                 <label for="Name">By: </label>
                 <output name="AboutMe" id ="AboutMe">
-                <label for="price_per_person">Price per person: $</label>
+                <label for="price_per_person">Price per person: <?php print_r($array_count_elem);?></label>
                 <output name="price_per_person" id ="price_per_person" value="<?php print_r($array_count_elem);?>">
             </div>
             <div class="col-md-3">
