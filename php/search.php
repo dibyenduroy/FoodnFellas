@@ -47,9 +47,7 @@
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
 
-
     $return = $_POST;
-
     $user_id = $_SESSION["user_id"];
     //$user_id = 2;
     // This will be used in Provider_address table.
@@ -81,7 +79,6 @@
     }
     $array_meal_search_all = Array();
 
-
     // Get the entries from Provider_address matching the city.
     $sql1 = "SELECT pa.user_id as pui, pa.provider_food_id as pfi FROM Provider_address  as pa JOIN Provider_food as pf
                                                     ON pa.provider_food_id = pf.provider_food_id
@@ -107,8 +104,6 @@
           if ($result2->num_rows > 0) {
                     while($array_meal_search_row = $result2->fetch_assoc()) {
               //print_r($array_meal_search_row);
-            
-
               $array_meal_search_all[$index] = $array_meal_search_row;
               $index++;
               $count++;
@@ -132,17 +127,15 @@
 
 ?>
           <h3> All Meal listings</h3>
-          <?php for($i = 1; $i <= $count; $i++): ?>
           <div class="col-md-3">
                 <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
             </div>
             <div class="col-md-3">
                 <label for="Name">By: </label>
                 <output name="AboutMe" id ="AboutMe">
-                <label for="price_per_person">Price per person: <?php echo $i;?></label>
+                <label for="price_per_person">Price per person: <?php echo $count;?></label>
                 <output name="price_per_person" id ="price_per_person">
             </div>
-          <?php endfor; ?>
             
 
       </div> 
