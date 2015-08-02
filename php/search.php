@@ -129,6 +129,7 @@ WHERE m.provider_food_id = '".$provider_id."';";
             }
             for ($i = 0; $i < count($array_meal_search_all); $i++) {
                 echo "I am here";
+                echo count($array_meal_search_all);
                 print_r($array_meal_search_all[$i]);
                 echo "after this";
             }
