@@ -16,6 +16,7 @@ function test() {
 
 function SignIn($email_p,$password_p,$login_type_p)
 {
+  header('content-type: text/javascript;');
   //starting the session for user profile page
   if(!empty($email_p) ) {
     //////////////////////
@@ -87,8 +88,8 @@ function SignIn($email_p,$password_p,$login_type_p)
   $password_p=md5($_POST["passwd"]);
   $login_type_p=$_POST['login_type'];
 
-  //SignIn($email_p,$password_p,$login_type_p);
-  test();
+  SignIn($email_p,$password_p,$login_type_p);
+  //test();
 //}
 
 ?>

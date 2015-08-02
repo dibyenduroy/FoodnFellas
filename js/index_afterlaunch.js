@@ -71,11 +71,11 @@ function signupCallBack() {
 function loginCallBack() {
     $.ajax({
         url: 'php/login_v2.php',
-        data: {name: 'Chad'},
         dataType: 'jsonp',
         jsonp: 'callback',
         jsonpCallback: 'jsonpCallback',
-        success: function(){
+        success: function(data){
+            console.log(data);
             alert("success");
         }, error: function(xhr, status, error) {
             alert("failure!");
