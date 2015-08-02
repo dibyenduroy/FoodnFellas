@@ -142,9 +142,20 @@ $conn->close();
                 <img class="img-responsive" id="kitchen_photo" src="<?php echo $array_selected_search['kitchen_photo'];?>" alt="">
             </div>
             <div class="col-md-12">
-                <label for="profile_image">Food Album  </label>
-                <img class="img-responsive" id="food_album" src="<?php echo $array_selected_search['food_album'];?>" alt="">
+            <label for="profile_image">Food Album  </label>
+            <?php 
+                $lst_photo = explode(",", $array_selected_search['food_album']);
+                /*print the array*/
+                foreach($lst as $item) { ?>
+                <img class="img-responsive" id="food_album" src="<?php echo $lst;?>" alt="">
+                <?php 
+                echo "$lst";
+                }
+                ?>
             </div>
+
+
+
             <br></br>
             <div class="container-fluid">
                 <h2> Meal listings of <?php echo $array_selected_search['f_name'];?></h3>
