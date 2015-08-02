@@ -101,7 +101,7 @@ if ($result1->num_rows > 0) {
 
 // At this point, we have all the information for the search query.
 // wrap the data as with the callback
-echo $_GET['callback'].'('.json_encode($array_selected_search).');';
+//echo $_GET['callback'].'('.json_encode($array_selected_search).');';
 
 $conn->close(); 
 
@@ -147,11 +147,11 @@ $conn->close();
                 echo $array_selected_search['food_album'];
                 $lst_photo = explode(",", $array_selected_search['food_album']);
                 /*print the array*/
-                echo $lst_photo;
+                //echo $lst_photo;
                 foreach($lst_photo as $item) { ?>
                 <img class="img-responsive" id="food_album" src="<?php echo $item;?>"/250x250 alt="">
                 <?php 
-                echo "$item";
+                //echo "$item";
                 }
                 ?>
             </div>
