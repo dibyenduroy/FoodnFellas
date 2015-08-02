@@ -68,7 +68,8 @@ function SignIn($email_p,$password_p,$login_type_p)
       $index++; 
       
     }
-    echo $_GET['callback'].'('.json_encode($array_user_results).');';
+    //echo $_GET['callback'].'('.json_encode($array_user_results).');';
+    echo json_encode($array_user_results);
     $conn->close();
   }
 }

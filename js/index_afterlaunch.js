@@ -74,7 +74,7 @@ function loginCallBack() {
             $.ajax({
                 url: 'php/login_v2.php',   //the script to call to get data
                 crossDomain: true,
-                dataType: 'jsonp',                //data format
+                dataType: 'json',                //data format
                 type: 'POST',
                 success: function (data) {
                     console.log('inside success');
