@@ -16,7 +16,6 @@ function test() {
 
 function SignIn($email_p,$password_p,$login_type_p)
 {
-  header('content-type: application/json;');
   //starting the session for user profile page
   if(!empty($email_p) ) {
     //////////////////////

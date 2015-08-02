@@ -73,7 +73,6 @@ function loginCallBack() {
         url: 'php/login_v2.php',
         dataType: 'jsonp',
         jsonp: 'callback',
-        contentType: "application/json; charset=utf-8",
         success: function(){
             alert("success");
         }, error: function(xhr, status, error) {
