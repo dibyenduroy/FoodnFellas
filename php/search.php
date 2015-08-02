@@ -127,7 +127,9 @@
                 <label for="Name">By:<?php echo $array_meal_search_row['f_name']." ".$array_meal_search_row['l_name']."  "; ?> </label>
                 <label for="price_per_person">Price per person: <?php echo $array_meal_search_row['price_per_person'] ?> </label>
               </div>
-                
+              <div class="col-md-3">
+              </div>
+
 
 <?php
             
