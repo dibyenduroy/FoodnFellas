@@ -101,7 +101,7 @@
         // Now, return the meal entries.
         while($row = $result1->fetch_assoc()) {
                 $provider_id = $row["pfi"];
-            $sql2 = "SELECT u.f_name, u.user_id,
+            $sql2 = "SELECT u.f_name, u.user_id, m.provider_food_id,
        u.l_name, 
        pf.price_per_person, 
        p.cuisine_i_cook , 
@@ -129,7 +129,7 @@ WHERE m.provider_food_id = '".$provider_id."';";
             }
             for ($i = 0; $i < count($array_meal_search_all); $i++) {
                 echo "I am here";
-                print_r($array_meal_search_all);
+                print_r($array_meal_search_all[$i]);
                 echo "after this";
             }
             //echo "\n";
