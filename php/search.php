@@ -43,6 +43,11 @@
     <?php
     // Session start.
     session_start();
+    // Getting session variables.
+    $user_id = $_SESSION["user_id"];
+    $f_name = $_SESSION["f_name"];
+    $l_name = $_SESSION["l_name"];
+    $is_provider = $_SESSION["is_provider"];
 
     // header('Cache-Control: no-cache');
     //header('content-type: text/javascript;');

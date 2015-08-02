@@ -1,6 +1,12 @@
 <?php
 
 session_start();
+// Getting session variables.
+$user_id = $_SESSION["user_id"];
+$f_name = $_SESSION["f_name"];
+$l_name = $_SESSION["l_name"];
+$is_provider = $_SESSION["is_provider"];
+
 // Delete this during final integration.
 $_SERVER['REQUEST_METHOD'] = "POST";
 
@@ -11,7 +17,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 {
 	$return = $_POST;
 	// Getting the user_id from the session.
-	$user_id = $_SESSION["user_id"];
+	// $user_id = $_SESSION["user_id"];
 	echo " User-id ";
 	echo $user_id;
 
