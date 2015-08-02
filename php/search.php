@@ -116,9 +116,14 @@
                // print_r($array_meal_search_row);
                 $counter++; 
 
-                  echo ("<tr><td>".$array_meal_search_row['f_name']."</td>");
-                  echo ("<td>".$array_meal_search_row['l_name']."</td>");
-                  echo ("<td>".$array_meal_search_row['price_per_person']."</td>");
+                  echo ("<div class='col-md-3'><img class='img-responsive' id='photo' src='http://placehold.it/150x150 alt=''></div><div class='col-md-3'>");
+                  echo ("<label for='Name'>By: ".$array_meal_search_row['f_name'].$array_meal_search_row['l_name']."</label>");
+                  echo ("<label for='price_per_person'>Price per person:".$array_meal_search_row['price_per_person']."</label></div>");
+
+                
+
+
+            
               //print_r($array_meal_search_row);
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
             }
