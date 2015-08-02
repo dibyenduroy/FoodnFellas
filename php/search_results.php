@@ -141,7 +141,6 @@ $conn->close();
                 <label for="profile_image">Kitchen Photo:  </label>
                 <img class="img-responsive" id="kitchen_photo" src="<?php echo $array_selected_search['kitchen_photo'];?>"/250x250 alt="">
             </div>
-            <div class="col-md-6">
             <label for="profile_image">Food Album  </label>
             <?php 
                 echo $array_selected_search['food_album'];
@@ -149,12 +148,14 @@ $conn->close();
                 /*print the array*/
                 //echo $lst_photo;
                 foreach($lst_photo as $item) { ?>
+                <div class="col-md-6">
                 <img class="img-responsive" id="food_album" src="<?php echo $item;?>"/250x250 alt="">
+                </div>
                 <?php 
                 //echo "$item";
                 }
                 ?>
-            </div>
+
 
 
 
