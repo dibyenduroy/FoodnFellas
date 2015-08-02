@@ -121,14 +121,15 @@
                   echo ("<label for='price_per_person'>Price per person: ".$array_meal_search_row['price_per_person']."</label></div>");*/
                   ?>
               <div class="col-md-6">
-                <input type="hidden" name="provider_food_id" value="<?php echo $array_meal_search_row['provider_food_id']; ?>">
-                <a data-toggle="modal" data-userid="<?php echo $array_meal_search_row['provider_food_id']; ?>" href="../php/search_results.php#myModal" class="btn btn-warning">
-                <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt=""><a href="../php/search_results.php">
+                $pfid = $array_meal_search_row['provider_food_id'];
+                
+                <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt=""><a href="../php/search_results.php?pfid=<?php $pfids?>">
                 <label for="Name">By:<?php echo $array_meal_search_row['f_name']." ".$array_meal_search_row['l_name']."  "; ?> </label>
                 <label for="price_per_person">Price per person: <?php echo $array_meal_search_row['price_per_person'] ?> </label>
               </div>
 <?php
-            
+            /*     <input type="hidden" name="provider_food_id" value="<?php echo $array_meal_search_row['provider_food_id']; ?>">
+            <a data-toggle="modal" data-userid="<?php echo $array_meal_search_row['provider_food_id']; ?>" href="../php/search_results.php#myModal" class="btn btn-warning">*/
               //print_r($array_meal_search_row);
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
             }
