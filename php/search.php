@@ -102,7 +102,7 @@
         while($row = $result1->fetch_assoc()) {
                 $provider_id = $row["pfi"];
             $sql2 = "SELECT m.provider_food_id,m.meal_id, u.f_name, u.user_id, 
-       u.l_name, pf.price_per_person
+       u.l_name, pf.price_per_person, u.photo
        FROM Meal as m JOIN user as u ON u.user_id = m.user_id 
        JOIN Provider_food as pf ON pf.provider_food_id = m.provider_food_id
             WHERE m.provider_food_id = '".$provider_id."';";
@@ -116,8 +116,8 @@
                // print_r($array_meal_search_row);
                 $counter++; 
 
-                  echo ("<div class='col-md-6'><img class='img-responsive' id='photo' src='http://placehold.it/250x250 alt=''></div><div class='col-md-6'>");
-                  echo ("<label for='Name'>By: ".$array_meal_search_row['f_name']." ".$array_meal_search_row['l_name']."</label>");
+                  echo ("<div class='col-md-6'><img class='img-responsive' id='photo' src=".$array_meal_search_row[photo]." alt=''></div><div class='col-md-6'>");
+                  echo ("<label for='Name'>By: ".$array_meal_search_row['f_name']." ".$array_meal_search_row['l_name']."  "."</label>");
                   echo ("<label for='price_per_person'>Price per person: ".$array_meal_search_row['price_per_person']."</label></div>");
 
                 
