@@ -19,7 +19,7 @@ function searchBtnCallBack() {
     where = encodeURI(where);
     when = encodeURI(when);
     numPeople = encodeURI(numPeople);
-    location.href='./html/search.html?'
+    location.href='../html/search.html?'
         + 'where=' + where + '&when='
         + when + '&numPeople=' + numPeople;
 }
