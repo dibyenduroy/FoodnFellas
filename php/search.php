@@ -47,9 +47,7 @@
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
 
-
     $return = $_POST;
-
     $user_id = $_SESSION["user_id"];
     //$user_id = 2;
     // This will be used in Provider_address table.
@@ -81,7 +79,6 @@
     }
     $array_meal_search_all = Array();
 
-
     // Get the entries from Provider_address matching the city.
     $sql1 = "SELECT pa.user_id as pui, pa.provider_food_id as pfi FROM Provider_address  as pa JOIN Provider_food as pf
                                                     ON pa.provider_food_id = pf.provider_food_id
@@ -100,18 +97,16 @@
         // Now, return the meal entries.
         while($row = $result1->fetch_assoc()) {
                 $provider_id = $row["pfi"];
-            $sql2 = "SELECT u.f_name, u.l_name, p.price_per_person, p.cuisine_i_cook , p.food_album, p.cuisine_i_cook FROM  Meal as m JOIN Provider as p ON m.user_id = p.user_id JOIN user u ON u.user_id = p.user_id WHERE  m.provider_food_id = '".$provider_id."';";
+            $sql2 = "SELECT u.f_name, u.l_name, p.price_per_person, p.cuisine_i_cook , p.food_album, p.cuisine_i_cook FROM  Meal as m JOIN Provider as p ON m.user_id = p.user_id JOIN user as u ON u.user_id = p.user_id WHERE  m.provider_food_id = '".$provider_id."';";
          // echo "$sql2";
           $index = 0;
                 $result2 = $conn->query($sql2);
           if ($result2->num_rows > 0) {
-                    while($array_meal_search_row = $result2->fetch_assoc()) {
+              while($array_meal_search_row = $result2->fetch_assoc()) {
               //print_r($array_meal_search_row);
-            
-
-              $array_meal_search_all[$index] = $array_meal_search_row;
-              $index++;
-              $count++;
+                $array_meal_search_all[$index] = $array_meal_search_row;
+                $index++;
+                $count++;
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
             }
             //echo "\n";
@@ -132,17 +127,15 @@
 
 ?>
           <h3> All Meal listings</h3>
-          <?php for($i = 1; $i <= $count; $i++): ?>
           <div class="col-md-3">
                 <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
             </div>
             <div class="col-md-3">
                 <label for="Name">By: </label>
                 <output name="AboutMe" id ="AboutMe">
-                <label for="price_per_person">Price per person: <?php echo $i;?></label>
+                <label for="price_per_person">Price per person: </label>
                 <output name="price_per_person" id ="price_per_person">
             </div>
-          <?php endfor; ?>
             
 
       </div> 
