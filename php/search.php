@@ -115,6 +115,10 @@
                 $index++; 
                 print_r($array_meal_search_row);
                 $counter++; 
+
+                  echo ("<tr><td>".$array_meal_search_row['f_name']."</td>");
+                  echo ("<td>".$row['l_name']."</td>");
+                  echo ("<td>".$row['price_per_person']."</td>");
               //print_r($array_meal_search_row);
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
             }
