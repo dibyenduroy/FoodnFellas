@@ -11,14 +11,14 @@
     <title>Stylish Portfolio - Start Bootstrap Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <!-- Custom styles for this template -->
-    <link href="css/index.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -488,15 +488,15 @@ function SignIn($email_p,$password_p,$login_type_p)
 
 
 <!-- jquery and jquery ui-->
-<script src="./external/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
-<link href="./external/jquery-ui-1.11.4.custom/jquery-ui.min.css" rel="stylesheet">
-<script src="./external/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+<script src="../external/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+<link href="../external/jquery-ui-1.11.4.custom/jquery-ui.min.css" rel="stylesheet">
+<script src="../external/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
 
-<script src="js/bootstrap.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 
 <!-- Custom Javascript -->
 <!--<script src="js/social_login.js"></script>-->
-<script src="js/index_afterlaunch.js"></script>
+<script src="../js/index_afterlaunch.js"></script>
 
 <!-- Custom Theme JavaScript -->
 <script>
