@@ -96,12 +96,12 @@
     //if (($conn->query($sql1) === TRUE)) {
     $result1 = $conn->query($sql1);
     //echo "$sql1";
-    $count = 0;
+    $counter = 0;
     if ($result1->num_rows > 0) {
         // Now, return the meal entries.
         while($row = $result1->fetch_assoc()) {
                 $provider_id = $row["pfi"];
-            $sql2 = "SELECT u.f_name, 
+            $sql2 = "SELECT u.f_name, u.user_id,
        u.l_name, 
        pf.price_per_person, 
        p.cuisine_i_cook , 
@@ -122,10 +122,15 @@ WHERE m.provider_food_id = '".$provider_id."';";
               while($array_meal_search_row = $result2->fetch_assoc()) { 
                 $array_meal_search_all[$index] = $array_meal_search_row;
                 $index++;
-                print_r($array_meal_search_row);
-                $count++;
+                //print_r($array_meal_search_row);
+                $counter++;
               //print_r($array_meal_search_row);
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
+            }
+            for ($i = 0; $i < count($array_meal_search_all); $i++) {
+                echo "I am here";
+                print_r($array_meal_search_all);
+                echo "after this";
             }
             //echo "\n";
             //print_r($array_meal_search_all);
@@ -136,7 +141,7 @@ WHERE m.provider_food_id = '".$provider_id."';";
         echo "The is some issue in conn->query";
     }
     $array_count_elem = array(
-        "count"  => $count
+        "counter"  => $counter
         );
     //$count;
     //echo $_GET['callback'].'('.json_encode($array_output).');';
@@ -150,7 +155,7 @@ WHERE m.provider_food_id = '".$provider_id."';";
             <div class="col-md-3">
                 <label for="Name">By: </label>
                 <output name="AboutMe" id ="AboutMe">
-                <label for="price_per_person">Price per person: <? php echo $array_meal_search_row["f_name"]; ?> </label>
+                <label for="price_per_person">Price per person: <? php echo $counter; ?> </label>
                 <output name="price_per_person" id ="price_per_person">
             </div>
             
