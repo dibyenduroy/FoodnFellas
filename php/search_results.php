@@ -50,7 +50,8 @@
 <?php
 
 //header('Cache-Control: no-cache');
-header('content-type: text/javascript;');
+//header('content-type: text/javascript;');
+header('Content-Type: text/html; charset=utf-8');
 
 // Delete this during integration cleanup.
 $_SERVER['REQUEST_METHOD'] = "POST";
