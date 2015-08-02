@@ -17,6 +17,17 @@
 </head>
 
 <body>
+
+<?php
+    // Session start.
+    session_start();
+    // Getting session variables.
+    $user_id = $_SESSION["user_id"];
+    $f_name = $_SESSION["f_name"];
+    $l_name = $_SESSION["l_name"];
+    $is_provider = $_SESSION["is_provider"];
+
+?>
   <!-- Navigation -->
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -26,7 +37,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/signup" data-toggle="modal" data-target=".social-signup-modal"></a></li>
-        <li><a href="/login" data-toggle="modal" data-target=".social-login-modal">MarySmith001</a></li>
+        <li><a href="/login" data-toggle="modal" data-target=".social-login-modal"> <?php  echo  "     ".$f_name; ?> </a></li>
         <li> <button type="button" class="btn btn-info" disabled>Become a provider</button> </li>
       </ul>
     </div><!--/.nav-collapse -->
@@ -42,12 +53,12 @@
 
     <?php
     // Session start.
-    session_start();
+    //session_start();
     // Getting session variables.
-    $user_id = $_SESSION["user_id"];
-    $f_name = $_SESSION["f_name"];
-    $l_name = $_SESSION["l_name"];
-    $is_provider = $_SESSION["is_provider"];
+    //$user_id = $_SESSION["user_id"];
+    //$f_name = $_SESSION["f_name"];
+    //$l_name = $_SESSION["l_name"];
+    //$is_provider = $_SESSION["is_provider"];
 
     // header('Cache-Control: no-cache');
     //header('content-type: text/javascript;');
