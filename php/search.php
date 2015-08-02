@@ -92,10 +92,126 @@ $array_output = array_merge($array_count_elem, $array_meal_search_all);
 
 // At this point, we have all the information for the search query.
 // wrap the data as with the callback
-echo $_GET['callback'].'('.json_encode($array_output).');';
+//echo $_GET['callback'].'('.json_encode($array_output).');';
 
 
 $conn->close();
 }
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>FoodnFellas</title>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">FoodnFellas</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/signup" data-toggle="modal" data-target=".social-signup-modal"></a></li>
+        <li><a href="/login" data-toggle="modal" data-target=".social-login-modal">MarySmith001</a></li>
+        <li> <button type="button" class="btn btn-info" disabled>Become a provider</button> </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+<div class ="container">
+  <div class="starter-template">
+
+    <!-- pre-filled from db info-->
+    <div class="row">
+      <div class="col-md-4"><label class="search-label"> Where </label> <input type="text" id="where" class="form-control" placeholder="Where?"></div>
+      <div class="col-md-4"> <label class="search-label"> Number of People </label><input type="text" id="numPeople" class="form-control" placeholder="No. of people"></div>
+      <div class="col-md-4"><label class="search-label">When?</label> <input type="text" id="when" class="form-control" placeholder="Date / Time"></div>
+    </div>
+    </br>
+
+    <form class="navbar-form" role="search">
+      <div class="row-fluid">
+        <div class="row">
+          <!-- range slider -->
+          <div class="col-md-12 price-slider">
+            <label for="amount" id="price-slider-label">Price range (per person):</label>
+            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            <div id="slider-range"></div>
+          </div>
+        </div>
+
+
+      <div class="container-fluid">
+          <h3> All Meal listings</h3>
+            <div class="col-md-3">
+                <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
+            </div>
+            <div class="col-md-3">
+                <label for="Name">By: </label>
+                <output name="AboutMe" id ="AboutMe">
+                <label for="price_per_person">Price per person: $</label>
+                <output name="price_per_person" id ="price_per_person" value="<?php echo $count;?>">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
+            </div>
+            <div class="col-md-3">
+                <label for="Name">By: </label>
+                <output name="Name" id ="Name">
+                <label for="price_per_person">Price per person: $</label>
+                <output name="price_per_person" id ="price_per_person">
+            </div>
+      </div> 
+
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3">
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+
+<!-- jquery and jquery ui-->
+<script src="../external/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+<link href="../external/jquery-ui-1.11.4.custom/jquery-ui.min.css" rel="stylesheet">
+<script src="../external/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+
+<!-- Bootstrap Core CSS -->
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="../css/search.css" rel="stylesheet">
+
+<!-- Custom Javascript -->
+<script src="../js/search_results.js"></script>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+</body>
+</html>
