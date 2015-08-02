@@ -202,7 +202,7 @@ $conn->close();
 
   <form action="OrderTransactionSubmit.php" method='post' enctype="multipart/form-data">   
    <br> <input type="hidden" name="provider_id" value="7" placeholder="provider_id" />  <br>
-   <br> <input type="hidden" name="consumer_id" value="<?php echo $user_id;?>" placeholder="consumer_id" />  <br>
+   <br> <input type="hidden" name="consumer_id" value="38" placeholder="consumer_id" />  <br>
    <br> <input type="hidden" name="meal_id" value="123" placeholder="meal_id" />  <br>
    <br> <input type="hidden" name="cost" value="100" placeholder="cost" /> <br>
    <br> <input type="hidden" name="DeliveryMethod" value="PICKUP" placeholder="DeliveryMethod" />  <br>
