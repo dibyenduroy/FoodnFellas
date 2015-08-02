@@ -175,6 +175,9 @@ $conn->close();
                     <dt><output name="meal_description" id ="meal_description"></dt>
                 </dl>
             <div>
+            <div class="col-md-12">
+                <button type="button" class="btn btn-info" action="OrderTransactionSubmit.php"></button>
+            <div>
 
         <!--input type='submit' class="btn btn-primary save" value='Save' onClick="window.location.reload(true)"/>
 
