@@ -116,7 +116,7 @@
                // print_r($array_meal_search_row);
                 $counter++; 
 
-                  echo ("<div class='col-md-6'><img class='img-responsive' id='photo' src=".$array_meal_search_row[photo]." alt=''></div><div class='col-md-6'>");
+                  echo ("<div class='col-md-6'><img class='img-responsive' id='photo' src=".$array_meal_search_row[photo]." alt=''></div><div class='col-md-3'>");
                   echo ("<label for='Name'>By: ".$array_meal_search_row['f_name']." ".$array_meal_search_row['l_name']."  "."</label>");
                   echo ("<label for='price_per_person'>Price per person: ".$array_meal_search_row['price_per_person']."</label></div>");
 
@@ -144,6 +144,15 @@
     }
 
 ?>
+            <div class="col-md-3">
+                <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
+            </div>
+            <div class="col-md-3">
+                <label for="Name">By: </label>
+                <output name="AboutMe" id ="AboutMe">
+                <label for="price_per_person">Price per person: $</label>
+                <output name="price_per_person" id ="price_per_person">
+            </div>
       </div> 
 
       <div class="row">
