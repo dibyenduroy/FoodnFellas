@@ -33,7 +33,7 @@
   </div>
 </nav>
 <h1>Nidhi</h1>
-<p><p>
+
 <div class ="container">
   <div class="starter-template">
           <div class="container-fluid">
@@ -114,7 +114,13 @@
                 $array_meal_search_all[$index] = $array_meal_search_row;
                 $index++;
                 //print_r($array_meal_search_row);
-                $counter++;
+                $counter++; ?>
+                <h5></h5>
+                <h5></h5>
+                <h5></h5>
+                <h5></h5>
+                <h5></h5>
+                <? php
               //print_r($array_meal_search_row);
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
             }
