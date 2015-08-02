@@ -117,17 +117,13 @@ ON     pf.user_id = u.user_id
 WHERE m.provider_food_id = '".$provider_id."';";
          // echo "$sql2";
           $index = 0;
-                $result2 = $conn->query($sql2);
+          $result2 = $conn->query($sql2);
           if ($result2->num_rows > 0) {
               while($array_meal_search_row = $result2->fetch_assoc()) { 
                 $array_meal_search_all[$index] = $array_meal_search_row;
                 $index++;
                 $count++;
-                
-
-            
               //print_r($array_meal_search_row);
-
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
             }
             //echo "\n";
@@ -153,7 +149,7 @@ WHERE m.provider_food_id = '".$provider_id."';";
             <div class="col-md-3">
                 <label for="Name">By: </label>
                 <output name="AboutMe" id ="AboutMe">
-                <label for="price_per_person">Price per person: <? php echo $count; ?> </label>
+                <label for="price_per_person">Price per person: <? php echo $count; echo $index; ?> </label>
                 <output name="price_per_person" id ="price_per_person">
             </div>
             
