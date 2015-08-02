@@ -101,33 +101,34 @@
         // Now, return the meal entries.
         while($row = $result1->fetch_assoc()) {
                 $provider_id = $row["pfi"];
-            $sql2 = "SELECT u.f_name, u.l_name, pf.price_per_person, p.cuisine_i_cook , p.food_album, p.cuisine_i_cook FROM  Meal as m JOIN Provider as p ON m.user_id = p.user_id JOIN user as u ON p.user_id = u.user_id JOIN Provider_food as pf ON pf.user_id = u.user_id WHERE
-              m.provider_food_id = '".$provider_id."';";
+            $sql2 = "SELECT u.f_name, 
+       u.l_name, 
+       pf.price_per_person, 
+       p.cuisine_i_cook , 
+       p.food_album, 
+       p.cuisine_i_cook 
+FROM   Meal     AS m 
+JOIN   Provider AS p 
+ON     m.user_id = p.user_id 
+JOIN   user AS u 
+ON     p.user_id = u.user_id 
+JOIN   Provider_food AS pf 
+ON     pf.user_id = u.user_id             
+WHERE m.provider_food_id = '".$provider_id."';";
          // echo "$sql2";
           $index = 0;
-                $result2 = $conn->query($sql2);
+          $result2 = $conn->query($sql2);
           if ($result2->num_rows > 0) {
-              while($array_meal_search_row = $result2->fetch_assoc()) { ?>
-
-          <div class="col-md-3">
-                <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
-            </div>
-            <div class="col-md-3">
-                <label for="Name">By: </label>
-                <output name="AboutMe" id ="AboutMe">
-                <label for="price_per_person">Price per person: <? php print_r($array_meal_search_row); ?> </label>
-                <output name="price_per_person" id ="price_per_person">
-            </div>
-            <? php 
-            
-              //print_r($array_meal_search_row);
+              while($array_meal_search_row = $result2->fetch_assoc()) { 
                 $array_meal_search_all[$index] = $array_meal_search_row;
                 $index++;
+                print_r($array_meal_search_row);
                 $count++;
+              //print_r($array_meal_search_row);
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
             }
             //echo "\n";
-            print_r($array_meal_search_all);
+            //print_r($array_meal_search_all);
           }
       }
     } else {
@@ -143,7 +144,16 @@
     }
 
 ?>
-
+            <div class="col-md-3">
+                <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
+            </div>
+            <div class="col-md-3">
+                <label for="Name">By: </label>
+                <output name="AboutMe" id ="AboutMe">
+                <label for="price_per_person">Price per person: <? php echo $array_meal_search_all[0]["f_name"]; ?> </label>
+                <output name="price_per_person" id ="price_per_person">
+            </div>
+            
 
       </div> 
 
