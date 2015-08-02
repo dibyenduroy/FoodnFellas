@@ -107,6 +107,7 @@ if ($result1->num_rows > 0) {
     if ($meal_details_results->num_rows >0 ) {
         while($array_meal_search_row = $meal_details_results->fetch_assoc()) { 
             $array_meal_search_all[$index] = $array_meal_search_row;
+            echo $array_meal_search_row;
             $index++; 
         }
  
