@@ -122,9 +122,20 @@ WHERE m.provider_food_id = '".$provider_id."';";
               while($array_meal_search_row = $result2->fetch_assoc()) { 
                 $array_meal_search_all[$index] = $array_meal_search_row;
                 $index++;
-                print_r($array_meal_search_row["f_name"]);
+                print_r($array_meal_search_row);
                 $count++;
               //print_r($array_meal_search_row);
+                ?>
+                <div class="col-md-3">
+                <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
+                </div>
+                <div class="col-md-3">
+                <label for="Name">By: </label>
+                <output name="AboutMe" id ="AboutMe">
+                <label for="price_per_person">Price per person: <? php echo $array_meal_search_all[0]["f_name"]; ?> </label>
+                <output name="price_per_person" id ="price_per_person">
+            </div> 
+            <? php
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
             }
             //echo "\n";
@@ -144,15 +155,7 @@ WHERE m.provider_food_id = '".$provider_id."';";
     }
 
 ?>
-            <div class="col-md-3">
-                <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
-            </div>
-            <div class="col-md-3">
-                <label for="Name">By: </label>
-                <output name="AboutMe" id ="AboutMe">
-                <label for="price_per_person">Price per person: <? php echo $array_meal_search_all[0]["f_name"]; ?> </label>
-                <output name="price_per_person" id ="price_per_person">
-            </div>
+
             
 
       </div> 
