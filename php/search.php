@@ -122,6 +122,7 @@ WHERE m.provider_food_id = '".$provider_id."';";
               while($array_meal_search_row = $result2->fetch_assoc()) { 
                 $array_meal_search_all[$index] = $array_meal_search_row;
                 $index++;
+                echo $array_meal_search_row;
                 $count++;
               //print_r($array_meal_search_row);
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
