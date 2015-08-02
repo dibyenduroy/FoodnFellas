@@ -97,7 +97,7 @@
         // Now, return the meal entries.
         while($row = $result1->fetch_assoc()) {
                 $provider_id = $row["pfi"];
-            $sql2 = "SELECT u.f_name, u.l_name, p.price_per_person, p.cuisine_i_cook , p.food_album, p.cuisine_i_cook FROM  Meal as m JOIN Provider as p ON m.user_id = p.user_id JOIN user u ON u.user_id = p.user_id WHERE  m.provider_food_id = '".$provider_id."';";
+            $sql2 = "SELECT u.f_name, u.l_name, p.price_per_person, p.cuisine_i_cook , p.food_album, p.cuisine_i_cook FROM  Meal as m JOIN Provider as p ON m.user_id = p.user_id JOIN user as u ON u.user_id = p.user_id WHERE  m.provider_food_id = '".$provider_id."';";
          // echo "$sql2";
           $index = 0;
                 $result2 = $conn->query($sql2);
