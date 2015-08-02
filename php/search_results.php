@@ -92,7 +92,7 @@ $sql1 = "SELECT u.user_id, u.f_name, u.l_name, u.photo, p.about_me, p.kitchen_ph
                                  WHERE pf.provider_food_id = '".$provider_food_id."';";
 
 
-$meal_details = "SELECT dish_name, dish_description FROM Meal where provider_food_id = '".$provider_food_id."';";
+$meal_details = "SELECT dish_name, meal_description FROM Meal where provider_food_id = '".$provider_food_id."';";
 
 // Delte these debug echos during integration.
 //echo "  sql1  ";
