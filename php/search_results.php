@@ -119,11 +119,11 @@ $conn->close();
                     <br></br>
             <div class="container-fluid">
             <div class="col-md-3">
-                <h2> Meal listings of <?php echo $array_selected_search['f_name']; echo $array_selected_search['l_name'];?></h3>
+                <h2> Meal listings of <?php echo $array_selected_search['f_name']; echo " "; echo $array_selected_search['l_name'];?></h3>
             </div>  
             <div class="col-md-3">
                 <label for="profile_image">Profile Photo : </label>
-                <img class="img-responsive" id="profile_image" src="<?php echo $array_selected_search['photo'];?>"/250x250 alt="">
+                <img class="img-responsive" id="profile_image" src="<?php echo $array_selected_search['photo'];?>" alt="" width="200" height="200">
             </div>
             <div class="col-md-3">
                 <label for="AboutMe">About Me:  <?php echo $array_selected_search['about_me'];?></label>
@@ -140,7 +140,7 @@ $conn->close();
             <br>
             <div class="col-md-3">
                 <label for="profile_image">Kitchen Photo:  </label>
-                <img class="img-responsive" id="kitchen_photo" src="<?php echo $array_selected_search['kitchen_photo'];?>"/250x250 alt="">
+                <img class="img-responsive" id="kitchen_photo" src="<?php echo $array_selected_search['kitchen_photo'];?>" alt="" width="200" height="200">
             </div>
             <label for="profile_image">Food Album  </label>
             <?php 
@@ -150,7 +150,7 @@ $conn->close();
                 //echo $lst_photo;
                 foreach($lst_photo as $item) { ?>
                 <div class="col-md-3">
-                <img class="img-responsive" id="food_album" src="<?php echo $item;?>"/250x250 alt="">
+                <img class="img-responsive" id="food_album" src="<?php echo $item;?>" alt="" width="200" height="200">
                 </div>
                 <?php 
                 //echo "$item";
