@@ -124,14 +124,9 @@ WHERE m.provider_food_id = '".$provider_id."';";
                 $index++;
                 //print_r($array_meal_search_row);
                 $counter++;
-              //print_r($array_meal_search_row);
-              //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
-            }
-
-
-            while (list($var, $val) = each($array_meal_search_all)) {
-              print "$var is $val\n"; 
-              echo '<div class="col-md-6">',
+                while (list($var, $val) = each($array_meal_search_row)) {
+                  print "$var is $val\n"; 
+                  echo '<div class="col-md-6">',
                     '<img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">',
                     '</div>',
                     '<div class="col-md-6">',
@@ -143,6 +138,12 @@ WHERE m.provider_food_id = '".$provider_id."';";
            
 
             }
+              //print_r($array_meal_search_row);
+              //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
+            }
+
+
+
             //echo "\n";
             //print_r($array_meal_search_all);
           }
