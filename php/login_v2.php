@@ -7,12 +7,12 @@ session_start();
 //header('content-type: text/javascript;');
 
 function test() {
-    header("content-type: text/javascript");
-        $obj->name = "Mary";
-        $obj->message = "Hello World";
-        echo $_GET['callback'].'('.json_encode($obj).');';
-    }
+  header("content-type: text/javascript");
+  $obj->name = "Mary";
+  $obj->message = "Hello World";
+  echo $_GET['callback'].'('.json_encode($obj).');';
 }
+
 
 function SignIn($email_p,$password_p,$login_type_p)
 {
