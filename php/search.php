@@ -110,7 +110,8 @@
               $count++;
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
             }
-                }
+            print_r($array_meal_search_all);
+          }
       }
     } else {
         echo "0 results";
@@ -143,7 +144,7 @@
                 <label for="Name">By: </label>
                 <output name="AboutMe" id ="AboutMe">
                 <label for="price_per_person">Price per person: <?php print_r($array_count_elem);?></label>
-                <output name="price_per_person" id ="price_per_person" value=<?php print_r($array_count_elem);?>>
+                <output name="price_per_person" id ="price_per_person" value=<?php print_r($array_count_elem);?> >
             </div>
             <div class="col-md-3">
                 <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
