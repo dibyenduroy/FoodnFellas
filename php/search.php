@@ -34,7 +34,11 @@
 </nav>
 <h1>Nidhi</h1>
 <p><p>
+<div class ="container">
+  <div class="starter-template">
+          <div class="container-fluid">
 
+         <h3> All Meal listings</h3>
 
     <?php
     // Session start.
@@ -103,7 +107,19 @@
           $index = 0;
                 $result2 = $conn->query($sql2);
           if ($result2->num_rows > 0) {
-              while($array_meal_search_row = $result2->fetch_assoc()) {
+              while($array_meal_search_row = $result2->fetch_assoc()) { ?>
+
+          <div class="col-md-3">
+                <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
+            </div>
+            <div class="col-md-3">
+                <label for="Name">By: </label>
+                <output name="AboutMe" id ="AboutMe">
+                <label for="price_per_person">Price per person: <? php echo $array_meal_search_row ?> </label>
+                <output name="price_per_person" id ="price_per_person">
+            </div>
+            <? php 
+            
               //print_r($array_meal_search_row);
                 $array_meal_search_all[$index] = $array_meal_search_row;
                 $index++;
@@ -127,17 +143,7 @@
     }
 
 ?>
-          <h3> All Meal listings</h3>
-          <div class="col-md-3">
-                <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
-            </div>
-            <div class="col-md-3">
-                <label for="Name">By: </label>
-                <output name="AboutMe" id ="AboutMe">
-                <label for="price_per_person">Price per person: </label>
-                <output name="price_per_person" id ="price_per_person">
-            </div>
-            
+
 
       </div> 
 
