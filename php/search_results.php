@@ -134,20 +134,20 @@ $conn->close();
             </div>
             <br>
             <div class="col-md-6">
-                <label for="profile_image">Profile Photo : <?php echo $array_selected_search['photo'];?></label>
-                <img class="img-responsive" id="profile_image" src="http://placehold.it/250x250" alt="">
+                <label for="profile_image">Profile Photo : </label>
+                <img class="img-responsive" id="profile_image" src="<?php echo $array_selected_search['photo'];?>"/250x250 alt="">
             </div>
             <div class="col-md-6">
-                <label for="profile_image">Kitchen Photo: <?php echo $array_selected_search['kitchen_photo'];?> </label>
-                <img class="img-responsive" id="kitchen_photo" src="http://placehold.it/250x250" alt="">
+                <label for="profile_image">Kitchen Photo:  </label>
+                <img class="img-responsive" id="kitchen_photo" src="<?php echo $array_selected_search['kitchen_photo'];?>" alt="">
             </div>
             <div class="col-md-12">
-                <label for="profile_image">Food Album  <?php echo $array_selected_search['food_album'];?></label>
-                <img class="img-responsive" id="food_album" src="http://placehold.it/250x250" alt="">
+                <label for="profile_image">Food Album  </label>
+                <img class="img-responsive" id="food_album" src="<?php echo $array_selected_search['food_album'];?>" alt="">
             </div>
             <br></br>
             <div class="container-fluid">
-                <h2> All Meal listings</h3>
+                <h2> Meal listings of <?php echo $array_selected_search['f_name'];?></h3>
             </div>   
     <!--// This is provider's Meal information.  looping required. -->
  
@@ -169,9 +169,9 @@ $conn->close();
             </div>
             <div class="col-md-12 ">
                 <dl>
-                    <label for="dish_name">Dish Name</label>
-                    <dt><output name="dish_name" id ="dish_name"></dt>
-                    <label for="meal_description">Dish Description</label>
+                    <label for="dish_name">Dish Name: <?php echo $array_selected_search['dish_name'];?></label>
+                    <dt><output name="dish_name" id ="dish_name" value="<?php echo $array_selected_search['dish_name'];?>"></dt>
+                    <label for="meal_description">Dish Description : <?php echo $array_selected_search['meal_description'];?></label>
                     <dt><output name="meal_description" id ="meal_description"></dt>
                 </dl>
             <div>
