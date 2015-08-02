@@ -121,7 +121,7 @@
                   echo ("<label for='price_per_person'>Price per person: ".$array_meal_search_row['price_per_person']."</label></div>");*/
                   ?>
               <div class="col-md-6">
-                $pfid = $array_meal_search_row['provider_food_id'];
+                <?php $pfid = $array_meal_search_row['provider_food_id']; ?>
                 
                 <a href="../php/search_results.php?pfid=<?php $pfids?>"><img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt=""></a>
                 <label for="Name">By:<?php echo $array_meal_search_row['f_name']." ".$array_meal_search_row['l_name']."  "; ?> </label>
