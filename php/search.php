@@ -105,7 +105,7 @@
        u.l_name, pf.price_per_person
        FROM Meal as m JOIN user as u ON u.user_id = m.user_id 
        JOIN Provider_food as pf ON pf.provider_food_id = m.provider_food_id
-            WHERE m.provider_food_id'".$provider_id."';";
+            WHERE m.provider_food_id = '".$provider_id."';";
          // echo "$sql2";
           $index = 0;
           $result2 = $conn->query($sql2);
