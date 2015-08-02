@@ -6,6 +6,13 @@ session_start();
 //header('Cache-Control: no-cache');
 //header('content-type: text/javascript;');
 
+function test() {
+    header("content-type: text/javascript");
+        $obj->name = "Mary";
+        $obj->message = "Hello World";
+        echo $_GET['callback'].'('.json_encode($obj).');';
+    }
+}
 
 function SignIn($email_p,$password_p,$login_type_p)
 {
@@ -80,7 +87,8 @@ function SignIn($email_p,$password_p,$login_type_p)
   $password_p=md5($_POST["passwd"]);
   $login_type_p=$_POST['login_type'];
 
-  SignIn($email_p,$password_p,$login_type_p);
+  //SignIn($email_p,$password_p,$login_type_p);
+  test();
 //}
 
 ?>

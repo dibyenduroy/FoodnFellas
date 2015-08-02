@@ -69,26 +69,36 @@ function signupCallBack() {
 //}
 
 function loginCallBack() {
-    jQuery(
-        $(function () {
-            $.ajax({
-                url: 'php/login_v2.php',   //the script to call to get data
-                crossDomain: true,
-                dataType: 'jsonp',                //data format
-                jsonp: 'callback',
-                success: function (data) {
-                    console.log('inside success');
-                    console.log(data);
-                    //location.href='index_afterlaunch.html';
-                    alert("Successful Login");
-                },
-                error: function (xhr, status, error) {
-                    var err = eval("(" + xhr.responseText + ")");
-                    console.log(err);
-                    //location.href='index_afterlaunch.html';
-                    alert("Unsuccessful login. Please try again");
-                }
-            });
-        })
-    );
+    $.ajax({
+        url: 'php/login_v2.php',
+        data: {name: 'Chad'},
+        dataType: 'jsonp',
+        jsonp: 'callback',
+        jsonpCallback: 'jsonpCallback',
+        success: function(){
+            alert("success");
+        }
+    });
+    //jQuery(
+    //    $(function () {
+    //        $.ajax({
+    //            url: 'php/login_v2.php',   //the script to call to get data
+    //            crossDomain: true,
+    //            dataType: 'jsonp',                //data format
+    //            jsonp: 'callback',
+    //            success: function (data) {
+    //                console.log('inside success');
+    //                console.log(data);
+    //                //location.href='index_afterlaunch.html';
+    //                alert("Successful Login");
+    //            },
+    //            error: function (xhr, status, error) {
+    //                var err = eval("(" + xhr.responseText + ")");
+    //                console.log(err);
+    //                //location.href='index_afterlaunch.html';
+    //                alert("Unsuccessful login. Please try again");
+    //            }
+    //        });
+    //    })
+    //);
 }
