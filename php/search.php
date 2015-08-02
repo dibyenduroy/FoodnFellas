@@ -96,7 +96,7 @@
     //if (($conn->query($sql1) === TRUE)) {
     $result1 = $conn->query($sql1);
     //echo "$sql1";
-    $count = 0;
+    $counter = 0;
     if ($result1->num_rows > 0) {
         // Now, return the meal entries.
         while($row = $result1->fetch_assoc()) {
@@ -123,7 +123,13 @@ WHERE m.provider_food_id = '".$provider_id."';";
                 $array_meal_search_all[$index] = $array_meal_search_row;
                 $index++;
                 print_r($array_meal_search_row);
-                $count++;
+                $counter++;
+               for ($i = 0; $i < count($array_meal_search_row); ++$i) {
+                print $array_meal_search_row[$i];
+                }
+
+
+
               //print_r($array_meal_search_row);
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
             }
@@ -136,7 +142,7 @@ WHERE m.provider_food_id = '".$provider_id."';";
         echo "The is some issue in conn->query";
     }
     $array_count_elem = array(
-        "count"  => $count
+        "counter"  => $counter
         );
     //$count;
     //echo $_GET['callback'].'('.json_encode($array_output).');';
