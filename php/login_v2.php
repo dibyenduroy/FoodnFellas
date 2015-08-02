@@ -132,9 +132,9 @@ function SignIn($email_p,$password_p,$login_type_p)
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
               <?php 
-              if (isset($_SESSION["user_id"])) { ?>
-                echo $GLOBAL_SESSION_USERNAME;
-              <?php } else { ?>
+              if (isset($_SESSION["user_id"])) {
+                echo $GLOBAL_SESSION_USERNAME; 
+               } else { ?>
                 <li><a href="#" data-toggle="modal" data-target=".signupwith-email-modal">Sign Up</a></li>
                 <li><a href="#" data-toggle="modal" data-target=".social-login-modal">Login</a></li>
               <?php } ?>
