@@ -176,7 +176,7 @@ $conn->close();
                 </dl>
             <div>
             <div class="col-md-12">
-                <button type="button" class="btn btn-info" action="OrderTransactionSubmit.php"></button>
+                <button type="button" class="btn btn-info btn-large" action="OrderTransactionSubmit.php">Order</button>
             <div>
 
         <!--input type='submit' class="btn btn-primary save" value='Save' onClick="window.location.reload(true)"/>
