@@ -154,15 +154,6 @@
 ?>
 
             
-            <div class="col-md-3">
-                <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
-            </div>
-            <div class="col-md-3">
-                <label for="Name">By: </label>
-                <output name="AboutMe" id ="AboutMe">
-                <label for="price_per_person">Price per person: $</label>
-                <output name="price_per_person" id ="price_per_person">
-            </div>
       </div> 
 
       <div class="row">
