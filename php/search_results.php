@@ -95,24 +95,26 @@ $meal_details = "SELECT dish_name, dish_description FROM Meal where provider_foo
 //echo "  sql1  ";
 //echo $sql1;
    $array_meal_search_all = array();
+   $index=0;
 $result1 = $conn->query($sql1);
 if ($result1->num_rows > 0) {
         // Delte these debug echos during integration.
         //echo "  if successful  ";
 	$array_selected_search = $result1->fetch_assoc(); 
+    $meal_details_results = $conn->query($meal_details);
+    if ($meal_details_results->num_rows >0 ) {
+        while($array_meal_search_row = $meal_details_results->fetch_assoc()) { 
+            $array_meal_search_all[$index] = $array_meal_search_row;
+            $index++; 
+        }
+    print_r($array_meal_search_all);
+    }
 
 } else {
 	echo "0 results";
 }
 
-$meal_details_results = $conn->query($meal_details);
-if ($meal_details_results->num_rows >0 ) {
-    while($array_meal_search_row = $meal_details_results->fetch_assoc()) { 
-        $array_meal_search_all[$index] = $array_meal_search_row;
-        $index++; 
-    }
-    print_r($array_meal_search_all);
-}
+
 
 // Delte these debug echos during integration.
 //echo "  Selected search output  ";
