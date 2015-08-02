@@ -75,8 +75,9 @@ function loginCallBack() {
         jsonp: 'callback',
         success: function(){
             alert("success");
-        }, error: function() {
-            alert("failure!");
+        }, error: function(xhr, status, error) {
+            var err = eval("(" + xhr.responseText + ")");
+            alert(err.Message);
         }
     });
     //jQuery(
