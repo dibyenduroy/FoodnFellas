@@ -40,6 +40,7 @@ header('Content-Type: text/html; charset=utf-8');
 // $_SESSION["user_id"] = 15;
 //header('Cache-Control: no-cache');
 //header('content-type: text/javascript;');
+$GLOBAL_SESSION_USERNAME;
 
 
 function SignIn($email_p,$password_p,$login_type_p)
@@ -101,6 +102,7 @@ function SignIn($email_p,$password_p,$login_type_p)
       $array_user_results[$index] = $row;
       $cookie_variable=$row["f_name"]." ".$row["l_name"]." ".$row["user_id"]." ".$row["is_provider"];
       setcookie("FoodnFellas", $cookie_variable);
+      $GLOBAL_SESSION_USERNAME=$row["f_name"]." ".$row["l_name"];
       $index++; 
       
     }
@@ -131,7 +133,7 @@ function SignIn($email_p,$password_p,$login_type_p)
             <ul class="nav navbar-nav navbar-right">
               <?php 
               if (isset($_SESSION["user_id"])) { ?>
-                Hello World
+                echo $GLOBAL_SESSION_USERNAME;
               <?php } else { ?>
                 <li><a href="#" data-toggle="modal" data-target=".signupwith-email-modal">Sign Up</a></li>
                 <li><a href="#" data-toggle="modal" data-target=".social-login-modal">Login</a></li>
