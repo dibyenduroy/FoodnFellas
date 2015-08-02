@@ -91,7 +91,7 @@ $array_output = array_merge($array_count_elem, $array_meal_search_all);
 
 // At this point, we have all the information for the search query.
 // wrap the data as with the callback
-echo $_GET['callback'].'('.json_encode($array_output).');';
+//echo $_GET['callback'].'('.json_encode($array_output).');';
 
 
 $conn->close();
@@ -168,7 +168,7 @@ $conn->close();
                 <label for="Name">By: </label>
                 <output name="AboutMe" id ="AboutMe">
                 <label for="price_per_person">Price per person: $</label>
-                <output name="price_per_person" id ="price_per_person" value="<?php $count?>">
+                <output name="price_per_person" id ="price_per_person" value="<?php echo $count;?>">
             </div>
             <div class="col-md-3">
                 <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
