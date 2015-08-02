@@ -118,6 +118,19 @@ $conn->close();
         <!--// This is provider information. No looping required. -->
                     <br></br>
             <div class="container-fluid">
+                <?php 
+                $lst_photo = explode(",", $array_selected_search['food_album']);
+                foreach($lst_photo as $item) { ?>
+                <div class="col-md-3">
+                    <?php if($lst_photo): ?>
+                        <img class="img-responsive" id="food_album" src="<?php echo $item;?>" alt="" width="200" height="200">
+                    <?php endif; ?>
+                </div>
+                <?php 
+                //echo "$item";
+                }
+                ?>
+                <br>
             <div class="col-md-12">
                 <h2> Meal listings of <?php echo $array_selected_search['f_name']; echo " "; echo $array_selected_search['l_name'];?></h3>
             </div>  
@@ -166,22 +179,7 @@ $conn->close();
                 <label for="profile_image">Kitchen Photo:  </label>
                 <img class="img-responsive" id="kitchen_photo" src="<?php echo $array_selected_search['kitchen_photo'];?>" alt="" width="200" height="200">
             </div>
-            <label for="profile_image">Food Album  </label>
-            <?php 
-                //echo $array_selected_search['food_album'];
-                $lst_photo = explode(",", $array_selected_search['food_album']);
-                /*print the array*/
-                //echo $lst_photo;
-                foreach($lst_photo as $item) { ?>
-                <div class="col-md-6">
-                    <?php if($lst_photo): ?>
-                        <img class="img-responsive" id="food_album" src="<?php echo $item;?>" alt="" width="200" height="200">
-                    <?php endif; ?>
-                </div>
-                <?php 
-                //echo "$item";
-                }
-                ?>
+
 
 
 
