@@ -116,9 +116,14 @@ $conn->close();
 <div class="container">
     <!-- Portfolio Item Row -->
         <!--// This is provider information. No looping required. -->
+                    <br></br>
+            <div class="container-fluid">
             <div class="col-md-3">
-                <label for="Name">Name: <?php echo $array_selected_search['f_name']; echo $array_selected_search['l_name'];?></label>
-                <output name="Name" id ="Name">
+                <h2> Meal listings of <?php echo $array_selected_search['f_name']; echo $array_selected_search['l_name'];?></h3>
+            </div>  
+            <div class="col-md-3">
+                <label for="profile_image">Profile Photo : </label>
+                <img class="img-responsive" id="profile_image" src="<?php echo $array_selected_search['photo'];?>"/250x250 alt="">
             </div>
             <div class="col-md-3">
                 <label for="AboutMe">About Me:  <?php echo $array_selected_search['about_me'];?></label>
@@ -133,22 +138,18 @@ $conn->close();
                 <output name="Cuisine_I_Cook" id ="Cuisine_I_Cook">
             </div>
             <br>
-            <div class="col-md-6">
-                <label for="profile_image">Profile Photo : </label>
-                <img class="img-responsive" id="profile_image" src="<?php echo $array_selected_search['photo'];?>"/250x250 alt="">
-            </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <label for="profile_image">Kitchen Photo:  </label>
                 <img class="img-responsive" id="kitchen_photo" src="<?php echo $array_selected_search['kitchen_photo'];?>"/250x250 alt="">
             </div>
             <label for="profile_image">Food Album  </label>
             <?php 
-                echo $array_selected_search['food_album'];
+                //echo $array_selected_search['food_album'];
                 $lst_photo = explode(",", $array_selected_search['food_album']);
                 /*print the array*/
                 //echo $lst_photo;
                 foreach($lst_photo as $item) { ?>
-                <div class="col-md-6">
+                <div class="col-md-3">
                 <img class="img-responsive" id="food_album" src="<?php echo $item;?>"/250x250 alt="">
                 </div>
                 <?php 
@@ -159,10 +160,7 @@ $conn->close();
 
 
 
-            <br></br>
-            <div class="container-fluid">
-                <h2> Meal listings of <?php echo $array_selected_search['f_name'];?></h3>
-            </div>   
+ 
     <!--// This is provider's Meal information.  looping required. -->
  
             <div class="col-xs-12 col-sm-3 ">

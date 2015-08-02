@@ -141,7 +141,7 @@
               <div class="col-md-6">
       
                 
-                <a href="../php/search_results.php?pfid=<?php $pfid?>"><img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt=""></a>
+                <a href="../php/search_results.php?pfid=<?php $pfid?>"><img class="img-responsive" id="photo" src="<?php echo $array_meal_search_row['photo'];?>" alt=""></a>
                 <label for="Name">By:<?php echo $array_meal_search_row['f_name']." ".$array_meal_search_row['l_name']."  "; ?> </label>
                 <label for="price_per_person">Price per person: <?php echo $array_meal_search_row['price_per_person'] ?> </label>
               </div>
