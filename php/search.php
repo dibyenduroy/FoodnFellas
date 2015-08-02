@@ -77,14 +77,14 @@
     //                                                AND pf.delivery_method = ".$delivery_method."
     //if (($conn->query($sql1) === TRUE)) {
     $result1 = $conn->query($sql1);
-    //echo "$sql1";
+    echo "$sql1";
     $count = 0;
     if ($result1->num_rows > 0) {
         // Now, return the meal entries.
         while($row = $result1->fetch_assoc()) {
                 $provider_id = $row["pfi"];
             $sql2 = "SELECT m.dish_name, m.meal_description, m.meal_id, p.about_me, p.awards_won, p.kitchen_photo, p.food_album, p.cuisine_i_cook FROM  Meal as m JOIN Provider as p ON m.user_id = p.user_id WHERE  m.provider_food_id = '".$provider_id."';";
-          //echo "$sql2";
+          echo "$sql2";
           $index = 0;
                 $result2 = $conn->query($sql2);
           if ($result2->num_rows > 0) {
