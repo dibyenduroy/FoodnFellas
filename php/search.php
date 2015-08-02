@@ -142,23 +142,7 @@
   <div class="starter-template">
 
     <!-- pre-filled from db info-->
-    <div class="row">
-      <div class="col-md-4"><label class="search-label"> Where </label> <input type="text" id="where" class="form-control" placeholder="Where?"></div>
-      <div class="col-md-4"> <label class="search-label"> Number of People </label><input type="text" id="numPeople" class="form-control" placeholder="No. of people"></div>
-      <div class="col-md-4"><label class="search-label">When?</label> <input type="text" id="when" class="form-control" placeholder="Date / Time"></div>
-    </div>
-    </br>
-
-    <form class="navbar-form" role="search">
-      <div class="row-fluid">
-        <div class="row">
-          <!-- range slider -->
-          <div class="col-md-12 price-slider">
-            <label for="amount" id="price-slider-label">Price range (per person):</label>
-            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-            <div id="slider-range"></div>
-          </div>
-        </div>
+   
 
 
       <div class="container-fluid">
@@ -170,7 +154,7 @@
                 <label for="Name">By: </label>
                 <output name="AboutMe" id ="AboutMe">
                 <label for="price_per_person">Price per person: $</label>
-                <output name="price_per_person" id ="price_per_person" value="<?php echo $count;?>">
+                <output name="price_per_person" id ="price_per_person" value="<?php print_r($array_count_elem);?>">
             </div>
             <div class="col-md-3">
                 <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
