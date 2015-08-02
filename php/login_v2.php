@@ -1,5 +1,7 @@
 <?php
 session_start();
+// Hard-coding, change later.
+$_SESSION["user_id"] = 15;
 //header('Cache-Control: no-cache');
 //header('content-type: text/javascript;');
 
@@ -54,7 +56,7 @@ function SignIn($email_p,$password_p,$login_type_p)
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
             // Set the session.
-            $_SESSION["user_id"] = $row["user_id"];
+            // $_SESSION["user_id"] = $row["user_id"];
             // Set the cookie.
             $array_user_results[$index] = $row;
             $cookie_variable=$row["f_name"]." ".$row["l_name"]." ".$row["user_id"]." ".$row["is_provider"];
