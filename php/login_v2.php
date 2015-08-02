@@ -96,6 +96,9 @@ function SignIn($email_p,$password_p,$login_type_p)
       // Set the session.
       $_SESSION["user_id"] = $row["user_id"];
       $_SESSION["f_name"] = $row["f_name"];
+      $_SESSION["l_name"] =$row["l_name"];
+      $_SESSION["is_provider"] =$row["is_provider"];
+
       //echo "  Set session user id ";
       //echo $_SESSION["user_id"];
       
