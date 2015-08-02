@@ -81,7 +81,7 @@
         die("Connection failed: " . $conn->connect_error);
         echo "Error Connecting to Database";
     }
-    $array_meal_search_all = Array();
+    $array_meal_search_all = array();
 
     // Get the entries from Provider_address matching the city.
     $sql1 = "SELECT pa.user_id as pui, pa.provider_food_id as pfi FROM Provider_address  as pa JOIN Provider_food as pf
