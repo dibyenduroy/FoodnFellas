@@ -17,6 +17,21 @@
 </head>
 
 <body>
+  <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">FoodnFellas</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/signup" data-toggle="modal" data-target=".social-signup-modal"></a></li>
+        <li><a href="/login" data-toggle="modal" data-target=".social-login-modal">MarySmith001</a></li>
+        <li> <button type="button" class="btn btn-info" disabled>Become a provider</button> </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
 
 
     <?php
@@ -110,21 +125,7 @@
     }
 
 ?>
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">FoodnFellas</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/signup" data-toggle="modal" data-target=".social-signup-modal"></a></li>
-        <li><a href="/login" data-toggle="modal" data-target=".social-login-modal">MarySmith001</a></li>
-        <li> <button type="button" class="btn btn-info" disabled>Become a provider</button> </li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div>
-</nav>
+
 
 <div class ="container">
   <div class="starter-template">
@@ -142,7 +143,7 @@
                 <label for="Name">By: </label>
                 <output name="AboutMe" id ="AboutMe">
                 <label for="price_per_person">Price per person: <?php print_r($array_count_elem);?></label>
-                <output name="price_per_person" id ="price_per_person" value="<?php print_r($array_count_elem);?>">
+                <output name="price_per_person" id ="price_per_person" value=<?php print_r($array_count_elem);?>>
             </div>
             <div class="col-md-3">
                 <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
