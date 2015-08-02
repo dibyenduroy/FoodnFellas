@@ -1,6 +1,7 @@
 <?php
+session_start();
 
-header('Cache-Control: no-cache');
+// header('Cache-Control: no-cache');
 header('content-type: text/javascript;');
 
 if($_SERVER['REQUEST_METHOD'] == "POST")
