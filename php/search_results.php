@@ -188,14 +188,19 @@ $user_id = $_SESSION["user_id"];
 $f_name = $_SESSION["f_name"];
 $l_name = $_SESSION["l_name"];
 $is_provider = $_SESSION["is_provider"];
+$cost=$array_selected_search['price_per_person'] *10;
 ?>
 
 <br>
+<br><br>
+<br>
+<br>
+
      <b> Order Input Details </b>   
    <br> <input type="hidden" name="provider_id" value=" <?php echo $array_selected_search['user_id'];?>" placeholder="provider_id" />  <br>
    <br> <input type="text" name="consumer_id" value="<?php echo $user_id;?>" placeholder="consumer_id" />  <br>
    <br> <input type="text" name="meal_id" value="123" placeholder="meal_id" />  <br>
-   <br> <input type="text" name="cost" value="<?php echo $array_selected_search['price_per_person'] * 10 ?> " placeholder="cost" /> <br>
+   <br> <input type="text" name="cost" value="<?php echo "100"?> " placeholder="cost" /> <br>
    <br> <input type="text" name="DeliveryMethod" value="" placeholder="DeliveryMethod" />  <br>
    <br> <input type="text" name="NumberofAdult" value="" placeholder="NumberofAdult" />  <br>
    <br> <input type="text" name="NumberofKids" value="" placeholder="NumberofKids" />  <br>
@@ -203,8 +208,10 @@ $is_provider = $_SESSION["is_provider"];
    <br> <input type="text" name="ReviewID" value="123" placeholder="ReviewID" />  <br>
    
 <br>
+<div class="col-md-12">
+                <button type="button" class="btn btn-info btn-large" action="OrderTransactionSubmit.php">Order</button>
+<div>
 
-<input type='submit' value='Update Details' onClick="window.location.reload(true)"/></div>
 </form>   
 
 
@@ -212,9 +219,7 @@ $is_provider = $_SESSION["is_provider"];
     <!--// This is provider's Meal information.  looping required. -->
  
 
-            <div class="col-md-12">
-                <button type="button" class="btn btn-info btn-large" action="OrderTransactionSubmit.php">Order</button>
-            <div>
+            
 
         <!--input type='submit' class="btn btn-primary save" value='Save' onClick="window.location.reload(true)"/>
 
