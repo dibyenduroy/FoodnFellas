@@ -74,6 +74,7 @@ function loginCallBack() {
         data: {name: 'Chad'},
         dataType: 'jsonp',
         jsonp: 'callback',
+        crossDomain: true,
         success: function(){
             alert("success");
         }, error: function(xhr, status, error) {
