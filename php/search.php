@@ -135,7 +135,7 @@
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
             }
         //echo "\n";
-            print_r($array_meal_search_all);
+            //print_r($array_meal_search_all);
           }
       }
     } else {
