@@ -27,8 +27,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 	                WHERE u.user_id = '".$user_id."';";
 
     // Delete these echos during final integration.
-	//echo " SQL1    ";
-	//echo $sql1;
+	echo " SQL1    ";
+	echo $sql1;
 
 	$result1 = $conn->query($sql1);
 	if ($result1->num_rows > 0) {

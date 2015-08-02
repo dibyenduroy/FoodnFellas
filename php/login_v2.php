@@ -58,6 +58,8 @@ function SignIn($email_p,$password_p,$login_type_p)
       $row = $result->fetch_assoc();
       // Set the session.
       $_SESSION["user_id"] = $row["user_id"];
+      echo "  Set session user id ";
+      echo $_SESSION["user_id"];
       
       // Set the cookie.
       $array_user_results[$index] = $row;
