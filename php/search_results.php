@@ -160,7 +160,8 @@ $conn->close();
                     <label for="meal_description">Dish Description : <?php echo $array_selected_search['meal_description'];?></label>
                     <dt><output name="meal_description" id ="meal_description"></dt>
                 </dl>
-            <div>
+            </div>
+
             <div class="col-md-12">
                 <label for="profile_image">Kitchen Photo:  </label>
                 <img class="img-responsive" id="kitchen_photo" src="<?php echo $array_selected_search['kitchen_photo'];?>" alt="" width="200" height="200">
@@ -173,7 +174,9 @@ $conn->close();
                 //echo $lst_photo;
                 foreach($lst_photo as $item) { ?>
                 <div class="col-md-6">
-                <img class="img-responsive" id="food_album" src="<?php echo $item;?>" alt="" width="200" height="200">
+                    <?php if($lst_photo): ?>
+                        <img class="img-responsive" id="food_album" src="<?php echo $item;?>" alt="" width="200" height="200">
+                    <?php endif; ?>
                 </div>
                 <?php 
                 //echo "$item";
