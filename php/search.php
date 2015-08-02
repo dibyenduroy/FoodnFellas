@@ -128,6 +128,7 @@ WHERE m.provider_food_id = '".$provider_id."';";
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
             }
             for ($i = 0; $i < count($array_meal_search_all); $i++) {
+                echo "I am here";
                 print_r($array_meal_search_all[$i]);
             }
             //echo "\n";
