@@ -106,21 +106,15 @@
        FROM Meal as m JOIN user as u ON u.user_id = m.user_id 
        JOIN Provider_food as pf ON pf.provider_food_id = m.provider_food_id
             WHERE m.provider_food_id = '".$provider_id."';";
-         // echo "$sql2";
+         echo "$sql2";
           $index = 0;
           $result2 = $conn->query($sql2);
           if ($result2->num_rows > 0) {
               while($array_meal_search_row = $result2->fetch_assoc()) { 
                 $array_meal_search_all[$index] = $array_meal_search_row;
                 $index++;
-                //print_r($array_meal_search_row);
-                $counter++; ?>
-                <h5></h5>
-                <h5></h5>
-                <h5></h5>
-                <h5></h5>
-                <h5></h5>
-                <? php
+                print_r($array_meal_search_row);
+                $counter++; 
               //print_r($array_meal_search_row);
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
             }
