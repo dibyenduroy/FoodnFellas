@@ -1,4 +1,5 @@
 <?php
+// Session start.
 session_start();
 
 // header('Cache-Control: no-cache');

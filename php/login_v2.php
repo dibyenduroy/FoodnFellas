@@ -1,4 +1,5 @@
 <?php
+// Session start.
 session_start();
 // Hard-coding, change later.
 // $_SESSION["user_id"] = 15;

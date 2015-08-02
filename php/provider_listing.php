@@ -10,6 +10,7 @@ $_SERVER['REQUEST_METHOD'] = "POST";
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
 	$return = $_POST;
+	// Getting the user_id from the session.
 	$user_id = $_SESSION["user_id"];
 	echo " User-id ";
 	echo $user_id;
