@@ -124,25 +124,18 @@ WHERE m.provider_food_id = '".$provider_id."';";
                 $index++;
                 //print_r($array_meal_search_row);
                 $counter++;
+                while (list($var, $val) = each($array_meal_search_row)) {
+                  print "$var is $val\n"; 
+
+           
+
+            }
               //print_r($array_meal_search_row);
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
             }
 
 
-            while (list($var, $val) = each($array_meal_search_all)) {
-              print "$var is $val\n"; 
-              echo '<div class="col-md-6">',
-                    '<img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">',
-                    '</div>',
-                    '<div class="col-md-6">',
-                    '<label for="Name">By: </label>',
-                    '<output name="AboutMe" id ="AboutMe">',
-                    '<label for="price_per_person">Price per person: $var is $val </label>',
-                    '<output name="price_per_person" id ="price_per_person">',
-                    '</div>';
-           
 
-            }
             //echo "\n";
             //print_r($array_meal_search_all);
           }
