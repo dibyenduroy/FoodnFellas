@@ -112,9 +112,8 @@
           if ($result2->num_rows > 0) {
               while($array_meal_search_row = $result2->fetch_assoc()) { 
                 $array_meal_search_all[$index] = $array_meal_search_row;
-                $index++; ?>
-                <h1> <? php print_r($array_meal_search_row); ?></h1>
-                <? php 
+                $index++; 
+                print_r($array_meal_search_row);
                 $counter++; 
               //print_r($array_meal_search_row);
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
