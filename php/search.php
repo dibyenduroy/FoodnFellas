@@ -124,12 +124,6 @@ WHERE m.provider_food_id = '".$provider_id."';";
                 $index++;
                 //print_r($array_meal_search_row);
                 $counter++;
-                while (list($var, $val) = each($array_meal_search_row)) {
-                  print "$var is $val\n"; 
-
-           
-
-            }
               //print_r($array_meal_search_row);
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
             }
@@ -137,7 +131,7 @@ WHERE m.provider_food_id = '".$provider_id."';";
 
 
             //echo "\n";
-            //print_r($array_meal_search_all);
+            print_r($array_meal_search_all);
           }
       }
     } else {
