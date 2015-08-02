@@ -86,7 +86,7 @@
     // Get the entries from Provider_address matching the city.
     $sql1 = "SELECT pa.user_id as pui, pa.provider_food_id as pfi FROM Provider_address  as pa JOIN Provider_food as pf
                                                     ON pa.provider_food_id = pf.provider_food_id
-                                                    WHERE pa.city = 'Sunnyvale';";
+                                                    WHERE pa.city = 'Livermore';";
     //                                                AND pf.min_people <= ".$num_people."
     //                                                AND pf.max_people >= ".$num_people."
     //                                                AND pf.price_per_person BETWEEN ".$price_low." AND ".$price_high."
