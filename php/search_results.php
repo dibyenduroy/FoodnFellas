@@ -68,7 +68,7 @@ $provider_food_id = 4;
 
 include 'foodnfellasDBConnection.php';
 
-$sql1 = "SELECT u.f_name, u.l_name, u.photo, p.about_me, p.kitchen_photo, p.food_album, p.awards_won, p.cuisine_i_cook, m.dish_name, 
+$sql1 = "SELECT u.user_id, u.f_name, u.l_name, u.photo, p.about_me, p.kitchen_photo, p.food_album, p.awards_won, p.cuisine_i_cook, m.dish_name, 
                 m.meal_description, pf.price_per_person, pf.delivery_method, pf.meal_type, pf.cuisine_type,
                 pf.available_start, pf.available_end, pa.street_1, pa.city, pa.state, pa.zip_code, pa.country   
                                  FROM Meal as m 
