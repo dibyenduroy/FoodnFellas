@@ -124,8 +124,8 @@ WHERE m.provider_food_id = '".$provider_id."';";
                 $index++;
                 print_r($array_meal_search_row);
                 $counter++;
-               for ($i = 0; $i < count($array_meal_search_row); ++$i) {
-                print $array_meal_search_row[$i];
+               for ($i = 0; $i < count($array_meal_search_row); $i++) {
+                echo $array_meal_search_row[$i];
                 }
 
 
@@ -156,7 +156,7 @@ WHERE m.provider_food_id = '".$provider_id."';";
             <div class="col-md-3">
                 <label for="Name">By: </label>
                 <output name="AboutMe" id ="AboutMe">
-                <label for="price_per_person">Price per person: <? php echo $array_meal_search_row["f_name"]; ?> </label>
+                <label for="price_per_person">Price per person: <? php print_r($array_meal_search_row); ?> </label>
                 <output name="price_per_person" id ="price_per_person">
             </div>
             
