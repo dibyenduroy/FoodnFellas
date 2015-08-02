@@ -77,6 +77,8 @@ function loginCallBack() {
         jsonpCallback: 'jsonpCallback',
         success: function(){
             alert("success");
+        }, error: function(xhr, status, error) {
+            alert("failure!");
         }
     });
     //jQuery(
