@@ -18,12 +18,14 @@
 
 <body>
 
+
     <?php
     // Session start.
     session_start();
 
     // header('Cache-Control: no-cache');
-    header('content-type: text/javascript;');
+    //header('content-type: text/javascript;');
+    header('Content-Type: text/html; charset=utf-8');
 
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
@@ -118,9 +120,8 @@
 
     $conn->close();
     }
+
 ?>
-
-
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
