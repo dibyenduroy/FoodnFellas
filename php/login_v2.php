@@ -16,7 +16,7 @@ function test() {
 
 function SignIn($email_p,$password_p,$login_type_p)
 {
-  header('content-type: text/javascript;');
+  header('content-type: application/json;');
   //starting the session for user profile page
   if(!empty($email_p) ) {
     //////////////////////
@@ -40,6 +40,7 @@ function SignIn($email_p,$password_p,$login_type_p)
         die("Connection failed: " . $conn->connect_error);
         echo "Error Connecting to Database";
     }
+
     if($login_type_p==="1") {
       $sql = "SELECT user_id, is_provider, f_name, l_name  FROM user where email='".$email_p."'"."AND password='".$password_p."'";
       
