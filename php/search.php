@@ -101,20 +101,11 @@
         // Now, return the meal entries.
         while($row = $result1->fetch_assoc()) {
                 $provider_id = $row["pfi"];
-            $sql2 = "SELECT u.f_name, u.user_id, m.provider_food_id,
-       u.l_name, 
-       pf.price_per_person, 
-       p.cuisine_i_cook , 
-       p.food_album, 
-       p.cuisine_i_cook 
-FROM   Meal     AS m 
-JOIN   Provider AS p 
-ON     m.user_id = p.user_id 
-JOIN   user AS u 
-ON     p.user_id = u.user_id 
-JOIN   Provider_food AS pf 
-ON     pf.user_id = u.user_id             
-WHERE m.provider_food_id = '".$provider_id."';";
+            $sql2 = "SELECT m.provider_food_id,m.meal_id, u.f_name, u.user_id, 
+       u.l_name, pf.price_per_person
+       FROM Meal as m JOIN user as u ON u.user_id = m.user_id 
+       JOIN Provider_food as pf ON pf.provider_food_id = m.provider_food_id
+            WHERE m.provider_food_id = '".$provider_id."';";
          // echo "$sql2";
           $index = 0;
           $result2 = $conn->query($sql2);
@@ -127,10 +118,7 @@ WHERE m.provider_food_id = '".$provider_id."';";
               //print_r($array_meal_search_row);
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
             }
-
-
-
-            //echo "\n";
+        //echo "\n";
             print_r($array_meal_search_all);
           }
       }
@@ -147,8 +135,6 @@ WHERE m.provider_food_id = '".$provider_id."';";
     }
 
 ?>
-
-
       </div> 
 
       <div class="row">
