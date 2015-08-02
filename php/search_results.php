@@ -68,7 +68,7 @@ $provider_food_id = 4;
 
 include 'foodnfellasDBConnection.php';
 
-$sql1 = "SELECT u.f_name, u.l_name, u.photo, u.about_me, p.kitchen_photo, p.food_album, p.awards_won, p.cuisine_i_cook, m.dish_name, 
+$sql1 = "SELECT u.f_name, u.l_name, u.photo, p.about_me, p.kitchen_photo, p.food_album, p.awards_won, p.cuisine_i_cook, m.dish_name, 
                 m.meal_description, pf.price_per_person, pf.delivery_method, pf.meal_type, pf.cuisine_type,
                 pf.available_start, pf.available_end, pa.street_1, pa.city, pa.state, pa.zip_code, pa.country   
                                  FROM Meal as m 
@@ -137,13 +137,12 @@ $conn->close();
                 <label for="Cuisine_I_Cook">Cuisines I Cook: <?php echo $array_selected_search['cuisine_type'];?></label>
                 <output name="Cuisine_I_Cook" id ="Cuisine_I_Cook">
             </div>
-            <br>
             <div class="col-md-3 ">
                 <label for="price_per_person">Price per person: <?php echo $array_selected_search['price_per_person'];?></label>
                 <output name="price_per_person" id ="price_per_person">
             </div>
             <div class="col-md-3">
-                <label for="delivery_method">Delivery Method  <?php echo $array_selected_search['delivery_method'];?></label>
+                <label for="delivery_method">Delivery Method : <?php echo $array_selected_search['delivery_method'];?></label>
                 <output name="delivery_method" id ="delivery_method">
             </div>
             <div class="col-md-3 ">
@@ -162,7 +161,7 @@ $conn->close();
                     <dt><output name="meal_description" id ="meal_description"></dt>
                 </dl>
             <div>
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <label for="profile_image">Kitchen Photo:  </label>
                 <img class="img-responsive" id="kitchen_photo" src="<?php echo $array_selected_search['kitchen_photo'];?>" alt="" width="200" height="200">
             </div>
@@ -173,7 +172,7 @@ $conn->close();
                 /*print the array*/
                 //echo $lst_photo;
                 foreach($lst_photo as $item) { ?>
-                <div class="col-md-3">
+                <div class="col-md-6">
                 <img class="img-responsive" id="food_album" src="<?php echo $item;?>" alt="" width="200" height="200">
                 </div>
                 <?php 
