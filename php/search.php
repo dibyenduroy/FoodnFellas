@@ -132,7 +132,7 @@
                 //print_r($array_meal_search_row);
                 $counter++; 
                 $pfid = $array_meal_search_row['provider_food_id'];
-                echo $pfid;
+                //echo $pfid;
                 /*echo("<div>".$array_meal_search_row['photo']."</div>");
                   echo ("<div class='col-md-6'><img class='img-responsive' id='photo' src=".$array_meal_search_row['photo']." alt=''></div><div class='col-md-3'>");
                   echo ("<label for='Name'>By: ".$array_meal_search_row['f_name']." ".$array_meal_search_row['l_name']."  "."</label>");
