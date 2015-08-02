@@ -32,6 +32,8 @@
     </div><!--/.nav-collapse -->
   </div>
 </nav>
+<h1>Nidhi</h1>
+<p><p>
 
 
     <?php
@@ -110,7 +112,7 @@
               $count++;
               //$array_meal_search_all = array_merge($array_meal_search_all, $array_meal_search_row);
             }
-            echo "\n";
+            //echo "\n";
             print_r($array_meal_search_all);
           }
       }
