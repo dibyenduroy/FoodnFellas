@@ -140,7 +140,7 @@
 
       <div class="container-fluid">
           <h3> All Meal listings</h3>
-          <?php for ($i = 1; $i <= $count; $i++) { 
+          <?php for ($i = 1; $i <= $count; $i++) : 
           echo $i; ?>
           <div class="col-md-3">
                 <img class="img-responsive" id="photo" src="http://placehold.it/150x150" alt="">
@@ -151,7 +151,7 @@
                 <label for="price_per_person">Price per person: <?php $array_meal_search_all[$i];?></label>
                 <output name="price_per_person" id ="price_per_person">
             </div>
-          <?php } ?>
+          <?php endfor; ?>
             
             
       </div> 
