@@ -35,12 +35,12 @@
 <?php
 // Session start.
 session_start();
-header('Content-Type: text/html; charset=utf-8'); 
+//header('Content-Type: text/html; charset=utf-8'); 
 // Hard-coding, change later.
 // $_SESSION["user_id"] = 15;
 //header('Cache-Control: no-cache');
 //header('content-type: text/javascript;');
-$GLOBAL_SESSION_USERNAME;
+$GLOBAL_SESSION_USERNAME="test";
 
 
 function SignIn($email_p,$password_p,$login_type_p)
@@ -95,6 +95,7 @@ function SignIn($email_p,$password_p,$login_type_p)
       $row = $result->fetch_assoc();
       // Set the session.
       $_SESSION["user_id"] = $row["user_id"];
+      $_SESSION["f_name"] = $row["f_name"];
       //echo "  Set session user id ";
       //echo $_SESSION["user_id"];
       
@@ -102,6 +103,7 @@ function SignIn($email_p,$password_p,$login_type_p)
       $array_user_results[$index] = $row;
       $cookie_variable=$row["f_name"]." ".$row["l_name"]." ".$row["user_id"]." ".$row["is_provider"];
       setcookie("FoodnFellas", $cookie_variable);
+
       $GLOBAL_SESSION_USERNAME=$row["f_name"]." ".$row["l_name"];
       $index++; 
       
@@ -133,12 +135,12 @@ function SignIn($email_p,$password_p,$login_type_p)
             <ul class="nav navbar-nav navbar-right">
               <?php 
               if (isset($_SESSION["user_id"])) {
-                echo $GLOBAL_SESSION_USERNAME; 
+                echo "      ".$_SESSION["f_name"];
                } else { ?>
                 <li><a href="#" data-toggle="modal" data-target=".signupwith-email-modal">Sign Up</a></li>
                 <li><a href="#" data-toggle="modal" data-target=".social-login-modal">Login</a></li>
               <?php } ?>
-              <li> <button type="button" class="btn btn-info" onclick="providerBtnCallBack()">Become a provider</button> </li>
+              <li> <button type="button" class="btn btn-info" onclick="providerBtnCallBack()">Become a provider</button>              </li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
