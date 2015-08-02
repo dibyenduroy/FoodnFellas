@@ -117,32 +117,32 @@ $conn->close();
     <!-- Portfolio Item Row -->
         <!--// This is provider information. No looping required. -->
             <div class="col-md-3">
-                <label for="Name">Name: </label>
+                <label for="Name">Name: <?php echo $array_selected_search['f_name']; echo $array_selected_search['l_name'];?></label>
                 <output name="Name" id ="Name">
             </div>
             <div class="col-md-3">
-                <label for="AboutMe">About Me:  </label>
+                <label for="AboutMe">About Me:  <?php echo $array_selected_search['about_me'];?></label>
                 <output name="AboutMe" id ="AboutMe">
             </div>
             <div class="col-md-3">
-                <label for="AwardsWon">Awards Won: </label>
+                <label for="AwardsWon">Awards Won: <?php echo $array_selected_search['awards_won'];?></label>
                 <output name="AwardsWon" id ="AwardsWon">
             </div>
             <div class="col-md-3">
-                <label for="Cuisine_I_Cook">Cuisines I Cook: </label>
+                <label for="Cuisine_I_Cook">Cuisines I Cook: <?php echo $array_selected_search['cuisine_type'];?></label>
                 <output name="Cuisine_I_Cook" id ="Cuisine_I_Cook">
             </div>
             <br>
             <div class="col-md-6">
-                <label for="profile_image">Profile Photo </label>
+                <label for="profile_image">Profile Photo : <?php echo $array_selected_search['photo'];?></label>
                 <img class="img-responsive" id="profile_image" src="http://placehold.it/250x250" alt="">
             </div>
             <div class="col-md-6">
-                <label for="profile_image">Kitchen Photo </label>
+                <label for="profile_image">Kitchen Photo: <?php echo $array_selected_search['kitchen_photo'];?> </label>
                 <img class="img-responsive" id="kitchen_photo" src="http://placehold.it/250x250" alt="">
             </div>
             <div class="col-md-12">
-                <label for="profile_image">Food Album </label>
+                <label for="profile_image">Food Album  <?php echo $array_selected_search['food_album'];?></label>
                 <img class="img-responsive" id="food_album" src="http://placehold.it/250x250" alt="">
             </div>
             <br></br>
@@ -152,15 +152,15 @@ $conn->close();
     <!--// This is provider's Meal information.  looping required. -->
  
             <div class="col-xs-12 col-sm-3 ">
-                <label for="price_per_person">Price per person: </label>
+                <label for="price_per_person">Price per person: <?php echo $array_selected_search['price_per_person'];?></label>
                 <output name="price_per_person" id ="price_per_person">
             </div>
             <div class="col-xs-12 col-sm-3 ">
-                <label for="delivery_method">Delivery Method </label>
+                <label for="delivery_method">Delivery Method  <?php echo $array_selected_search['delivery_method'];?></label>
                 <output name="delivery_method" id ="delivery_method">
             </div>
             <div class="col-xs-12 col-sm-3 ">
-                <label for="meal_type">Cuisine Type </label>
+                <label for="meal_type">Cuisine Type : <?php echo $array_selected_search['cuisine_type'];?> </label>
                 <output name="meal_type" id ="meal_type">
             </div>
             <div class="col-md-6 ">
