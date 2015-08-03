@@ -178,22 +178,23 @@ $conn->close();
                   <input type="text" name="ReviewID" value="123" placeholder="ReviewID" />  
                </div>
                <div class="col-md-7">
-                <input type="text" name="cost" value="<?php echo "100"?> " placeholder="cost" />
+                Cost: 
+                <input type="text" name="cost" value="<?php echo "$120"; ?> " placeholder="cost" readonly/>
                </div>
                <div class="col-md-7">
-                <input type="text" name="DeliveryMethod" value="" placeholder="DeliveryMethod" /> 
+                Delivery Method: 
+                <input type="text" name="DeliveryMethod" value="DINEIN" readonly/> 
                </div>
                <div class="col-md-7">
-                <input type="text" name="NumberofAdult" value="" placeholder="NumberofAdult" />
+                Number of Adults: 
+                <input type="text" name="NumberofAdult" value="20" placeholder="NumberofAdult" readonly/>
                </div>
                <div class="col-md-7">
-                <input type="text" name="NumberofKids" value="" placeholder="NumberofKids" /> 
+                Special Note: 
+                <input type="text" name="SpecialNote" value="" style="line-height: 5em;" placeholder="SpecialNote"/> 
                </div>
                <div class="col-md-7">
-                <input type="text" name="SpecialNote" value="" placeholder="SpecialNote" style="width: 300px;" /> 
-               </div>
-               <div class="col-md-7">
-                <button type="button" class="btn btn-info btn-large" action="OrderTransactionSubmit.php">Order</button>
+                <button type="button" class="btn btn-danger btn-lg" action="OrderTransactionSubmit.php">Order</button>
               </div>
             </form>   
         </div>
