@@ -93,19 +93,19 @@ $conn->close();
         <li data-target="#myCarousel" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner" role="listbox">
-
         <?php
         $lst_photo = explode(",", $array_selected_search['food_album']);
         $i=0;
-        foreach($lst_photo as $item) { ?>
-            <?php if($lst_photo): $?>
+        foreach($lst_photo as $item) {
+            if($lst_photo) { $?>
               <div class="item">
                 <img class="slide" src="<?php echo $item;?>" alt="<?php echo $i;?>">
               </div>
-            <?php $i++;
-            endif; 
+            <?php 
+              $i++;
+            } 
         //echo "$item";
-        } ?>
+        }?>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
