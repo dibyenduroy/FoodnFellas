@@ -187,7 +187,7 @@ $conn->close();
                 <div class="col-md-3">
                 </div>
                 <div class="col-md-8">
-                  <input type="text" id="DeliveryMethod" name="DeliveryMethod" value="DINE IN" readonly/> 
+                  <input type="text" id="DeliveryMethod" name="DeliveryMethod" value="PICKUP" readonly/> 
                 </div>
 
                 <div class="col-md-3">
