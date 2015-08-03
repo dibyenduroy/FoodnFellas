@@ -172,18 +172,17 @@ $conn->close();
             $cost=$array_selected_search['price_per_person'] *10;
             ?> 
                
-               <br> <input type="hidden" name="provider_id" value="7" placeholder="provider_id" />  <br>
-               <br> <input type="hidden" name="consumer_id" value="38" placeholder="consumer_id" />  <br>
-               <br> <input type="hidden" name="meal_id" value="123" placeholder="meal_id" />  <br>
-              <br> <input type="hidden" name="cost" value="100" placeholder="cost" /> <br>
-              <br> <input type="hidden" name="DeliveryMethod" value="PICKUP" placeholder="DeliveryMethod" />  <br>
-              <br> <input type="text" name="NumberofAdult" value="" placeholder="NumberofAdult" />  <br>
-              <br> <input type="text" name="NumberofKids" value="" placeholder="NumberofKids" />  <br>
-              <br> <input type="text" name="SpecialNote" value="" placeholder="SpecialNote" style="width: 500px;" />  <br>
-               <br> <input type="hidden" name="ReviewID" value="123" placeholder="ReviewID" />  <br>
-   
-
-          </form>   
+  <br> <input type="hidden" name="provider_id" value="7" placeholder="provider_id" />  <br>
+   <br> <input type="hidden" name="consumer_id" value="38" placeholder="consumer_id" />  <br>
+   <br> <input type="hidden" name="meal_id" value="123" placeholder="meal_id" />  <br>
+   <br> <input type="text" name="cost" value="100" placeholder="cost" /> <br>
+   <br> <input type="hidden" name="DeliveryMethod" value="PICKUP" placeholder="DeliveryMethod" />  <br>
+   <br> <input type="text" name="NumberofAdult" value="" placeholder="NumberofAdult" />  <br>
+   <br> <input type="text" name="NumberofKids" value="" placeholder="NumberofKids" />  <br>
+   <br> <input type="text" name="SpecialNote" value="" placeholder="SpecialNote" style="width: 500px;" />  <br>
+   <br> <input type="hidden" name="ReviewID" value="123" placeholder="ReviewID" />  <br>
+    <button type="submit" class="btn btn-danger btn-lg btn-block" onClick="window.location.reload(true)">Order</button>           
+  </form>   
         </div>
 
         <div class="col-lg-4">
