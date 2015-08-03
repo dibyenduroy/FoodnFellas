@@ -203,7 +203,7 @@ $conn->close();
                 <div class="col-md-8">
                   <input type="text" id="SpecialNote" name="SpecialNote" value="" style="line-height: 5em;" placeholder="SpecialNote"/> 
                 </div>
-               <div class="col-md-7">
+               <div class="col-md-12">
                 <button type="button" class="btn btn-danger btn-lg btn-block" action="OrderTransactionSubmit.php">Order</button>
               </div>
             </form>   
