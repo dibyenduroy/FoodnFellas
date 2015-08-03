@@ -152,29 +152,33 @@ $conn->close();
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="http://s3-us-west-2.amazonaws.com/foodnfellas/GoodFoodAward.png" width="140" height="140">
           <h2>Awards Won</h2>
           <p> <?php echo $array_selected_search['awards_won'];?></p>
           <p><output name="AwardsWon" id ="AwardsWon"></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="http://s3-us-west-2.amazonaws.com/foodnfellas/BackgroundImages/Shukto.jpg" width="140" height="140">
           <h2>Cuisines I Cook</h2>
           <p><?php echo $array_selected_search['cuisine_type'];?></p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
 
         <div class="col-lg-4">
-            <h2>Price per person: <?php echo $array_selected_search['price_per_person'];?></h2>
+            <h3>Price per person:</h3> 
+            <p> <?php echo $array_selected_search['price_per_person'];?></p>
         </div>
         <div class="col-lg-4">
-            <h2>Delivery Method : <?php echo $array_selected_search['delivery_method'];?></h2>
+            <h3>Delivery Method: </h3>
+            <p> <?php echo $array_selected_search['delivery_method'];?></p>
         </div>
         <div class="col-lg-4">
-            <h2>Cuisine Type : <?php echo $array_selected_search['cuisine_type'];?> </h2>
+            <h3>Cuisine Type: </h3> 
+            <p> <?php echo $array_selected_search['cuisine_type'];?> </p>
         </div>
         <div class="col-lg-4">
-            <h2>Available On : <?php echo $array_selected_search['available_on'];?> </h2>
+            <h3> Available On: </h3>
+            <p> <?php echo $array_selected_search['available_on'];?> </p>
         </div>
 
       </div><!-- /.row -->
