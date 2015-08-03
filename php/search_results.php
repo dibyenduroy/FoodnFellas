@@ -152,29 +152,30 @@ $conn->close();
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
+          <img class="img-circle" alt="Generic placeholder image" width="140" height="140">
           <h2>Awards Won</h2>
           <p> <?php echo $array_selected_search['awards_won'];?></p>
           <p><output name="AwardsWon" id ="AwardsWon"></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
+          <img class="img-circle" alt="Generic placeholder image" width="140" height="140">
           <h2>Cuisines I Cook</h2>
           <p><?php echo $array_selected_search['cuisine_type'];?></p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-
-        <div class="col-md-3 ">
+        <div class="col-lg-4">
             <label for="price_per_person">Price per person: <?php echo $array_selected_search['price_per_person'];?></label>
             <output name="price_per_person" id ="price_per_person">
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-4">
             <label for="delivery_method">Delivery Method : <?php echo $array_selected_search['delivery_method'];?></label>
             <output name="delivery_method" id ="delivery_method">
         </div>
-        <div class="col-md-3 ">
+        <div class="col-lg-4">
             <label for="meal_type">Cuisine Type : <?php echo $array_selected_search['cuisine_type'];?> </label>
             <output name="meal_type" id ="meal_type">
         </div>
-        <div class="col-md-3 ">
+        <div class="col-lg-4">
             <label for="available_on">Available On : <?php echo $array_selected_search['available_on'];?> </label>
             <output name="available_on" id ="available_on">
         </div>
