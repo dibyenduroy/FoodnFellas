@@ -100,9 +100,9 @@
     $array_meal_search_all = array();
 
     // Get the entries from Provider_address matching the city.
-    $sql1 = "SELECT pa.user_id as pui, pa.provider_food_id as pfi FROM Provider_address  as pa JOIN Provider_food as pf
+    $sql1 = "SELECT DISTINCT pa.provider_food_id as pfi, pa.user_id as pui  FROM Provider_address  as pa JOIN Provider_food as pf
                                                     ON pa.provider_food_id = pf.provider_food_id
-                                                    WHERE pa.city = 'Livermore';";
+                                                    WHERE pa.city = 'Livermore';" ;
     //                                                AND pf.min_people <= ".$num_people."
     //                                                AND pf.max_people >= ".$num_people."
     //                                                AND pf.price_per_person BETWEEN ".$price_low." AND ".$price_high."
@@ -117,11 +117,11 @@
         // Now, return the meal entries.
         while($row = $result1->fetch_assoc()) {
                 $provider_id = $row["pfi"];
-            $sql2 = "SELECT m.provider_food_id,m.meal_id, u.f_name, u.user_id, 
+            $sql2 = "SELECT m.provider_food_id,u.f_name, u.user_id, 
        u.l_name, pf.price_per_person, u.photo
        FROM Meal as m JOIN user as u ON u.user_id = m.user_id 
        JOIN Provider_food as pf ON pf.provider_food_id = m.provider_food_id
-            WHERE m.provider_food_id = '".$provider_id."';";
+            WHERE m.provider_food_id = '".$provider_id."' GROUP BY m.provider_food_id;";
          //echo "$sql2";
           $index = 0;
           $result2 = $conn->query($sql2);
