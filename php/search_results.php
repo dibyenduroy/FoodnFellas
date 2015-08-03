@@ -101,11 +101,6 @@ $conn->close();
             <?php if($lst_photo): ?>
               <div class="item">
                 <img class="slide" src="<?php echo $item;?>" alt="First slide">
-                <div class="container">
-                  <div class="carousel-caption">
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-                  </div>
-                </div>
               </div>
             <?php endif; ?>
           </div>
