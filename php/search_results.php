@@ -166,19 +166,19 @@ $conn->close();
 
         <div class="col-lg-4">
             <h3>Price per person:</h3> 
-            <p> <?php echo $array_selected_search['price_per_person'];?></p>
+            <h4>$ <?php echo $array_selected_search['price_per_person'];?></h4>
         </div>
         <div class="col-lg-4">
             <h3>Delivery Method: </h3>
-            <p> <?php echo $array_selected_search['delivery_method'];?></p>
+            <h4> <?php echo $array_selected_search['delivery_method'];?></h4>
         </div>
         <div class="col-lg-4">
             <h3>Cuisine Type: </h3> 
-            <p> <?php echo $array_selected_search['cuisine_type'];?> </p>
+            <h4> <?php echo $array_selected_search['cuisine_type'];?> </h4>
         </div>
         <div class="col-lg-4">
             <h3> Available On: </h3>
-            <p> <?php echo $array_selected_search['available_on'];?> </p>
+            <h4> <?php echo $array_selected_search['available_on'];?> </h4>
         </div>
 
       </div><!-- /.row -->
@@ -196,9 +196,7 @@ $conn->close();
         $l_name = $_SESSION["l_name"];
         $is_provider = $_SESSION["is_provider"];
         $cost=$array_selected_search['price_per_person'] *10;
-        ?>
-
-           <h2 class="featurette-heading"> Order Input Details </h2>   
+        ?> 
            <div class="col-md-7">
              <input type="hidden" name="provider_id" value=" <?php echo $array_selected_search['user_id'];?>" placeholder="provider_id" /> 
            </div>
@@ -231,6 +229,21 @@ $conn->close();
           </div>
         </form>   
       <!-- /END THE FEATURETTES -->
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+          <div class="list-group">
+            <a href="#" class="list-group-item active">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+          </div>
+        </div><!--/.sidebar-offcanvas-->
 
       <!-- FOOTER -->
       <footer>
