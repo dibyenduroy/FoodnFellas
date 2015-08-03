@@ -182,7 +182,7 @@ $conn->close();
    <br>  Delivery Method <input type="text" name="DeliveryMethod" value="PICKUP" placeholder="DeliveryMethod" readonly />  <br>
    </div>
    <div class="col-md-8">
-   <br>  Number of Adults <input type="text" name="NumberofAdult" value="20" placeholder="NumberofAdult" style="width: 150px; align:left" readonly/>  <br>
+   <br>  Number of Adults <input type="text" name="NumberofAdult" value="20" placeholder="NumberofAdult" readonly/>  <br>
    </div>
  <div class="col-md-8">
    <br>  Number of Kids <input type="text" name="NumberofKids" value="0" placeholder="NumberofKids"  readonly/>  <br>
