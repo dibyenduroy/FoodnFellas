@@ -184,16 +184,12 @@ $conn->close();
                <div class="col-md-8">
                 <input type="text" id="cost" name="cost" value="<?php echo "$120"; ?> " placeholder="cost" readonly/>
                </div>
-              
-                <div class="col-md-3">
-                  <label for="DeliveryMethod">Delivery method</label>
-                </div>
-                <div class="col-md-8">
-                  <input type="text" id="DeliveryMethod" name="DeliveryMethod" value="DINEIN" readonly/> 
+                <div class="col-md-12">
+                  <input type="text" id="DeliveryMethod" name="DeliveryMethod" value="DINE IN" readonly/> 
                 </div>
 
                 <div class="col-md-3">
-                  <label for="NumberofAdult">Number of people</label>
+                  <label for="NumberofAdult">People</label>
                 </div>
                 <div class="col-md-8">
                   <input type="text" id="NumberofAdult" name="NumberofAdult" value="20" placeholder="NumberofAdult" readonly/>
