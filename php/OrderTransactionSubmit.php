@@ -83,7 +83,8 @@ $message = '
 
     Regards,  <br>
     FoodnFellas Team.
-
+    
+    To Visit our Home Page Click < a href="http://foodnfellas.com/php/login_v2.php" > FoodnFellas </a> 
 
 </body>
 </html>
