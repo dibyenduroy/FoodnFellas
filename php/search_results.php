@@ -220,13 +220,15 @@ $conn->close();
         </div>
         <div class="col-lg-4">
             <h3> Dishes Serving: </h3>
+            <ol>
             <?php foreach ($array_meal_search_all as $array_meal) { ?>
-            <dl>
-                <dt><output name="dish_name" id ="dish_name" value="<?php echo $array_meal['dish_name'];?>"></dt>
-                <dt><output name="meal_description" id ="meal_description" value="<?php echo $array_meal['meal_description'];?>"></dt>
-            </dl>
+                <li><?php echo $array_meal['dish_name'];?></li>
+                <li><?php echo $array_meal['meal_description'];?>/li>
             <?php } ?>
+        </ol>
         </div>
+
+
 
       </div><!-- /.row --> 
       <!-- FOOTER -->
