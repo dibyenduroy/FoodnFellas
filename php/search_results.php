@@ -222,8 +222,7 @@ $conn->close();
             <h3> Dishes Serving: </h3>
             <ol>
             <?php foreach ($array_meal_search_all as $array_meal) { ?>
-                <li><?php echo $array_meal['dish_name'];?></li>
-                <li><?php echo $array_meal['meal_description'];?>/li>
+                <li><h5><?php echo $array_meal['dish_name'];?> : <?php echo $array_meal['meal_description'];?><h5></li>
             <?php } ?>
         </ol>
         </div>
