@@ -38,8 +38,8 @@ $result_consumer = $conn->query($consumer_email);
 if (($conn->query($sql1) === TRUE)  and ($result_provider->num_rows > 0) and ($result_consumer->num_rows > 0) ) {
   
   $return["Status"] = "Success";
-  echo "Order Sucessfully Placed";
-  echo "Sending Email to Providers and Consumer";
+  //echo "Order Sucessfully Placed";
+  //echo "Sending Email to Provider and Consumer";
   $row_provider = $result_provider->fetch_assoc();
   $row_consumer = $result_consumer->fetch_assoc();
   
@@ -86,6 +86,8 @@ $message = '
 </body>
 </html>
 ';
+
+echo $message;
 
 // To send HTML mail, the Content-type header must be set
 $headers  = 'MIME-Version: 1.0' . "\r\n";
