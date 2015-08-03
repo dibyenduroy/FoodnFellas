@@ -204,7 +204,7 @@ $conn->close();
                   <input type="text" id="SpecialNote" name="SpecialNote" value="" style="line-height: 5em;" placeholder="SpecialNote"/> 
                 </div>
                <div class="col-md-12">
-                <button type="button" class="btn btn-danger btn-lg btn-block" onClick="window.location.reload(true)">Order</button>
+                <button type="submit" class="btn btn-danger btn-lg btn-block" onClick="window.location.reload(true)">Order</button>
               </div>
             </form>   
         </div>
