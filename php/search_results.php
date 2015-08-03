@@ -178,33 +178,33 @@ $conn->close();
                   <input type="text" name="ReviewID" value="123" placeholder="ReviewID" />  
                </div>
               
-               <div class="col-md-6">
+               <div class="col-md-3">
                 <label for="cost">Cost</label>
                </div>
-               <div class="col-md-6">
+               <div class="col-md-8">
                 <input type="text" id="cost" name="cost" value="<?php echo "$120"; ?> " placeholder="cost" readonly/>
                </div>
               
-                <div class="col-md-6">
+                <div class="col-md-3">
                   <label for="DeliveryMethod">Delivery method</label>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-8">
                   <input type="text" id="DeliveryMethod" name="DeliveryMethod" value="DINEIN" readonly/> 
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-3">
                   <label for="NumberofAdult">Number of people</label>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-8">
                   <input type="text" id="NumberofAdult" name="NumberofAdult" value="20" placeholder="NumberofAdult" readonly/>
                 </div>
 
-               <div class="col-md-6">
+                <div class="col-md-8">
                 <label for="SpecialNote">Special Note</label>
-                  </div>
-              <div class="col-md-6">
-                <input type="text" id="SpecialNote" name="SpecialNote" value="" style="line-height: 5em;" placeholder="SpecialNote"/> 
-               </div>
+                </div>
+                <div class="col-md-8">
+                  <input type="text" id="SpecialNote" name="SpecialNote" value="" style="line-height: 5em;" placeholder="SpecialNote"/> 
+                </div>
                <div class="col-md-7">
                 <button type="button" class="btn btn-danger btn-lg" action="OrderTransactionSubmit.php">Order</button>
               </div>
