@@ -38,12 +38,9 @@ $provider_food_id = 4;
 
 include 'foodnfellasDBConnection.php';
 
-$sql1 = "SELECT u.user_id, u.f_name, u.l_name, u.photo, p.about_me, p.kitchen_photo, p.food_album, p.awards_won, p.cuisine_i_cook, m.dish_name, 
-                m.meal_description, pf.price_per_person, pf.delivery_method, pf.meal_type, pf.cuisine_type,
+$sql1 = "SELECT u.user_id, u.f_name, u.l_name, u.photo, p.about_me, p.kitchen_photo, p.food_album, p.awards_won, p.cuisine_i_cook, pf.price_per_person, pf.delivery_method, pf.meal_type, pf.cuisine_type,
                 pf.available_start, pf.available_end, pa.street_1, pa.city, pa.state, pa.zip_code, pa.country   
-                                 FROM Meal as m 
-                                 JOIN Provider_address as pa                            
-                                 ON m.provider_food_id = pa.provider_food_id
+                                 FROM Provider_address as pa 
                                  JOIN Provider_food as pf 
                                  ON pa.provider_food_id = pf.provider_food_id
                                  JOIN Provider as p
@@ -52,7 +49,11 @@ $sql1 = "SELECT u.user_id, u.f_name, u.l_name, u.photo, p.about_me, p.kitchen_ph
                                  ON p.user_id = u.user_id
                                  WHERE pf.provider_food_id = '".$provider_food_id."';";
 
+$meal_details = "SELECT dish_name, meal_description FROM Meal where provider_food_id = '".$provider_food_id."';";
 
+// Delte these debug echos during integration.
+//echo "  sql1  ";
+//echo $sql1;
 
 $result1 = $conn->query($sql1);
 if ($result1->num_rows > 0) {
@@ -160,6 +161,24 @@ $conn->close();
           <p><?php echo $array_selected_search['cuisine_type'];?></p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
+
+        <div class="col-md-3 ">
+            <label for="price_per_person">Price per person: <?php echo $array_selected_search['price_per_person'];?></label>
+            <output name="price_per_person" id ="price_per_person">
+        </div>
+        <div class="col-md-3">
+            <label for="delivery_method">Delivery Method : <?php echo $array_selected_search['delivery_method'];?></label>
+            <output name="delivery_method" id ="delivery_method">
+        </div>
+        <div class="col-md-3 ">
+            <label for="meal_type">Cuisine Type : <?php echo $array_selected_search['cuisine_type'];?> </label>
+            <output name="meal_type" id ="meal_type">
+        </div>
+        <div class="col-md-3 ">
+            <label for="available_on">Available On : <?php echo $array_selected_search['available_on'];?> </label>
+            <output name="available_on" id ="available_on">
+        </div>
+
       </div><!-- /.row -->
 
       <!-- START THE FEATURETTES -->
