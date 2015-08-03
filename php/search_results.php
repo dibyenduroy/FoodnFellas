@@ -211,10 +211,6 @@ $conn->close();
             <h4> PICKUP,DINEIN</h4>
         </div>
         <div class="col-lg-4">
-            <h3>Cuisine Type: </h3> 
-            <h4> <?php echo $array_selected_search['cuisine_type'];?> </h4>
-        </div>
-        <div class="col-lg-4">
             <h3> Dishes Serving: </h3>
             <ol>
             <?php foreach ($array_meal_search_all as $array_meal) { ?>
