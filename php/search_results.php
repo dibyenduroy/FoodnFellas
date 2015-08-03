@@ -184,7 +184,9 @@ $conn->close();
                <div class="col-md-8">
                 <input type="text" id="cost" name="cost" value="<?php echo "$120"; ?> " placeholder="cost" readonly/>
                </div>
-                <div class="col-md-12">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-8">
                   <input type="text" id="DeliveryMethod" name="DeliveryMethod" value="DINE IN" readonly/> 
                 </div>
 
@@ -202,7 +204,7 @@ $conn->close();
                   <input type="text" id="SpecialNote" name="SpecialNote" value="" style="line-height: 5em;" placeholder="SpecialNote"/> 
                 </div>
                <div class="col-md-7">
-                <button type="button" class="btn btn-danger btn-lg" action="OrderTransactionSubmit.php">Order</button>
+                <button type="button" class="btn btn-danger btn-lg btn-block" action="OrderTransactionSubmit.php">Order</button>
               </div>
             </form>   
         </div>
