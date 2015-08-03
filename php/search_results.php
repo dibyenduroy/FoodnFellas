@@ -171,14 +171,11 @@ $conn->close();
             $is_provider = $_SESSION["is_provider"];
             $cost=$array_selected_search['price_per_person'] *10;
             ?> 
-               <div class="col-md-7">
+               <div class="col-md-7" style="display: none;">
                  <input type="hidden" name="provider_id" value=" <?php echo $array_selected_search['user_id'];?>" placeholder="provider_id" /> 
-               </div>
-               <div class="col-md-7">
                   <input type="text" name="consumer_id" value="<?php echo $user_id;?>" placeholder="consumer_id" /> 
-               </div>
-               <div class="col-md-7">
-                <input type="text" name="meal_id" value="123" placeholder="meal_id" />
+                  <input type="text" name="meal_id" value="123" placeholder="meal_id" />
+                  <input type="text" name="ReviewID" value="123" placeholder="ReviewID" />  
                </div>
                <div class="col-md-7">
                 <input type="text" name="cost" value="<?php echo "100"?> " placeholder="cost" />
@@ -195,9 +192,6 @@ $conn->close();
                <div class="col-md-7">
                 <input type="text" name="SpecialNote" value="" placeholder="SpecialNote" style="width: 300px;" /> 
                </div>
-               <div class="col-md-7">
-                <input type="text" name="ReviewID" value="123" placeholder="ReviewID" />  
-              </div>
                <div class="col-md-7">
                 <button type="button" class="btn btn-info btn-large" action="OrderTransactionSubmit.php">Order</button>
               </div>
