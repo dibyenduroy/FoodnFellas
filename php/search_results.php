@@ -100,7 +100,7 @@ $conn->close();
         foreach($lst_photo as $item) { ?>
             <?php if($lst_photo): $?>
               <div class="item">
-                <img class="slide" src="<?php echo $item;?>" alt="<?php echo $i ?>">
+                <img class="slide" src="<?php echo $item;?>" alt="<?php echo $i;?>">
               </div>
             <?php $i++;
             endif; 
