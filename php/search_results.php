@@ -109,11 +109,18 @@ $conn->close();
         $i=0;
         $array_slide = array("first-slide", "second-slide", "third-slide", "forth-slide", "fifth-slide");
         foreach($lst_photo as $item) {
-            if($item) { ?>
-              <div class="item">
-                <img class="<?php echo $array_slide[$i];?>" src="<?php echo $item;?>" alt="<?php echo $i;?>">
-              </div>
-            <?php 
+            if($item) { 
+              switch($i) {
+                case 0: ?>
+                  <div class="item active">
+                    <img class="<?php echo $array_slide[$i];?>" src="<?php echo $item;?>" alt="<?php echo $i;?>">
+                  </div>
+                <?php 
+                default: ?>
+                <div class="item">
+                  <img class="<?php echo $array_slide[$i];?>" src="<?php echo $item;?>" alt="<?php echo $i;?>">
+                </div>
+              <?php } 
               $i++;
             } 
         //echo "$item";
