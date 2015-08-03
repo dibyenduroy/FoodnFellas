@@ -171,42 +171,19 @@ $conn->close();
             $is_provider = $_SESSION["is_provider"];
             $cost=$array_selected_search['price_per_person'] *10;
             ?> 
-               <div class="col-md-7" style="display: none;">
-                 <input type="hidden" name="provider_id" value="7" placeholder="provider_id" /> 
-                  <input type="text" name="consumer_id" value="38" placeholder="consumer_id" /> 
-                  <input type="text" name="meal_id" value="123" placeholder="meal_id" />
-                  <input type="text" name="ReviewID" value="123" placeholder="ReviewID" />  
-               </div>
-              
-               <div class="col-md-3">
-                <label for="cost">Cost</label>
-               </div>
-               <div class="col-md-8">
-                <input type="text" id="cost" name="cost" value="120" placeholder="cost" readonly/>
-               </div>
-                <div class="col-md-3">
-                </div>
-                <div class="col-md-8">
-                  <input type="text" id="DeliveryMethod" name="DeliveryMethod" value="PICKUP" readonly/> 
-                </div>
+               
+               <br> <input type="hidden" name="provider_id" value="7" placeholder="provider_id" />  <br>
+               <br> <input type="hidden" name="consumer_id" value="38" placeholder="consumer_id" />  <br>
+               <br> <input type="hidden" name="meal_id" value="123" placeholder="meal_id" />  <br>
+              <br> <input type="hidden" name="cost" value="100" placeholder="cost" /> <br>
+              <br> <input type="hidden" name="DeliveryMethod" value="PICKUP" placeholder="DeliveryMethod" />  <br>
+              <br> <input type="text" name="NumberofAdult" value="" placeholder="NumberofAdult" />  <br>
+              <br> <input type="text" name="NumberofKids" value="" placeholder="NumberofKids" />  <br>
+              <br> <input type="text" name="SpecialNote" value="" placeholder="SpecialNote" style="width: 500px;" />  <br>
+               <br> <input type="hidden" name="ReviewID" value="123" placeholder="ReviewID" />  <br>
+   
 
-                <div class="col-md-3">
-                  <label for="NumberofAdult">People</label>
-                </div>
-                <div class="col-md-8">
-                  <input type="text" id="NumberofAdult" name="NumberofAdult" value="20" placeholder="NumberofAdult" readonly/>
-                </div>
-
-                <div class="col-md-8">
-                <label for="SpecialNote">Special Note</label>
-                </div>
-                <div class="col-md-8">
-                  <input type="text" id="SpecialNote" name="SpecialNote" value="" style="line-height: 5em;" placeholder="SpecialNote"/> 
-                </div>
-               <div class="col-md-12">
-                <button type="submit" class="btn btn-danger btn-lg btn-block" onClick="window.location.reload(true)">Order</button>
-              </div>
-            </form>   
+          </form>   
         </div>
 
         <div class="col-lg-4">
