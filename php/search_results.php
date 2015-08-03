@@ -97,14 +97,11 @@ $conn->close();
         <?php
         $lst_photo = explode(",", $array_selected_search['food_album']);
         foreach($lst_photo as $item) { ?>
-          <div class="col-md-3">
             <?php if($lst_photo): ?>
               <div class="item">
                 <img class="slide" src="<?php echo $item;?>" alt="First slide">
               </div>
-            <?php endif; ?>
-          </div>
-        <?php
+            <?php endif;
         //echo "$item";
         } ?>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
