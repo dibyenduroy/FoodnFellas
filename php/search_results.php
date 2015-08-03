@@ -175,11 +175,21 @@ $conn->close();
   <br> <input type="hidden" name="provider_id" value="7" placeholder="provider_id" />  <br>
    <br> <input type="hidden" name="consumer_id" value="38" placeholder="consumer_id" />  <br>
    <br> <input type="hidden" name="meal_id" value="123" placeholder="meal_id" />  <br>
-   <br> Cost <input type="text" name="cost" value="120" placeholder="cost" readonly/> <br>
+   <div class="col-md-8">
+   <br>  Cost <input type="text" name="cost" value="120" placeholder="cost" readonly/> <br>
+    </div>
+    <div class="col-md-8">
    <br>  Delivery Method <input type="text" name="DeliveryMethod" value="PICKUP" placeholder="DeliveryMethod" readonly />  <br>
-   <br> Number of Adults <input type="text" name="NumberofAdult" value="20" placeholder="NumberofAdult" style="width: 150px; align:left" readonly/>  <br>
-   <br> Number of Kids <input type="text" name="NumberofKids" value="0" placeholder="NumberofKids"  readonly/>  <br>
-   <br> Special Note <input type="text" id="SpecialNote" name="SpecialNote" value="" style="line-height: 5em;" placeholder="SpecialNote"/>  <br>
+   </div>
+   <div class="col-md-8">
+   <br>  Number of Adults <input type="text" name="NumberofAdult" value="20" placeholder="NumberofAdult" style="width: 150px; align:left" readonly/>  <br>
+   </div>
+ <div class="col-md-8">
+   <br>  Number of Kids <input type="text" name="NumberofKids" value="0" placeholder="NumberofKids"  readonly/>  <br>
+  </div> 
+   <div class="col-md-8">
+   <br>  Special Note <input type="text" id="SpecialNote" name="SpecialNote" value="" style="line-height: 5em;" placeholder="SpecialNote"/>  <br>
+   </div> 
    <br> <input type="hidden" name="ReviewID" value="123" placeholder="ReviewID" />  <br>
     <button type="submit" class="btn btn-danger btn-lg btn-block" onClick="window.location.reload(true)">Order</button>           
   </form>   
@@ -198,7 +208,7 @@ $conn->close();
         </div>
         <div class="col-lg-4">
             <h3>Delivery Method: </h3>
-            <h4> <?php echo $array_selected_search['delivery_method'];?></h4>
+            <h4> PICKUP,DINEIN</h4>
         </div>
         <div class="col-lg-4">
             <h3>Cuisine Type: </h3> 
