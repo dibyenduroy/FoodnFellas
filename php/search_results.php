@@ -177,8 +177,8 @@ $conn->close();
    <br> <input type="hidden" name="meal_id" value="123" placeholder="meal_id" />  <br>
    <br> Cost <input type="text" name="cost" value="120" placeholder="cost" readonly/> <br>
    <br>  Delivery Method <input type="text" name="DeliveryMethod" value="PICKUP" placeholder="DeliveryMethod" readonly />  <br>
-   <br> Number of Adults <input type="text" name="NumberofAdult" value="20" placeholder="NumberofAdult" readonly/>  <br>
-   <br> NUmber of Kids <input type="text" name="NumberofKids" value="0" placeholder="NumberofKids"  readonly/>  <br>
+   <br> Number of Adults <input type="text" name="NumberofAdult" value="20" placeholder="NumberofAdult" style="width: 150px;" readonly/>  <br>
+   <br> Number of Kids <input type="text" name="NumberofKids" value="0" placeholder="NumberofKids"  readonly/>  <br>
    <br> Special Note <input type="text" id="SpecialNote" name="SpecialNote" value="" style="line-height: 5em;" placeholder="SpecialNote"/>  <br>
    <br> <input type="hidden" name="ReviewID" value="123" placeholder="ReviewID" />  <br>
     <button type="submit" class="btn btn-danger btn-lg btn-block" onClick="window.location.reload(true)">Order</button>           
