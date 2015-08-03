@@ -82,6 +82,8 @@ $conn->close();
   <!-- Navigation -->
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
+      <div class="row row-offcanvas row-offcanvas-right">
+
         <div class="navbar-header">
           <a class="navbar-brand" href="#">FoodnFellas</a>
         </div>
@@ -244,7 +246,7 @@ $conn->close();
             <a href="#" class="list-group-item">Link</a>
           </div>
         </div><!--/.sidebar-offcanvas-->
-
+      </div> <!-- /.offcanvas container-->  
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
