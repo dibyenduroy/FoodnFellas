@@ -107,10 +107,11 @@ $conn->close();
         <?php
         $lst_photo = explode(",", $array_selected_search['food_album']);
         $i=0;
+        $array_slide = array("first-slide", "second-slide", "third-slide", "forth-slide", "fifth-slide");
         foreach($lst_photo as $item) {
             if($item) { ?>
               <div class="item">
-                <img class="slide" src="<?php echo $item;?>" alt="<?php echo $i;?>">
+                <img class="<?php echo $array_slide[$i];?>" src="<?php echo $item;?>" alt="<?php echo $i;?>">
               </div>
             <?php 
               $i++;
