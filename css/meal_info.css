@@ -133,6 +133,9 @@ body {
   }
 }
 
+#orderTransaction{
+  background-color: #efefef;
+}
 
 /*
  * Off Canvas

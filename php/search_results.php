@@ -162,7 +162,7 @@ $conn->close();
 
         <div class="col-lg-4">
             <h4> Order Transaction Page <h>   
-            <form action="OrderTransactionSubmit.php" method='post' enctype="multipart/form-data">
+            <form id="orderTransaction" action="OrderTransactionSubmit.php" method='post' enctype="multipart/form-data">
             <?php session_start();
             // Getting session variables.
             $user_id = $_SESSION["user_id"];
@@ -178,20 +178,20 @@ $conn->close();
                   <input type="text" name="ReviewID" value="123" placeholder="ReviewID" />  
                </div>
                <div class="col-md-7">
-                Cost: 
-                <input type="text" name="cost" value="<?php echo "$120"; ?> " placeholder="cost" readonly/>
+                <label for="cost">Cost</label>
+                <input type="text" id="cost" name="cost" value="<?php echo "$120"; ?> " placeholder="cost" readonly/>
                </div>
                <div class="col-md-7">
-                Delivery Method: 
-                <input type="text" name="DeliveryMethod" value="DINEIN" readonly/> 
+                <label for="DeliveryMethod">Delivery method</label>
+                <input type="text" id="DeliveryMethod" name="DeliveryMethod" value="DINEIN" readonly/> 
                </div>
                <div class="col-md-7">
-                Number of Adults: 
-                <input type="text" name="NumberofAdult" value="20" placeholder="NumberofAdult" readonly/>
+                <label for="NumberofAdult">Number of people</label>
+                <input type="text" id="NumberofAdult" name="NumberofAdult" value="20" placeholder="NumberofAdult" readonly/>
                </div>
                <div class="col-md-7">
-                Special Note: 
-                <input type="text" name="SpecialNote" value="" style="line-height: 5em;" placeholder="SpecialNote"/> 
+                <label for="SpecialNote">Special Note</label>
+                <input type="text" id="SpecialNote" name="SpecialNote" value="" style="line-height: 5em;" placeholder="SpecialNote"/> 
                </div>
                <div class="col-md-7">
                 <button type="button" class="btn btn-danger btn-lg" action="OrderTransactionSubmit.php">Order</button>
