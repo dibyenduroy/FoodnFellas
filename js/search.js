@@ -59,7 +59,7 @@ function gotoSearchResult(){
         type: 'GET',
         success: function(data)
         {
-            location.href='../html/search_results.html';
+            location.href='../html/meal_info.html';
             $('#AboutMe').val(data['count']);
             // display  profile photos and other photos.
             if (data['photo']) {

@@ -19,54 +19,6 @@
 <!-- NAVBAR
 ================================================== -->
   <body>
-
-<?php
-header('Content-Type: text/html; charset=utf-8');
-
-// Delete this during integration cleanup.
-$_SERVER['REQUEST_METHOD'] = "POST";
-
-if($_SERVER['REQUEST_METHOD'] == "POST")
-{
-
-$return = $_POST;
-
-$provider_food_id = $return["food_provider_id"];
-
-// Delete this hardcoding during final cleanup.
-$provider_food_id = 4; 
-
-include 'foodnfellasDBConnection.php';
-
-$sql1 = "SELECT u.user_id, u.f_name, u.l_name, u.photo, p.about_me, p.kitchen_photo, p.food_album, p.awards_won, p.cuisine_i_cook, m.dish_name, 
-                m.meal_description, pf.price_per_person, pf.delivery_method, pf.meal_type, pf.cuisine_type,
-                pf.available_start, pf.available_end, pa.street_1, pa.city, pa.state, pa.zip_code, pa.country   
-                                 FROM Meal as m 
-                                 JOIN Provider_address as pa                            
-                                 ON m.provider_food_id = pa.provider_food_id
-                                 JOIN Provider_food as pf 
-                                 ON pa.provider_food_id = pf.provider_food_id
-                                 JOIN Provider as p
-                                 ON pf.user_id = p.user_id
-                                 JOIN user as u 
-                                 ON p.user_id = u.user_id
-                                 WHERE pf.provider_food_id = '".$provider_food_id."';";
-
-
-$result1 = $conn->query($sql1);
-if ($result1->num_rows > 0) {
-        // Delte these debug echos during integration.
-        //echo "  if successful  ";
-  $array_selected_search = $result1->fetch_assoc(); 
-} else {
-  echo "0 results";
-}
-
-$conn->close(); 
-}
-?>
-
-
   <!-- Navigation -->
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
@@ -150,53 +102,47 @@ $conn->close();
       </div><!-- /.row -->
 
       <!-- START THE FEATURETTES -->
+
       <hr class="featurette-divider">
 
       <div class="row featurette">
-        <h4> Order Transaction Page <h>   
-        <form action="OrderTransactionSubmit.php" method='post' enctype="multipart/form-data">
-        <?php session_start();
-        // Getting session variables.
-        $user_id = $_SESSION["user_id"];
-        $f_name = $_SESSION["f_name"];
-        $l_name = $_SESSION["l_name"];
-        $is_provider = $_SESSION["is_provider"];
-        $cost=$array_selected_search['price_per_person'] *10;
-        ?>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
 
-           <h2 class="featurette-heading"> Order Input Details </h2>   
-           <div class="col-md-7">
-             <input type="hidden" name="provider_id" value=" <?php echo $array_selected_search['user_id'];?>" placeholder="provider_id" /> 
-           </div>
-           <div class="col-md-7">
-              <input type="text" name="consumer_id" value="<?php echo $user_id;?>" placeholder="consumer_id" /> 
-           </div>
-           <div class="col-md-7">
-            <input type="text" name="meal_id" value="123" placeholder="meal_id" />
-           </div>
-           <div class="col-md-7">
-            <input type="text" name="cost" value="<?php echo "100"?> " placeholder="cost" />
-           </div>
-           <div class="col-md-7">
-            <input type="text" name="DeliveryMethod" value="" placeholder="DeliveryMethod" /> 
-           </div>
-           <div class="col-md-7">
-            <input type="text" name="NumberofAdult" value="" placeholder="NumberofAdult" />
-           </div>
-           <div class="col-md-7">
-            <input type="text" name="NumberofKids" value="" placeholder="NumberofKids" /> 
-           </div>
-           <div class="col-md-7">
-            <input type="text" name="SpecialNote" value="" placeholder="SpecialNote" style="width: 300px;" /> 
-           </div>
-           <div class="col-md-7">
-            <input type="text" name="ReviewID" value="123" placeholder="ReviewID" />  
-          </div>
-           <div class="col-md-7">
-            <button type="button" class="btn btn-info btn-large" action="OrderTransactionSubmit.php">Order</button>
-          </div>
-        </form>   
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
       <!-- /END THE FEATURETTES -->
+
 
       <!-- FOOTER -->
       <footer>
