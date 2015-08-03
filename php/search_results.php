@@ -159,6 +159,51 @@ $conn->close();
           <p> <?php echo $array_selected_search['awards_won'];?></p>
           <p><output name="AwardsWon" id ="AwardsWon"></p>
         </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4">
+            <h4> Order Transaction Page <h>   
+            <form action="OrderTransactionSubmit.php" method='post' enctype="multipart/form-data">
+            <?php session_start();
+            // Getting session variables.
+            $user_id = $_SESSION["user_id"];
+            $f_name = $_SESSION["f_name"];
+            $l_name = $_SESSION["l_name"];
+            $is_provider = $_SESSION["is_provider"];
+            $cost=$array_selected_search['price_per_person'] *10;
+            ?> 
+               <div class="col-md-7">
+                 <input type="hidden" name="provider_id" value=" <?php echo $array_selected_search['user_id'];?>" placeholder="provider_id" /> 
+               </div>
+               <div class="col-md-7">
+                  <input type="text" name="consumer_id" value="<?php echo $user_id;?>" placeholder="consumer_id" /> 
+               </div>
+               <div class="col-md-7">
+                <input type="text" name="meal_id" value="123" placeholder="meal_id" />
+               </div>
+               <div class="col-md-7">
+                <input type="text" name="cost" value="<?php echo "100"?> " placeholder="cost" />
+               </div>
+               <div class="col-md-7">
+                <input type="text" name="DeliveryMethod" value="" placeholder="DeliveryMethod" /> 
+               </div>
+               <div class="col-md-7">
+                <input type="text" name="NumberofAdult" value="" placeholder="NumberofAdult" />
+               </div>
+               <div class="col-md-7">
+                <input type="text" name="NumberofKids" value="" placeholder="NumberofKids" /> 
+               </div>
+               <div class="col-md-7">
+                <input type="text" name="SpecialNote" value="" placeholder="SpecialNote" style="width: 300px;" /> 
+               </div>
+               <div class="col-md-7">
+                <input type="text" name="ReviewID" value="123" placeholder="ReviewID" />  
+              </div>
+               <div class="col-md-7">
+                <button type="button" class="btn btn-info btn-large" action="OrderTransactionSubmit.php">Order</button>
+              </div>
+            </form>   
+        </div>
+
         <div class="col-lg-4">
           <img class="img-circle" src="http://s3-us-west-2.amazonaws.com/foodnfellas/BackgroundImages/Shukto.jpg" width="140" height="140">
           <h2>Cuisines I Cook</h2>
