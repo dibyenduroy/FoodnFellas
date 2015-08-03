@@ -172,8 +172,8 @@ $conn->close();
             $cost=$array_selected_search['price_per_person'] *10;
             ?> 
                <div class="col-md-7" style="display: none;">
-                 <input type="hidden" name="provider_id" value=" <?php echo $array_selected_search['user_id'];?>" placeholder="provider_id" /> 
-                  <input type="text" name="consumer_id" value="<?php echo $user_id;?>" placeholder="consumer_id" /> 
+                 <input type="hidden" name="provider_id" value="7" placeholder="provider_id" /> 
+                  <input type="text" name="consumer_id" value="38" placeholder="consumer_id" /> 
                   <input type="text" name="meal_id" value="123" placeholder="meal_id" />
                   <input type="text" name="ReviewID" value="123" placeholder="ReviewID" />  
                </div>
@@ -182,7 +182,7 @@ $conn->close();
                 <label for="cost">Cost</label>
                </div>
                <div class="col-md-8">
-                <input type="text" id="cost" name="cost" value="<?php echo "$120"; ?> " placeholder="cost" readonly/>
+                <input type="text" id="cost" name="cost" value="120" placeholder="cost" readonly/>
                </div>
                 <div class="col-md-3">
                 </div>
