@@ -58,7 +58,9 @@ $message = '
 <head>
   <title>FoodnFellas Order Submission </title>
 </head>
-<body img src="http://s3-us-west-2.amazonaws.com/foodnfellas/FoodAlbum/Veg/LittiChokha.jpg">
+<body>
+<img src="http://s3-us-west-2.amazonaws.com/foodnfellas/FoodAlbum/Veg/LittiChokha.jpg">
+
   <p>Order Details are as below : </p>
   
   <br>
