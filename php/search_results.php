@@ -198,7 +198,7 @@ $conn->close();
         <div class="col-lg-4">
           <img class="img-circle" src="http://s3-us-west-2.amazonaws.com/foodnfellas/BackgroundImages/Shukto.jpg" width="140" height="140">
           <h2>Cuisines I Cook</h2>
-          <p><?php echo $array_selected_search['cuisine_type'];?></p>
+          <p><?php echo $array_selected_search['cuisine_i_cook'];?></p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
 
