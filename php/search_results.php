@@ -53,13 +53,24 @@ $sql1 = "SELECT u.user_id, u.f_name, u.l_name, u.photo, p.about_me, p.kitchen_ph
                                  WHERE pf.provider_food_id = '".$provider_food_id."';";
 
 
+
 $result1 = $conn->query($sql1);
 if ($result1->num_rows > 0) {
         // Delte these debug echos during integration.
         //echo "  if successful  ";
-  $array_selected_search = $result1->fetch_assoc(); 
+    $array_selected_search = $result1->fetch_assoc(); 
+    $meal_details_results = $conn->query($meal_details);
+    if ($meal_details_results->num_rows >0 ) {
+        while($array_meal_search_row = $meal_details_results->fetch_assoc()) { 
+            $array_meal_search_all[$index] = $array_meal_search_row;
+            //echo $array_meal_search_row;
+            $index++; 
+        }
+ 
+    }
+
 } else {
-  echo "0 results";
+    echo "0 results";
 }
 
 $conn->close(); 
