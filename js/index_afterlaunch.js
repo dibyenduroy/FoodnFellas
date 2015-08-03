@@ -38,16 +38,16 @@ function signupCallBack() {
                 dataType: 'jsonp',                //data format
                 type: 'GET',
                 success: function (data) {
-                    console.log('inside success');
-                    console.log(data);
+                    //console.log('inside success');
+                    //console.log(data);
                     //TODO: need to check if sign up was successful (data should have status -- fix PHP)
                     //location.href='index_afterlaunch.html';
-                    alert("Sign up was succesful")
+                    //alert("Sign up was succesful")
                 },
                 error: function (xhr, status, error) {
                     var err = eval("(" + xhr.responseText + ")");
                     location.href='index_afterlaunch.html';
-                    alert("Sign up was failed. Please try again");
+                    //alert("Sign up was failed. Please try again");
                 }
             });
         })
@@ -67,38 +67,38 @@ function signupCallBack() {
 //        })
 //    );
 //}
-
-function loginCallBack() {
-    $.ajax({
-        url: 'login_v2.php',
-        dataType: 'jsonp',
-        jsonp: 'callback',
-        success: function(data){
-            alert("success");
-        }, error: function(xhr, status, error) {
-            alert(error);
-        }
-    });
-    //jQuery(
-    //    $(function () {
-    //        $.ajax({
-    //            url: 'php/login_v2.php',   //the script to call to get data
-    //            crossDomain: true,
-    //            dataType: 'jsonp',                //data format
-    //            jsonp: 'callback',
-    //            success: function (data) {
-    //                console.log('inside success');
-    //                console.log(data);
-    //                //location.href='index_afterlaunch.html';
-    //                alert("Successful Login");
-    //            },
-    //            error: function (xhr, status, error) {
-    //                var err = eval("(" + xhr.responseText + ")");
-    //                console.log(err);
-    //                //location.href='index_afterlaunch.html';
-    //                alert("Unsuccessful login. Please try again");
-    //            }
-    //        });
-    //    })
-    //);
-}
+//
+//function loginCallBack() {
+//    $.ajax({
+//        url: 'login_v2.php',
+//        dataType: 'jsonp',
+//        jsonp: 'callback',
+//        success: function(data){
+//            alert("success");
+//        }, error: function(xhr, status, error) {
+//            alert(error);
+//        }
+//    });
+//    //jQuery(
+//    //    $(function () {
+//    //        $.ajax({
+//    //            url: 'php/login_v2.php',   //the script to call to get data
+//    //            crossDomain: true,
+//    //            dataType: 'jsonp',                //data format
+//    //            jsonp: 'callback',
+//    //            success: function (data) {
+//    //                console.log('inside success');
+//    //                console.log(data);
+//    //                //location.href='index_afterlaunch.html';
+//    //                alert("Successful Login");
+//    //            },
+//    //            error: function (xhr, status, error) {
+//    //                var err = eval("(" + xhr.responseText + ")");
+//    //                console.log(err);
+//    //                //location.href='index_afterlaunch.html';
+//    //                alert("Unsuccessful login. Please try again");
+//    //            }
+//    //        });
+//    //    })
+//    //);
+//}
