@@ -177,8 +177,10 @@ $conn->close();
                   <input type="text" name="meal_id" value="123" placeholder="meal_id" />
                   <input type="text" name="ReviewID" value="123" placeholder="ReviewID" />  
                </div>
-               <div class="col-md-7">
+               <div class="col-md-3">
                 <label for="cost">Cost</label>
+              </div>
+              <div class="col-md-3">
                 <input type="text" id="cost" name="cost" value="<?php echo "$120"; ?> " placeholder="cost" readonly/>
                </div>
                <div class="col-md-7">
