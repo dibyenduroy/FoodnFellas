@@ -107,7 +107,7 @@ if ($result1->num_rows > 0) {
     if ($meal_details_results->num_rows >0 ) {
         while($array_meal_search_row = $meal_details_results->fetch_assoc()) { 
             $array_meal_search_all[$index] = $array_meal_search_row;
-            echo $array_meal_search_row;
+            //echo $array_meal_search_row;
             $index++; 
         }
  
@@ -143,7 +143,7 @@ $conn->close();
                     <br></br>
             <div class="container-fluid">
                 <?php 
-                   print_r($array_meal_search_all);
+                   //print_r($array_meal_search_all);
                 $lst_photo = explode(",", $array_selected_search['food_album']);
                 foreach($lst_photo as $item) { ?>
                 <div class="col-md-3">
@@ -192,12 +192,16 @@ $conn->close();
                 <output name="available_on" id ="available_on">
             </div>
             <div class="col-md-3 ">
-                <dl>
-                    <label for="dish_name">Dish Name: <?php echo $array_selected_search['dish_name'];?></label>
-                    <dt><output name="dish_name" id ="dish_name" value="<?php echo $array_selected_search['dish_name'];?>"></dt>
-                    <label for="meal_description">Dish Description : <?php echo $array_selected_search['meal_description'];?></label>
-                    <dt><output name="meal_description" id ="meal_description"></dt>
-                </dl>
+
+            <?php foreach ($array_meal_search_all as $array_meal) { ?>
+            <dl>
+                <dt><output name="dish_name" id ="dish_name" value="<?php echo $array_selected_search['dish_name'];?>"></dt>
+                <dt><output name="meal_description" id ="meal_description" value="<?php echo $array_selected_search['meal_description'];?>"></dt>
+            </dl>
+            <?php } ?>
+
+
+
             </div>
 
             <div class="col-md-12">
