@@ -171,48 +171,34 @@ $conn->close();
             $is_provider = $_SESSION["is_provider"];
             $cost=$array_selected_search['price_per_person'] *10;
             ?> 
-               <div class="col-md-7" style="display: none;">
-                 <input type="hidden" name="provider_id" value=" <?php echo $array_selected_search['user_id'];?>" placeholder="provider_id" /> 
-                  <input type="text" name="consumer_id" value="<?php echo $user_id;?>" placeholder="consumer_id" /> 
-                  <input type="text" name="meal_id" value="123" placeholder="meal_id" />
-                  <input type="text" name="ReviewID" value="123" placeholder="ReviewID" />  
-               </div>
-              
-               <div class="col-md-3">
-                <label for="cost">Cost</label>
-               </div>
-               <div class="col-md-8">
-                <input type="text" id="cost" name="cost" value="<?php echo "$120"; ?> " placeholder="cost" readonly/>
-               </div>
-                <div class="col-md-3">
-                </div>
-                <div class="col-md-8">
-                  <input type="text" id="DeliveryMethod" name="DeliveryMethod" value="DINE IN" readonly/> 
-                </div>
-
-                <div class="col-md-3">
-                  <label for="NumberofAdult">People</label>
-                </div>
-                <div class="col-md-8">
-                  <input type="text" id="NumberofAdult" name="NumberofAdult" value="20" placeholder="NumberofAdult" readonly/>
-                </div>
-
-                <div class="col-md-8">
-                <label for="SpecialNote">Special Note</label>
-                </div>
-                <div class="col-md-8">
-                  <input type="text" id="SpecialNote" name="SpecialNote" value="" style="line-height: 5em;" placeholder="SpecialNote"/> 
-                </div>
-               <div class="col-md-12">
-                <button type="submit" class="btn btn-danger btn-lg btn-block" onClick="window.location.reload(true)">Order</button>
-              </div>
-            </form>   
+               
+  <br> <input type="hidden" name="provider_id" value="7" placeholder="provider_id" />  <br>
+   <br> <input type="hidden" name="consumer_id" value="38" placeholder="consumer_id" />  <br>
+   <br> <input type="hidden" name="meal_id" value="123" placeholder="meal_id" />  <br>
+   <div class="col-md-8">
+   <br>  Cost <input type="text" name="cost" value="120" placeholder="cost" readonly/> <br>
+    </div>
+    <div class="col-md-8">
+   <br>  Delivery Method <input type="text" name="DeliveryMethod" value="PICKUP" placeholder="DeliveryMethod" readonly />  <br>
+   </div>
+   <div class="col-md-8">
+   <br>  Number of Adults <input type="text" name="NumberofAdult" value="20" placeholder="NumberofAdult" readonly/>  <br>
+   </div>
+ <div class="col-md-8">
+   <br>  Number of Kids <input type="text" name="NumberofKids" value="0" placeholder="NumberofKids"  readonly/>  <br>
+  </div> 
+   <div class="col-md-8">
+   <br>  Special Note <input type="text" id="SpecialNote" name="SpecialNote" value="" style="line-height: 5em;" placeholder="SpecialNote"/>  <br>
+   </div> 
+   <br> <input type="hidden" name="ReviewID" value="123" placeholder="ReviewID" />  <br>
+    <button type="submit" class="btn btn-danger btn-lg btn-block" onClick="window.location.reload(true)">Order</button>           
+  </form>   
         </div>
 
         <div class="col-lg-4">
           <img class="img-circle" src="http://s3-us-west-2.amazonaws.com/foodnfellas/BackgroundImages/Shukto.jpg" width="140" height="140">
           <h2>Cuisines I Cook</h2>
-          <p><?php echo $array_selected_search['cuisine_type'];?></p>
+          <p><?php echo $array_selected_search['cuisine_i_cook'];?></p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
 
@@ -222,16 +208,19 @@ $conn->close();
         </div>
         <div class="col-lg-4">
             <h3>Delivery Method: </h3>
-            <h4> <?php echo $array_selected_search['delivery_method'];?></h4>
+            <h4> PICKUP,DINEIN</h4>
         </div>
         <div class="col-lg-4">
-            <h3>Cuisine Type: </h3> 
-            <h4> <?php echo $array_selected_search['cuisine_type'];?> </h4>
+            <h3> Dishes Serving: </h3>
+            <ol>
+            <?php foreach ($array_meal_search_all as $array_meal) { ?>
+                <li><h5><b><?php echo $array_meal['dish_name'];?></b>: <?php echo $array_meal['meal_description'];?><h5></li>
+            <?php } ?>
+        </ol>
         </div>
-        <div class="col-lg-4">
-            <h3> Available On: </h3>
-            <h4> <?php echo $array_selected_search['available_on'];?> </h4>
-        </div>
+
+
+
       </div><!-- /.row --> 
       <!-- FOOTER -->
       <footer>

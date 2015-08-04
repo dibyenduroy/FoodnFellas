@@ -38,8 +38,8 @@ $result_consumer = $conn->query($consumer_email);
 if (($conn->query($sql1) === TRUE)  and ($result_provider->num_rows > 0) and ($result_consumer->num_rows > 0) ) {
   
   $return["Status"] = "Success";
-  echo "Order Sucessfully Placed";
-  echo "Sending Email to Providers and Consumer";
+  //echo "Order Sucessfully Placed";
+  //echo "Sending Email to Provider and Consumer";
   $row_provider = $result_provider->fetch_assoc();
   $row_consumer = $result_consumer->fetch_assoc();
   
@@ -59,6 +59,8 @@ $message = '
   <title>FoodnFellas Order Submission </title>
 </head>
 <body>
+<img src="http://s3-us-west-2.amazonaws.com/foodnfellas/FoodAlbum/Veg/LittiChokha.jpg">
+
   <p>Order Details are as below : </p>
   
   <br>
@@ -81,11 +83,14 @@ $message = '
 
     Regards,  <br>
     FoodnFellas Team.
-
+    
+    To Visit our Home Page Click <a href="http://foodnfellas.com/php/login_v2.php"> FoodnFellas </a> 
 
 </body>
 </html>
 ';
+
+echo $message;
 
 // To send HTML mail, the Content-type header must be set
 $headers  = 'MIME-Version: 1.0' . "\r\n";
